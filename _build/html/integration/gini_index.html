@@ -1,0 +1,1112 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Area Between Curves and Wealth Distribution &#8212; Calculus with Python</title>
+    
+  <link rel="stylesheet" href="../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.3da636dd464baa7582d2.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.18.0/dist/embed-amd.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Area Between Curves and Application to Equality" href="gini_extra.html" />
+    <link rel="prev" title="Assignment 3: Definite Integral" href="03_Calc_Assignment.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../index.html">
+  
+  
+  <h1 class="site-logo" id="site-title">Calculus with Python</h1>
+  
+</a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../syllabus.html">
+   Calculus: Spring 2021 Version
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Introduction and Review
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../intro/functions.html">
+   Functions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../intro/assignment_1_functions.html">
+   Problem Set I: Functions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../intro/probability.html">
+   Introduction to Probability
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../intro/stats.html">
+   Probability and Statistics
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../intro/02_calc_assign.html">
+   Assignment 2
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Integration
+ </span>
+</p>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="area.html">
+   Riemann Sums and Definite Integrals
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="riemann_sums.html">
+   Center of Mass
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="03_Calc_Assignment.html">
+   Assignment 3: Definite Integral
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Area Between Curves and Wealth Distribution
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="#wealth-distribution">
+   Wealth Distribution
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="gini_extra.html">
+   Area Between Curves and Application to Equality
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="gini_extra.html#wealth-distribution-and-baseball">
+   Wealth Distribution and Baseball
+  </a>
+ </li>
+</ul>
+
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/integration/gini_index.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+        <!-- Source interaction buttons -->
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/integration/gini_index.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Area Between Curves and Wealth Distribution
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#wealth-distribution">
+   Wealth Distribution
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#quadratic-fit">
+     Quadratic Fit
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#getting-the-fit">
+       Getting the Fit
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#inequality-through-time">
+       Inequality through Time
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#census-bureau-data-and-pandas">
+       Census Bureau Data and Pandas
+      </a>
+      <ul class="nav section-nav flex-column">
+       <li class="toc-h4 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#creating-the-dataframe">
+         Creating the DataFrame
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#problems">
+       Problems
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+        </nav>
+        
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-50838873-3', 'auto');
+  ga('send', 'pageview');
+
+</script><div class="section" id="area-between-curves-and-wealth-distribution">
+<h1>Area Between Curves and Wealth Distribution<a class="headerlink" href="#area-between-curves-and-wealth-distribution" title="Permalink to this headline">¶</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">from</span> <span class="nn">scipy.integrate</span> <span class="kn">import</span> <span class="n">quad</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#define y = x</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#define y = sqrt(x)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#plot on 0, 1</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#area between?</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>EX:</strong> Consider <span class="math notranslate nohighlight">\(y = \sqrt{x}\)</span> and <span class="math notranslate nohighlight">\(y = x^2\)</span></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#define functions</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#plot</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#domain?</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#solution</span>
+</pre></div>
+</div>
+</div>
+</div>
+<ol class="simple">
+<li><p><span class="math notranslate nohighlight">\(f(x) = \sin{x}\)</span> and <span class="math notranslate nohighlight">\(g(x) = \cos{x}\)</span> on <span class="math notranslate nohighlight">\([0, \pi]\)</span></p></li>
+<li><p>Between <span class="math notranslate nohighlight">\(f(x) = 3x + 4\)</span> and <span class="math notranslate nohighlight">\(g(x) = x^2\)</span></p></li>
+</ol>
+</div>
+<div class="section" id="wealth-distribution">
+<h1>Wealth Distribution<a class="headerlink" href="#wealth-distribution" title="Permalink to this headline">¶</a></h1>
+<p>One way that we might understand equality is through understanding the distribution of wealth in a society.  Perfect wealth distribution would mean that all participants have the same share of wealth as everyone else.  We can represent this situation mathematically with a function <span class="math notranslate nohighlight">\(L(x) = x\)</span> that we will call the <strong>Lorenz Curve</strong>.</p>
+<p>Concretely, if we were to look at every 20% of the population, we would see 20% of income.</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Fifths of Households</p></th>
+<th class="head"><p>Percent of Wealth</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Lowest Fifth</p></td>
+<td><p>20</p></td>
+</tr>
+<tr class="row-odd"><td><p>Lowest two - Fifths</p></td>
+<td><p>40</p></td>
+</tr>
+<tr class="row-even"><td><p>Lowest three - Fifths</p></td>
+<td><p>60</p></td>
+</tr>
+<tr class="row-odd"><td><p>Lowest four - Fifths</p></td>
+<td><p>80</p></td>
+</tr>
+<tr class="row-even"><td><p>Lowest five - Fifths</p></td>
+<td><p>100</p></td>
+</tr>
+</tbody>
+</table>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">percent</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">,</span> <span class="mf">0.4</span><span class="p">,</span> <span class="mf">0.6</span><span class="p">,</span> <span class="mf">0.8</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">]</span>
+<span class="n">lorenz</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">,</span> <span class="mf">0.4</span><span class="p">,</span> <span class="mf">0.6</span><span class="p">,</span> <span class="mf">0.8</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">percent</span><span class="p">,</span> <span class="n">lorenz</span><span class="p">,</span> <span class="s1">&#39;-o&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Perfect Wealth Distribution&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0.5, 1.0, &#39;Perfect Wealth Distribution&#39;)
+</pre></div>
+</div>
+<img alt="../_images/gini_index_21_1.png" src="../_images/gini_index_21_1.png" />
+</div>
+</div>
+<p>It is unlikely that we have perfect distribution of wealth in a society however.  For example, the following table describes the cumulative distribution of income in the United States for the year 1994.</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Fifths of Households</p></th>
+<th class="head"><p>Percent of Wealth</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Lowest Fifth</p></td>
+<td><p>4.2</p></td>
+</tr>
+<tr class="row-odd"><td><p>Lowest two - Fifths</p></td>
+<td><p>14.2</p></td>
+</tr>
+<tr class="row-even"><td><p>Lowest three - Fifths</p></td>
+<td><p>29.9</p></td>
+</tr>
+<tr class="row-odd"><td><p>Lowest four - Fifths</p></td>
+<td><p>53.2</p></td>
+</tr>
+<tr class="row-even"><td><p>Lowest five - Fifths</p></td>
+<td><p>100.0</p></td>
+</tr>
+</tbody>
+</table>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">usa_94</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mf">0.042</span><span class="p">,</span> <span class="mf">0.142</span><span class="p">,</span> <span class="mf">0.299</span><span class="p">,</span> <span class="mf">0.532</span><span class="p">,</span> <span class="mf">1.00</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span> <span class="o">=</span> <span class="p">(</span><span class="mi">9</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">percent</span><span class="p">,</span> <span class="n">lorenz</span><span class="p">,</span> <span class="s1">&#39;-o&#39;</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s1">&#39;Lorenz Curve&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">percent</span><span class="p">,</span> <span class="n">usa_94</span><span class="p">,</span> <span class="s1">&#39;-o&#39;</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s1">&#39;USA 1994&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;The Difference between Perfect and Actual Wealth Equality&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span> <span class="o">=</span> <span class="s1">&#39;best&#39;</span><span class="p">,</span> <span class="n">frameon</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x7f8b488ee7f0&gt;
+</pre></div>
+</div>
+<img alt="../_images/gini_index_24_1.png" src="../_images/gini_index_24_1.png" />
+</div>
+</div>
+<p>The area between these curves can be understood to represent the discrepency between perfect wealth distribution and levels of inequality.  Further, if we examine the ratio between this area and that under the <strong>Lorenz Curve</strong> we get the <strong>Gini Index</strong>.</p>
+<p>One big issue remains however.  We don’t want to use rectangles to approximate these regions but we don’t have equations for the actual distribution of wealth.  We introduce two curve fitting techniques using <code class="docutils literal notranslate"><span class="pre">numpy</span></code> to address this problem.</p>
+<div class="section" id="quadratic-fit">
+<h2>Quadratic Fit<a class="headerlink" href="#quadratic-fit" title="Permalink to this headline">¶</a></h2>
+<p>The curve in the figure above representing the actual distribution of wealth in the USA in 1994 can be approximated by a polynomial function.  NumPy has a function called <code class="docutils literal notranslate"><span class="pre">polyfit</span></code> that will fit a polynomial to a set of points.  Here, we use <code class="docutils literal notranslate"><span class="pre">polyfit</span></code> to fit a quadratic function to the points.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">polyfit</span><span class="p">(</span><span class="n">percent</span><span class="p">,</span> <span class="n">usa_94</span><span class="p">,</span> <span class="n">deg</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([ 1.18839286, -0.24167857,  0.02092857])
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">coefs</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">polyfit</span><span class="p">(</span><span class="n">percent</span><span class="p">,</span> <span class="n">usa_94</span><span class="p">,</span> <span class="n">deg</span> <span class="o">=</span> <span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">fit</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">coefs</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">*</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">coefs</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">*</span><span class="n">x</span> <span class="o">+</span> <span class="n">coefs</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">percent</span><span class="p">,</span> <span class="p">[</span><span class="n">fit</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">percent</span><span class="p">],</span> <span class="s1">&#39;--o&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7f8b090d6310&gt;]
+</pre></div>
+</div>
+<img alt="../_images/gini_index_30_1.png" src="../_images/gini_index_30_1.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fit</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">poly1d</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">polyfit</span><span class="p">(</span><span class="n">percent</span><span class="p">,</span> <span class="n">usa_94</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fit</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>poly1d([ 1.18839286, -0.24167857,  0.02092857])
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fit</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.020928571428571605
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span> <span class="o">=</span> <span class="p">(</span><span class="mi">9</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">percent</span><span class="p">,</span> <span class="n">usa_94</span><span class="p">,</span> <span class="s1">&#39;-o&#39;</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s1">&#39;Polyfit&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">percent</span><span class="p">,</span> <span class="n">fit</span><span class="p">(</span><span class="n">percent</span><span class="p">),</span> <span class="s1">&#39;-o&#39;</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s1">&#39;Actual USA 1994&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Quality of Quadratic Fit&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span> <span class="o">=</span> <span class="s1">&#39;best&#39;</span><span class="p">,</span> <span class="n">frameon</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x7f8b090ed820&gt;
+</pre></div>
+</div>
+<img alt="../_images/gini_index_34_1.png" src="../_images/gini_index_34_1.png" />
+</div>
+</div>
+<div class="section" id="getting-the-fit">
+<h3>Getting the Fit<a class="headerlink" href="#getting-the-fit" title="Permalink to this headline">¶</a></h3>
+<p>Below, we return to the complete picture where we plot our fitted function and the <strong>Lorenz Curve</strong> and shade the area that represents the difference in income distribution.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span> <span class="o">=</span> <span class="p">(</span><span class="mi">9</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">percent</span><span class="p">,</span> <span class="n">lorenz</span><span class="p">,</span> <span class="s1">&#39;--o&#39;</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s1">&#39;Lorenz&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">percent</span><span class="p">,</span> <span class="n">fit</span><span class="p">(</span><span class="n">percent</span><span class="p">),</span> <span class="s1">&#39;--o&#39;</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s1">&#39;Polyfit&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">fill_between</span><span class="p">(</span><span class="n">percent</span><span class="p">,</span> <span class="n">lorenz</span><span class="p">,</span> <span class="n">fit</span><span class="p">(</span><span class="n">percent</span><span class="p">),</span> <span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.3</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;burlywood&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Visualizing the Gini Index&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span> <span class="o">=</span> <span class="s1">&#39;best&#39;</span><span class="p">,</span> <span class="n">frameon</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x7f8b5855be20&gt;
+</pre></div>
+</div>
+<img alt="../_images/gini_index_36_1.png" src="../_images/gini_index_36_1.png" />
+</div>
+</div>
+<p>Now, we want to compute the ratio between the area between the curves to that under the <strong>Lorenz Curve</strong>.  We can do this easily in Sympy but declaring <span class="math notranslate nohighlight">\(x\)</span> a symbol and substituting it into our fit function then integrating this.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sympy</span> <span class="k">as</span> <span class="nn">sy</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">sy</span><span class="o">.</span><span class="n">Symbol</span><span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">)</span>
+<span class="n">fit</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle x \left(1.18839285714286 x - 0.241678571428572\right) + 0.0209285714285716\]</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">A_btwn</span> <span class="o">=</span> <span class="n">sy</span><span class="o">.</span><span class="n">integrate</span><span class="p">((</span><span class="n">x</span> <span class="o">-</span> <span class="n">fit</span><span class="p">(</span><span class="n">x</span><span class="p">)),</span> <span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">A_L</span> <span class="o">=</span> <span class="n">sy</span><span class="o">.</span><span class="n">integrate</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">A_btwn</span><span class="o">/</span><span class="n">A_L</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle 0.407559523809523\]</div>
+</div>
+</div>
+</div>
+<div class="section" id="inequality-through-time">
+<h3>Inequality through Time<a class="headerlink" href="#inequality-through-time" title="Permalink to this headline">¶</a></h3>
+<p>Now that we understand how to compute the Gini Index, we want to explore what improving the gap in wealth distribution would mean.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span> <span class="o">=</span> <span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">7</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">x</span><span class="o">**</span><span class="mi">2</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;Country A&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">x</span><span class="o">**</span><span class="mi">4</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;Country B&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">x</span><span class="o">**</span><span class="mi">8</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;Country C&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">x</span><span class="o">**</span><span class="mi">16</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;Country D&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Income Percent&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Population Fraction&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Different Wealth Distributions&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span> <span class="o">=</span> <span class="s2">&quot;best&quot;</span><span class="p">,</span> <span class="n">frameon</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x7f8b3a5fceb0&gt;
+</pre></div>
+</div>
+<img alt="../_images/gini_index_44_1.png" src="../_images/gini_index_44_1.png" />
+</div>
+</div>
+<p>Which of the above countries do you believe is the most equitable?  Why?</p>
+</div>
+<div class="section" id="census-bureau-data-and-pandas">
+<h3>Census Bureau Data and Pandas<a class="headerlink" href="#census-bureau-data-and-pandas" title="Permalink to this headline">¶</a></h3>
+<p>There are many organizations that use the Gini Index to this day.  The OECD, World Bank, and US Census all track Gini Indicies.  We want to investigate the real data much as we have with our smaller examples.  To do so, we will use the Pandas library.</p>
+<p>The table below gives distribution data for the years 1970, 1980, 1990, and 2000.</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>x</p></th>
+<th class="head"><p>0.0</p></th>
+<th class="head"><p>0.2</p></th>
+<th class="head"><p>0.4</p></th>
+<th class="head"><p>0.6</p></th>
+<th class="head"><p>0.8</p></th>
+<th class="head"><p>1.0</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>1970</p></td>
+<td><p>0.000</p></td>
+<td><p>0.041</p></td>
+<td><p>0.149</p></td>
+<td><p>0.323</p></td>
+<td><p>0.568</p></td>
+<td><p>1.000</p></td>
+</tr>
+<tr class="row-odd"><td><p>1980</p></td>
+<td><p>0.000</p></td>
+<td><p>0.042</p></td>
+<td><p>0.144</p></td>
+<td><p>0.312</p></td>
+<td><p>0.559</p></td>
+<td><p>1.000</p></td>
+</tr>
+<tr class="row-even"><td><p>1990</p></td>
+<td><p>0.000</p></td>
+<td><p>0.038</p></td>
+<td><p>0.134</p></td>
+<td><p>0.293</p></td>
+<td><p>0.530</p></td>
+<td><p>1.000</p></td>
+</tr>
+<tr class="row-odd"><td><p>2000</p></td>
+<td><p>0.000</p></td>
+<td><p>0.036</p></td>
+<td><p>0.125</p></td>
+<td><p>0.273</p></td>
+<td><p>0.503</p></td>
+<td><p>1.000</p></td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="creating-the-dataframe">
+<h4>Creating the DataFrame<a class="headerlink" href="#creating-the-dataframe" title="Permalink to this headline">¶</a></h4>
+<p>We will begin by creating a table from this data by entering lists with these values and creating a DataFrame from these lists.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="n">seventies</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mf">0.041</span><span class="p">,</span> <span class="mf">0.149</span><span class="p">,</span> <span class="mf">0.323</span><span class="p">,</span> <span class="mf">0.568</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">]</span>
+<span class="n">eighties</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mf">0.042</span><span class="p">,</span> <span class="mf">0.144</span><span class="p">,</span> <span class="mf">0.312</span><span class="p">,</span> <span class="mf">0.559</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">]</span>
+<span class="n">nineties</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mf">0.038</span><span class="p">,</span> <span class="mf">0.134</span><span class="p">,</span> <span class="mf">0.293</span><span class="p">,</span> <span class="mf">0.53</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">]</span>
+<span class="n">twothou</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mf">0.036</span><span class="p">,</span> <span class="mf">0.125</span><span class="p">,</span> <span class="mf">0.273</span><span class="p">,</span> <span class="mf">0.503</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">&#39;1970s&#39;</span><span class="p">:</span> <span class="n">seventies</span><span class="p">,</span> <span class="s1">&#39;1980s&#39;</span><span class="p">:</span><span class="n">eighties</span><span class="p">,</span> <span class="s1">&#39;1990s&#39;</span><span class="p">:</span> <span class="n">nineties</span><span class="p">,</span>
+                  <span class="s1">&#39;2000s&#39;</span><span class="p">:</span> <span class="n">twothou</span><span class="p">,</span> <span class="s1">&#39;perfect&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">,</span> <span class="mf">0.4</span><span class="p">,</span> <span class="mf">0.6</span><span class="p">,</span> <span class="mf">0.8</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">]})</span>
+<span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>1970s</th>
+      <th>1980s</th>
+      <th>1990s</th>
+      <th>2000s</th>
+      <th>perfect</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>0.000</td>
+      <td>0.000</td>
+      <td>0.000</td>
+      <td>0.000</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>0.041</td>
+      <td>0.042</td>
+      <td>0.038</td>
+      <td>0.036</td>
+      <td>0.2</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>0.149</td>
+      <td>0.144</td>
+      <td>0.134</td>
+      <td>0.125</td>
+      <td>0.4</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>0.323</td>
+      <td>0.312</td>
+      <td>0.293</td>
+      <td>0.273</td>
+      <td>0.6</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>0.568</td>
+      <td>0.559</td>
+      <td>0.530</td>
+      <td>0.503</td>
+      <td>0.8</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</div>
+</div>
+<div class="section" id="problems">
+<h3>Problems<a class="headerlink" href="#problems" title="Permalink to this headline">¶</a></h3>
+<p><strong>Problem 1</strong>: Visit the WikiPedia page on <a class="reference external" href="https://en.wikipedia.org/wiki/Gini_coefficient"><strong>Gini Coefficients</strong></a>.  See if you can replicate the results in the table comparing the U.S. Gini Index in the 1970’s to that of the 2000’s.</p>
+<p><strong>Problem 2</strong>: Use the table below to find the Lorenz curve for the data.</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Fraction of People</p></th>
+<th class="head"><p>Fraction of Income</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0.0</p></td>
+<td><p>0.0</p></td>
+</tr>
+<tr class="row-odd"><td><p>0.2</p></td>
+<td><p>0.06</p></td>
+</tr>
+<tr class="row-even"><td><p>0.4</p></td>
+<td><p>0.18</p></td>
+</tr>
+<tr class="row-odd"><td><p>0.6</p></td>
+<td><p>0.36</p></td>
+</tr>
+<tr class="row-even"><td><p>0.8</p></td>
+<td><p>0.60</p></td>
+</tr>
+<tr class="row-odd"><td><p>1.0</p></td>
+<td><p>1.00</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Problem 3</strong>: Let the fraction of population be the variable <span class="math notranslate nohighlight">\(p\)</span> and the fraction of the resource to be <span class="math notranslate nohighlight">\(r\)</span>.  Use the symbols to write the equation for perfect equality.</p>
+<p><strong>Problem 4</strong>: The table below shows how arable land is distributed among farmers in Blivia, Denmark, and the United States.  In which country is the land most equally distributed?  The least?</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Fraction of Farmers</p></th>
+<th class="head"><p>Fraction of Land Bolivia</p></th>
+<th class="head"><p>Denmark</p></th>
+<th class="head"><p>United States</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0.0</p></td>
+<td><p>0.0</p></td>
+<td><p>0.0</p></td>
+<td><p>0.0</p></td>
+</tr>
+<tr class="row-odd"><td><p>0.1</p></td>
+<td><p>0.0</p></td>
+<td><p>0.06</p></td>
+<td><p>0.025</p></td>
+</tr>
+<tr class="row-even"><td><p>0.2</p></td>
+<td><p>0.0</p></td>
+<td><p>0.12</p></td>
+<td><p>0.05</p></td>
+</tr>
+<tr class="row-odd"><td><p>0.3</p></td>
+<td><p>0.0</p></td>
+<td><p>0.18</p></td>
+<td><p>0.075</p></td>
+</tr>
+<tr class="row-even"><td><p>0.4</p></td>
+<td><p>0.0</p></td>
+<td><p>0.24</p></td>
+<td><p>0.10</p></td>
+</tr>
+<tr class="row-odd"><td><p>0.5</p></td>
+<td><p>0.010</p></td>
+<td><p>0.30</p></td>
+<td><p>0.13</p></td>
+</tr>
+<tr class="row-even"><td><p>0.6</p></td>
+<td><p>0.016</p></td>
+<td><p>0.36</p></td>
+<td><p>0.18</p></td>
+</tr>
+<tr class="row-odd"><td><p>0.7</p></td>
+<td><p>0.022</p></td>
+<td><p>0.45</p></td>
+<td><p>0.22</p></td>
+</tr>
+<tr class="row-even"><td><p>0.8</p></td>
+<td><p>0.03</p></td>
+<td><p>0.54</p></td>
+<td><p>0.28</p></td>
+</tr>
+<tr class="row-odd"><td><p>0.9</p></td>
+<td><p>0.04</p></td>
+<td><p>0.70</p></td>
+<td><p>0.42</p></td>
+</tr>
+<tr class="row-even"><td><p>1.0</p></td>
+<td><p>1.00</p></td>
+<td><p>1.00</p></td>
+<td><p>1.00</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Problem 5</strong>: The table below shows how population was divided among the 25 largest countries in 1963 and 1968.  Was there change in the population distribution between 1963 and 1968? How would the Lorenz curves for 1963 and 1968 compare?</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Fraction of Countries</p></th>
+<th class="head"><p>Fraction of Population 1963</p></th>
+<th class="head"><p>1968</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0.0</p></td>
+<td><p>0.0</p></td>
+<td><p>0.0</p></td>
+</tr>
+<tr class="row-odd"><td><p>0.2</p></td>
+<td><p>0.046</p></td>
+<td><p>0.048</p></td>
+</tr>
+<tr class="row-even"><td><p>0.4</p></td>
+<td><p>0.105</p></td>
+<td><p>0.107</p></td>
+</tr>
+<tr class="row-odd"><td><p>0.6</p></td>
+<td><p>0.193</p></td>
+<td><p>0.194</p></td>
+</tr>
+<tr class="row-even"><td><p>0.8</p></td>
+<td><p>0.345</p></td>
+<td><p>0.347</p></td>
+</tr>
+<tr class="row-odd"><td><p>1.0</p></td>
+<td><p>1.000</p></td>
+<td><p>1.00</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Problem 6</strong>: The table below shows how total energy produced and total energy consumed was divided among the 25 largest producers and users of energy in 1963.  Draw the corresponding Lornez curves on the same set of coordinates.  Was production of energy more or less equally divided than was use of energy?</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Fraction of Countries</p></th>
+<th class="head"><p>Energy Used</p></th>
+<th class="head"><p>Energy Produced</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0.0</p></td>
+<td><p>0.00</p></td>
+<td><p>0.00</p></td>
+</tr>
+<tr class="row-odd"><td><p>0.2</p></td>
+<td><p>0.027</p></td>
+<td><p>0.032</p></td>
+</tr>
+<tr class="row-even"><td><p>0.4</p></td>
+<td><p>0.065</p></td>
+<td><p>0.084</p></td>
+</tr>
+<tr class="row-odd"><td><p>0.6</p></td>
+<td><p>0.135</p></td>
+<td><p>170</p></td>
+</tr>
+<tr class="row-even"><td><p>0.8</p></td>
+<td><p>0.266</p></td>
+<td><p>0.3031</p></td>
+</tr>
+<tr class="row-odd"><td><p>1.0</p></td>
+<td><p>1.000</p></td>
+<td><p>1.0000</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Problem 7</strong>: Letting <span class="math notranslate nohighlight">\(p\)</span> stand for the fraction of the population and <span class="math notranslate nohighlight">\(r\)</span> for the fraction of the resource, consider the family of Lorenz curve given by the equation</p>
+<div class="math notranslate nohighlight">
+\[r = p^n; \quad n = 1,2,3,4,...\]</div>
+<ul class="simple">
+<li><p>To what situation does <span class="math notranslate nohighlight">\(n = 1\)</span> correspond?</p></li>
+<li><p>In what way is the number <span class="math notranslate nohighlight">\(n\)</span> a measure of the equlaity of distribution?</p></li>
+<li><p>To what situation does the Lorenz curve <span class="math notranslate nohighlight">\(r = p^n\)</span> correspond in the case as <span class="math notranslate nohighlight">\(n \to \infty\)</span></p></li>
+</ul>
+<p><strong>Problem 8</strong>: The table below shows how gross national product (GNP) is distributed among the countries of the world:</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Fraction of Countries</p></th>
+<th class="head"><p>Fraction of GNP</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0.0</p></td>
+<td><p>0.0</p></td>
+</tr>
+<tr class="row-odd"><td><p>0.1</p></td>
+<td><p>0.001</p></td>
+</tr>
+<tr class="row-even"><td><p>0.2</p></td>
+<td><p>0.002</p></td>
+</tr>
+<tr class="row-odd"><td><p>0.3</p></td>
+<td><p>0.005</p></td>
+</tr>
+<tr class="row-even"><td><p>0.4</p></td>
+<td><p>0.010</p></td>
+</tr>
+<tr class="row-odd"><td><p>0.5</p></td>
+<td><p>0.018</p></td>
+</tr>
+<tr class="row-even"><td><p>0.6</p></td>
+<td><p>0.028</p></td>
+</tr>
+<tr class="row-odd"><td><p>0.7</p></td>
+<td><p>0.058</p></td>
+</tr>
+<tr class="row-even"><td><p>0.8</p></td>
+<td><p>0.11</p></td>
+</tr>
+<tr class="row-odd"><td><p>0.9</p></td>
+<td><p>0.21</p></td>
+</tr>
+<tr class="row-even"><td><p>1.0</p></td>
+<td><p>1.00</p></td>
+</tr>
+</tbody>
+</table>
+<p>a. Determine the Lorenz Curve for this data using the model you deem most appropriate.</p>
+<p>b. Draw the Lorenz Curve and the curve for completely unequal distribution on the same axes.</p>
+<p>c. Is the GNP divided equally or unequally among the countries of the world?</p>
+<p><strong>Problem 9</strong>: Use the library to find a research article that investigates the Gini Coefficient.  Describe the research, what were they investigating, what was the data, and what did they find.</p>
+<p><strong>Problem 10</strong>: The US Census provides data that could be used in an analysis of distribution of resources.  One such dataset is the <a class="reference external" href="https://www.census.gov/data/tables/2017/demo/wealth/wealth-asset-ownership.html">Wealth, Asset Ownership, &amp; Debt of Households</a>. Use this data to analyze the equality of the distribution of debt – or find another data table that is of interest and makes sense to use in an analysis of distribution of resources.</p>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./integration"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="03_Calc_Assignment.html" title="previous page">Assignment 3: Definite Integral</a>
+    <a class='right-next' id="next-link" href="gini_extra.html" title="next page">Area Between Curves and Application to Equality</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By The Jupyter Book community<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="../_static/js/index.3da636dd464baa7582d2.js"></script>
+
+
+    
+  </body>
+</html>

@@ -1,0 +1,12 @@
+// Linear Function
+digraph {
+	node [color=lightblue2 style=filled]
+	x [label=Input]
+	node [color=orange edgecolor=black style=filled]
+	f [label="input * slope + intercept" shape=box]
+	node [color=lightblue2 style=filled]
+	y [label=Output]
+	x -> f
+	f -> y
+	label="Linear Function as a Process"
+}

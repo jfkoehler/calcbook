@@ -1,0 +1,515 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculus: Spring 2021 Version &#8212; Calculus with Python</title>
+    
+  <link rel="stylesheet" href="_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.3da636dd464baa7582d2.js">
+
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.18.0/dist/embed-amd.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Functions" href="intro/functions.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="index.html">
+  
+  
+  <h1 class="site-logo" id="site-title">Calculus with Python</h1>
+  
+</a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <ul class="nav sidenav_l1">
+ <li class="toctree-l1 current active">
+  <a class="reference internal" href="#">
+   Calculus: Spring 2021 Version
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Introduction and Review
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro/functions.html">
+   Functions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro/assignment_1_functions.html">
+   Problem Set I: Functions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro/probability.html">
+   Introduction to Probability
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro/stats.html">
+   Probability and Statistics
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro/02_calc_assign.html">
+   Assignment 2
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Integration
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="integration/area.html">
+   Riemann Sums and Definite Integrals
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="integration/riemann_sums.html">
+   Center of Mass
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="integration/03_Calc_Assignment.html">
+   Assignment 3: Definite Integral
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="integration/gini_index.html">
+   Area Between Curves and Wealth Distribution
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="integration/gini_index.html#wealth-distribution">
+   Wealth Distribution
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="integration/gini_extra.html">
+   Area Between Curves and Application to Equality
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="integration/gini_extra.html#wealth-distribution-and-baseball">
+   Wealth Distribution and Baseball
+  </a>
+ </li>
+</ul>
+
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/syllabus.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+        <!-- Source interaction buttons -->
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/syllabus.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#course-description">
+   Course Description
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#learning-outcomes">
+     Learning Outcomes
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#course-structure">
+     Course Structure
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#schedule">
+     Schedule
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#attendance">
+     Attendance
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#course-readings-materials-and-technology-requirements">
+     Course Readings, Materials, and Technology Requirements
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#university-policies">
+     University Policies
+    </a>
+    <ul class="nav section-nav flex-column">
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+        </nav>
+        
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="calculus-spring-2021-version">
+<h1>Calculus: Spring 2021 Version<a class="headerlink" href="#calculus-spring-2021-version" title="Permalink to this headline">¶</a></h1>
+<p>This class is taught at The New School in Eugene Lange College.  I exist within the Department of Natural Sciences and Mathematics, though this course is not aligned with any explicit major.  I do not expect that you have had much experience with mathematics or computers, but that with a semester worth of hard work you can, and must learn.</p>
+<p><strong>Course Information</strong></p>
+<ul class="simple">
+<li><p>Course Title: Calculus I</p></li>
+<li><p>Course Number: LMTH 2041</p></li>
+<li><p>Course CRN: 8536</p></li>
+<li><p>Instructor Name: Jacob F. Koehler</p></li>
+<li><p>email: koehlerj&#64;newschool.edu</p></li>
+</ul>
+<div class="section" id="course-description">
+<h2>Course Description<a class="headerlink" href="#course-description" title="Permalink to this headline">¶</a></h2>
+<p>This course covers the content of a traditional first semester in Calculus with a focus on modeling. Topics include integration and differentiation, the Fundamental Theorem of Calculus, partial derivatives, tangent lines, optimization and basic differential equations. Applications of calculus and differential equations will be drawn from the social and natural sciences. Students will learn how to integrate numerical, geometric and analytic methods to solve problems, as well as to incorporate technology and mathematical software to compute, communicate, and visualize mathematics. This course is offered every spring and fulfills the second mathematics requirement for the Interdisciplinary Science major. It is also an option to fulfill the mathematics requirement for the Economics major.</p>
+<div class="section" id="learning-outcomes">
+<h3>Learning Outcomes<a class="headerlink" href="#learning-outcomes" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Use functions to model real world data</p></li>
+<li><p>Use integration to find the area under a curve</p></li>
+<li><p>Apply the definite and indefinite integral to data to understand probability</p></li>
+<li><p>Use summations to understand data through measures of center and spread</p></li>
+<li><p>Use summations and definite integrals to explore inequality, regression, and classification problems</p></li>
+<li><p>Use finite differences to explore rate of change of discrete data</p></li>
+<li><p>Use derivatives to understand change in continuous data</p></li>
+<li><p>Use derivatives to build regression models</p></li>
+<li><p>Approximate solutions to differential equations</p></li>
+<li><p>Use gradient descent to maximize or minimize functions</p></li>
+<li><p>Apply gradient descent to regression and classification problems</p></li>
+<li><p>Solve constrained optimization problems</p></li>
+<li><p>Use constrained optimization to model data and develop conceptual economic models</p></li>
+</ul>
+</div>
+<div class="section" id="course-structure">
+<h3>Course Structure<a class="headerlink" href="#course-structure" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><strong>In Person Meetings</strong>: <em>Wednesdays through Zoom</em> 10:00 am - 11:40 am</p></li>
+<li><p><strong>Online Lectures</strong>: Posted weekly on Mondays (perhaps earlier)</p></li>
+<li><p><strong>Class Discussions</strong>: Weekly in <a class="reference external" href="https://piazza.com/newschool/spring2021/calculusiasp21online">Piazza</a></p></li>
+</ul>
+<p>Because we are operating in a virtual classroom enviornment, my aim is to automate the content delivery portion of the class from that of the problem solving, individual, and group work.  I will release lecture videos for the week on Monday with the expectation that you watch these and note any questions.  You should have these clearly formulated and posted on Piazza prior to class on Wednesday.  We will address any issues in the lectures and work together on a subset of our weekly problem set, focusing on how to use technology to solve these problems and share your solutions.  Following this meeting, you will be responsible for posting a solution to a specific problem every week for which your small group will also be responsible for checking.</p>
+<ul class="simple">
+<li><p><em>Asynchronous Activities</em>: Watch Video Lectures, Ask Questions on Piazza, Post Solutions in Piazza</p></li>
+<li><p><em>Synchronous Activities</em>: Problem discussion and solutions, technical tutorials</p></li>
+</ul>
+</div>
+<div class="section" id="schedule">
+<h3>Schedule<a class="headerlink" href="#schedule" title="Permalink to this headline">¶</a></h3>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>Week</strong></p></th>
+<th class="head"><p><strong>Topic</strong></p></th>
+<th class="head"><p><strong>Materials</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0.</p></td>
+<td><p><em>Functions</em></p></td>
+<td><p><ul><li>Videos</li><li>Problems</li><li>Piazza Solutions</li></p></td>
+</tr>
+<tr class="row-odd"><td><p>1</p></td>
+<td><p><em>Sequences and Summations</em></p></td>
+<td><p><ul><li>Videos</li><li>Problems</li><li>Piazza Solutions</li></p></td>
+</tr>
+<tr class="row-even"><td><p>2</p></td>
+<td><p><em>Discrete Probability and Riemann Sums</em></p></td>
+<td><p><ul><li>Videos</li><li>Problems</li><li>Piazza Solutions</li></p></td>
+</tr>
+<tr class="row-odd"><td><p>3</p></td>
+<td><p><em>Definite integral and Continuous Probability Distributions</em></p></td>
+<td><p><ul><li>Videos</li><li>Problems</li><li>Piazza Solutions</li></p></td>
+</tr>
+<tr class="row-even"><td><p>4</p></td>
+<td><p><em>Project I: Gini</em></p></td>
+<td><p><ul><li>Videos</li><li>Problems</li><li>Piazza Solutions</li></p></td>
+</tr>
+<tr class="row-odd"><td><p>5</p></td>
+<td><p><em>Discrete Change and Finite Differences</em></p></td>
+<td><p><ul><li>Videos</li><li>Problems</li><li>Piazza Solutions</li></p></td>
+</tr>
+<tr class="row-even"><td><p>6</p></td>
+<td><p><em>Continuous Change and a Definition of the Derivative</em></p></td>
+<td><p><ul><li>Videos</li><li>Problems</li><li>Piazza Solutions</li></p></td>
+</tr>
+<tr class="row-odd"><td><p>7</p></td>
+<td><p><em>Rules of Differentiation: The Chain Rule</em></p></td>
+<td><p><ul><li>Videos</li><li>Problems</li><li>Piazza Solutions</li></p></td>
+</tr>
+<tr class="row-even"><td><p>8</p></td>
+<td><p><em>Application of Derivatives: Ordinary Least Squares</em></p></td>
+<td><p><ul><li>Videos</li><li>Problems</li><li>Piazza Solutions</li></p></td>
+</tr>
+<tr class="row-odd"><td><p>9</p></td>
+<td><p><em>Project II: Regression</em></p></td>
+<td><p><ul><li>Videos</li><li>Problems</li><li>Piazza Solutions</li></p></td>
+</tr>
+<tr class="row-even"><td><p>10</p></td>
+<td><p><em>Differential Equations: Basic Models and Approximate Solutions</em></p></td>
+<td><p><ul><li>Videos</li><li>Problems</li><li>Piazza Solutions</li></p></td>
+</tr>
+<tr class="row-odd"><td><p>11</p></td>
+<td><p><em>Differential Equations: Systems and Exact Solutions</em></p></td>
+<td><p><ul><li>Videos</li><li>Problems</li><li>Piazza Solutions</li></p></td>
+</tr>
+<tr class="row-even"><td><p>12</p></td>
+<td><p><em>Optimization Revisited: Gradient Descent</em></p></td>
+<td><p><ul><li>Videos</li><li>Problems</li><li>Piazza Solutions</li></p></td>
+</tr>
+<tr class="row-odd"><td><p>13</p></td>
+<td><p><em>Constrained Optimization: Production and Regularization</em></p></td>
+<td><p><ul><li>Videos</li><li>Problems</li><li>Piazza Solutions</li></p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Final Grade Calculation</strong></p>
+<ul class="simple">
+<li><p>Weekly Assignments: 50%</p></li>
+<li><p>Projects: 30%</p></li>
+<li><p>Quizzes: 20%</p></li>
+</ul>
+</div>
+<div class="section" id="attendance">
+<h3>Attendance<a class="headerlink" href="#attendance" title="Permalink to this headline">¶</a></h3>
+<p>You are expected to attend all Wednesday sessions and participate actively in the group problem solving activities.</p>
+</div>
+<div class="section" id="course-readings-materials-and-technology-requirements">
+<h3>Course Readings, Materials, and Technology Requirements<a class="headerlink" href="#course-readings-materials-and-technology-requirements" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><em>Readings</em>: We will not use a single text for this class outside of my own notes that follow.  From time to time I may post additional readings in canvas, and suggest additional resources in my notes for each particular section.</p></li>
+<li><p><em>Materials</em>: Materials will be shared as Jupyter notebooks.  These are freely available to install and use locally through <span class="xref myst">Anaconda</span> and available through your google drive as <span class="xref myst">Google Colab Notebooks</span>.  All materials will be made available through both downloadable files in my github repository as well as linked as Google Colab notebooks.</p></li>
+<li><p><em>Technology Requirements</em>: You need a working computer that has consistent internet access and reasonable memory for using materials locally or through web access.</p></li>
+</ul>
+<p><strong>Disability Services</strong></p>
+<ul class="simple">
+<li><p>Student Disability Services:  (http://www.newschool.edu/student-disability-services/).</p></li>
+</ul>
+<blockquote>
+<div><p>If you are a student with a disability/disabled student, or believe you might have a disability that requires accommodations, please contact the Student Disability Services (SDS) at studentdisability&#64;newschool.edu, or 212-229-5626, to coordinate all reasonable accommodation requests.</p>
+</div></blockquote>
+</div>
+<div class="section" id="university-policies">
+<h3>University Policies<a class="headerlink" href="#university-policies" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Academic Integrity Policy found at:<br />
+http://www.newschool.edu/policies</p></li>
+<li><p>The Intellectual Property Rights Policy, found at: http://www.newschool.edu/provost/accreditation-policies/</p></li>
+<li><p>For further information on plagiarism, students can be directed to the Learning Center’s website: http://www.newschool.edu/learning-center</p></li>
+<li><p>Grading policies as found in the academic catalogs or online at https://www.newschool.edu/registrar/grade-policies/</p></li>
+</ul>
+<div class="toctree-wrapper compound">
+</div>
+<div class="toctree-wrapper compound">
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='right-next' id="next-link" href="intro/functions.html" title="next page">Functions</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By The Jupyter Book community<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="_static/js/index.3da636dd464baa7582d2.js"></script>
+
+
+    
+  </body>
+</html>
