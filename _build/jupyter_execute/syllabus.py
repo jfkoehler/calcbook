@@ -129,3 +129,12 @@ integration/03_Calc_Assignment
 integration/gini_index
 integration/gini_extra
 ```
+
+
+```{toctree}
+:hidden:
+:titlesonly:
+:caption: Differentiation
+
+differentiation/intro_to_derivatives
+```

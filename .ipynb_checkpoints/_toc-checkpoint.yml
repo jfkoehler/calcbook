@@ -14,5 +14,9 @@
   - file: integration/03_Calc_Assignment
   - file: integration/gini_index
   - file: integration/gini_extra
+  
+- part: Differentiation
+  chapters:
+  - file: differentiation/intro_to_derivatives
 
 
