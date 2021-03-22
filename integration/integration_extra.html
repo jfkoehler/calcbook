@@ -47,6 +47,8 @@
     <script src="../_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
     <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.18.0/dist/embed-amd.js"></script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
@@ -136,11 +138,6 @@
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="riemann_sums.html">
-   Center of Mass
-  </a>
- </li>
- <li class="toctree-l1">
   <a class="reference internal" href="03_Calc_Assignment.html">
    Assignment 3: Definite Integral
   </a>
@@ -163,6 +160,18 @@
  <li class="toctree-l1">
   <a class="reference internal" href="gini_extra.html#wealth-distribution-and-baseball">
    Wealth Distribution and Baseball
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Differentiation
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../differentiation/intro_to_derivatives.html">
+   Introduction to Derivatives
   </a>
  </li>
 </ul>
@@ -855,7 +864,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.collections.PolyCollection at 0x7fc378ffc6a0&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.collections.PolyCollection at 0x7fbaa8d6d250&gt;
 </pre></div>
 </div>
 <img alt="../_images/integration_extra_40_1.png" src="../_images/integration_extra_40_1.png" />
@@ -907,26 +916,26 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([0.62762763, 0.2022022 , 0.27427427, 0.73273273, 0.002002  ,
-       0.71671672, 0.38838839, 0.63163163, 0.05305305, 0.54554555,
-       0.00600601, 0.11311311, 0.95995996, 0.2992993 , 0.14514515,
-       0.70770771, 0.77277277, 0.41541542, 0.86386386, 0.13513514,
-       0.37637638, 0.58558559, 0.13213213, 0.71171171, 0.7957958 ,
-       0.92792793, 0.87487487, 0.58158158, 0.88188188, 0.1971972 ,
-       0.23623624, 0.68868869, 0.9029029 , 0.51651652, 0.47547548,
-       0.49449449, 0.41941942, 0.27727728, 0.31831832, 0.20620621,
-       0.5995996 , 0.68168168, 0.01901902, 0.        , 0.1031031 ,
-       0.97697698, 0.5985986 , 0.25525526, 0.75075075, 0.58558559,
-       0.56356356, 0.33833834, 0.8038038 , 0.65965966, 0.20520521,
-       0.14514515, 0.74274274, 0.40640641, 0.71071071, 0.86786787,
-       0.79079079, 0.74274274, 0.36536537, 0.05905906, 0.22022022,
-       0.21521522, 0.07107107, 0.96796797, 0.1021021 , 0.73973974,
-       0.41541542, 0.08608609, 0.97197197, 0.48448448, 0.3003003 ,
-       0.93693694, 0.58858859, 0.02502503, 0.23223223, 0.21921922,
-       0.24524525, 0.4984985 , 0.25825826, 0.78878879, 0.20520521,
-       0.28028028, 0.61861862, 0.88688689, 0.58058058, 0.63063063,
-       0.79379379, 0.79179179, 0.74774775, 0.68668669, 0.29229229,
-       0.15815816, 0.82782783, 0.1981982 , 0.7987988 , 0.26726727])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([0.31931932, 0.35635636, 0.75475475, 0.06206206, 0.43443443,
+       0.74174174, 0.79479479, 0.44744745, 0.57357357, 0.95995996,
+       0.12812813, 0.42542543, 0.51151151, 0.53453453, 0.85685686,
+       0.86086086, 0.25325325, 0.54554555, 0.42642643, 0.92092092,
+       0.33633634, 0.95495495, 0.38938939, 0.05605606, 0.02202202,
+       0.40640641, 0.10710711, 0.28428428, 0.00900901, 0.64964965,
+       0.83183183, 0.33933934, 0.93893894, 0.69469469, 0.30630631,
+       0.27527528, 0.4044044 , 0.8048048 , 0.51051051, 0.67667668,
+       0.18718719, 0.45445445, 0.38138138, 0.82482482, 0.8018018 ,
+       0.27727728, 0.14714715, 0.54654655, 0.08208208, 0.87687688,
+       0.42442442, 0.87187187, 0.03903904, 0.37737738, 0.91891892,
+       0.56756757, 0.98098098, 0.06506507, 0.001001  , 0.04104104,
+       0.04804805, 0.38538539, 0.90590591, 0.5965966 , 0.12212212,
+       0.004004  , 0.55655656, 0.16516517, 0.27027027, 0.72572573,
+       0.25725726, 0.47347347, 0.87587588, 0.65665666, 0.58958959,
+       0.24424424, 0.94194194, 0.2012012 , 0.82782783, 0.49449449,
+       0.11811812, 0.67567568, 0.56056056, 0.08708709, 0.92592593,
+       0.89389389, 0.33733734, 0.57357357, 0.30630631, 0.92092092,
+       0.49249249, 0.98398398, 0.7047047 , 0.70770771, 0.63063063,
+       0.35035035, 0.10910911, 0.81281281, 0.74674675, 0.19319319])
 </pre></div>
 </div>
 </div>
@@ -938,7 +947,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.46548500452404357
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.3078776975173371
 </pre></div>
 </div>
 </div>
@@ -1001,8 +1010,8 @@
       <td>0.1145833333</td>
       <td>0.3437500000</td>
       <td>0.0104166667</td>
-      <td>0.4360651943</td>
-      <td>0.1027318610</td>
+      <td>0.4850854358</td>
+      <td>0.1517521025</td>
     </tr>
     <tr>
       <th>1</th>
@@ -1011,8 +1020,8 @@
       <td>0.0123958333</td>
       <td>0.3334375000</td>
       <td>0.0001041667</td>
-      <td>0.3720829188</td>
-      <td>0.0387495854</td>
+      <td>0.3339857124</td>
+      <td>0.0006523791</td>
     </tr>
     <tr>
       <th>2</th>
@@ -1021,8 +1030,8 @@
       <td>0.0012489583</td>
       <td>0.3333343750</td>
       <td>0.0000010417</td>
-      <td>0.3354490577</td>
-      <td>0.0021157243</td>
+      <td>0.3222062177</td>
+      <td>0.0111271156</td>
     </tr>
     <tr>
       <th>3</th>
@@ -1031,8 +1040,8 @@
       <td>0.0001249896</td>
       <td>0.3333333438</td>
       <td>0.0000000104</td>
-      <td>0.3401471126</td>
-      <td>0.0068137792</td>
+      <td>0.3297504043</td>
+      <td>0.0035829290</td>
     </tr>
     <tr>
       <th>4</th>
@@ -1041,8 +1050,8 @@
       <td>0.0000124999</td>
       <td>0.3333333334</td>
       <td>0.0000000001</td>
-      <td>0.3337331737</td>
-      <td>0.0003998404</td>
+      <td>0.3326355384</td>
+      <td>0.0006977950</td>
     </tr>
     <tr>
       <th>5</th>
@@ -1051,8 +1060,8 @@
       <td>0.0000012500</td>
       <td>0.3333333333</td>
       <td>0.0000000000</td>
-      <td>0.3346429733</td>
-      <td>0.0013096400</td>
+      <td>0.3333188708</td>
+      <td>0.0000144626</td>
     </tr>
   </tbody>
 </table>

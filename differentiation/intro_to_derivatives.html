@@ -1,0 +1,518 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Introduction to Derivatives &#8212; Calculus: Finite and Infinite</title>
+    
+  <link rel="stylesheet" href="../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.3da636dd464baa7582d2.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="Area Between Curves and Application to Equality" href="../integration/gini_extra.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../index.html">
+  
+  <img src="../_static/lion.jpg" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">Calculus: Finite and Infinite</h1>
+  
+</a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../syllabus.html">
+   Calculus: Spring 2021 Version
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Introduction and Review
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../intro/functions.html">
+   Functions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../intro/assignment_1_functions.html">
+   Problem Set I: Functions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../intro/probability.html">
+   Introduction to Probability
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../intro/stats.html">
+   Probability and Statistics
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../intro/02_calc_assign.html">
+   Assignment 2
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Integration
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../integration/area.html">
+   Riemann Sums and Definite Integrals
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../integration/03_Calc_Assignment.html">
+   Assignment 3: Definite Integral
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../integration/gini_index.html">
+   Area Between Curves and Wealth Distribution
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../integration/gini_index.html#wealth-distribution">
+   Wealth Distribution
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../integration/gini_extra.html">
+   Area Between Curves and Application to Equality
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../integration/gini_extra.html#wealth-distribution-and-baseball">
+   Wealth Distribution and Baseball
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Differentiation
+ </span>
+</p>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Introduction to Derivatives
+  </a>
+ </li>
+</ul>
+
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/differentiation/intro_to_derivatives.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+        <!-- Source interaction buttons -->
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/differentiation/intro_to_derivatives.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#derivative-a-definition">
+   Derivative: A Definition
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#example">
+     EXAMPLE
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#notation-and-rules">
+       Notation and Rules
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#interpretation-instantaneous-rate-of-change">
+     Interpretation: Instantaneous Rate of Change
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#a-function-and-its-derivative">
+     A Function and its Derivative
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#problem-ap-calculus-2017-free-response-3">
+       PROBLEM: AP Calculus 2017 Free Response 3
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#problem-ap-calculus-2015-free-response-5">
+       Problem: AP Calculus 2015 Free Response 5
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#up-next">
+     Up Next
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+        </nav>
+        
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="introduction-to-derivatives">
+<h1>Introduction to Derivatives<a class="headerlink" href="#introduction-to-derivatives" title="Permalink to this headline">¶</a></h1>
+<p><strong>OBJECTIVES</strong></p>
+<ul class="simple">
+<li><p>Review the definition of the derivative</p></li>
+<li><p>Use the definition to evaluate derivative at a point</p></li>
+<li><p>Use symbolic rules to evaluate the derivative as a function</p></li>
+<li><p>Use derivatives to describe the behavior of original function</p></li>
+<li><p>Apply derivatives to solve problems dealing with particle motion</p></li>
+</ul>
+<center>
+    <img src = https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Tangent_to_a_curve.svg/440px-Tangent_to_a_curve.svg.png />
+</center>
+<blockquote>
+<div><p><em>In mathematics, the derivative of a function of a real variable measures the sensitivity to change of the function value (output value) with respect to a change in its argument (input value). Derivatives are a fundamental tool of calculus. For example, the derivative of the position of a moving object with respect to time is the object’s velocity: this measures how quickly the position of the object changes when time advances.</em> – <a class="reference external" href="https://en.wikipedia.org/wiki/Derivative">source</a></p>
+</div></blockquote>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+<span class="kn">import</span> <span class="nn">ipywidgets</span> <span class="k">as</span> <span class="nn">widgets</span>
+<span class="kn">from</span> <span class="nn">ipywidgets</span> <span class="kn">import</span> <span class="n">IntSlider</span><span class="p">,</span> <span class="n">FloatSlider</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="derivative-a-definition">
+<h2>Derivative: A Definition<a class="headerlink" href="#derivative-a-definition" title="Permalink to this headline">¶</a></h2>
+<p>Derivatives were motivated by the formula for the slope of a line. The image below demonstrates how we consider a point <span class="math notranslate nohighlight">\(x\)</span> and a second point distance <span class="math notranslate nohighlight">\(h\)</span> away from <span class="math notranslate nohighlight">\(x\)</span>.</p>
+<center>
+    <img src = https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Secant-calculus.svg/500px-Secant-calculus.svg.png />
+</center>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\text{Difference Quotient}:
+\displaystyle m={\frac {\Delta f(a)}{\Delta a}}={\frac {f(a+h)-f(a)}{(a+h)-(a)}}={\frac {f(a+h)-f(a)}{h}}.\)</span></p></li>
+</ul>
+<p>To find the slope of the tangent line, we let this distance between the points approach zero.</p>
+<center>
+ <img src = https://upload.wikimedia.org/wikipedia/commons/c/cc/Tangent_animation.gif />
+</center>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\text{Using the limit:} 
+~{\displaystyle f'(a)=\lim _{h\to 0}{\frac {f(a+h)-f(a)}{h}}.}\)</span></p></li>
+</ul>
+<p>To reiterate, a result of this is a single value that represents the slope of the tangent line at <span class="math notranslate nohighlight">\(x = a\)</span>.</p>
+<div class="section" id="example">
+<h3>EXAMPLE<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h3>
+<p>Suppose we have <span class="math notranslate nohighlight">\(f(x) = x^2\)</span> and we want the <em>slope of the tangent line</em> at <span class="math notranslate nohighlight">\(x = 1\)</span>:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\text{Difference Quotient}: \frac{f(1 + h) - f(1)}{h}\)</span></p></li>
+</ul>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\text{Plug into our function} ~ f: \quad \frac{(1 + h)^2 - (1)^2}{h}\)</span></p></li>
+</ul>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\text{Simplify:} \quad \frac{1 + 2h + h^2 - 1}{h}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\text{Cancel 1's and factor} \quad \frac{h(2 + h)}{h}\)</span></p></li>
+</ul>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(f'(1) = 2 + h\)</span></p></li>
+</ul>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\text{Evaluate limit}: \quad \lim_{h \to 0} 2 + h = 2\)</span></p></li>
+</ul>
+<p>As a result of our work, we now know the slope of the line tangent to the function <span class="math notranslate nohighlight">\(f(x) = x^2\)</span> at <span class="math notranslate nohighlight">\(x = 1\)</span> is 2.</p>
+<p><strong>QUESTIONS</strong></p>
+<ul class="simple">
+<li><p>Repeat for <span class="math notranslate nohighlight">\(x = 0\)</span></p></li>
+<li><p>Consider the function <span class="math notranslate nohighlight">\(f(x) = (x - 2)^2 + 3\)</span>.</p></li>
+<li><p>Plot the function.</p></li>
+<li><p>Determine the slope of the line tangent to <span class="math notranslate nohighlight">\(f\)</span> at <span class="math notranslate nohighlight">\(x = 2\)</span>, and <span class="math notranslate nohighlight">\(x = 3\)</span>.</p></li>
+<li><p>Write the equation for the tangent line and plot this alongside the original function.</p></li>
+</ul>
+<div class="section" id="notation-and-rules">
+<h4>Notation and Rules<a class="headerlink" href="#notation-and-rules" title="Permalink to this headline">¶</a></h4>
+<p>The derivative of a function <span class="math notranslate nohighlight">\(f\)</span> is typically written as <span class="math notranslate nohighlight">\(f'\)</span>.  If the independent variable is <span class="math notranslate nohighlight">\(x\)</span> and dependent <span class="math notranslate nohighlight">\(y\)</span>, an equivalent expression would be written <span class="math notranslate nohighlight">\(\frac{dy}{dx}\)</span>. Additionally, we have some straightforward rules for finding the derivative of different kinds of functions.  Below are the most basic rules, for a larger list see <a class="reference external" href="https://openstax.org/books/calculus-volume-1/pages/b-table-of-derivatives">link</a>:</p>
+<ol class="simple">
+<li><p><strong>Polynomial Functions</strong>: <span class="math notranslate nohighlight">\(f(x) = x^n \quad f'(x) = nx^{n-1}\)</span></p></li>
+<li><p><strong>Trignometric Functions</strong>: <span class="math notranslate nohighlight">\(\frac{d}{dx}\sin(x) = \cos(x) \quad \frac{d}{dx}\cos(x) = -\sin(x)\)</span></p></li>
+<li><p><strong>Exponential Functions</strong>: <span class="math notranslate nohighlight">\(f(x) = e^x \quad f'(x) = e^x\)</span></p></li>
+</ol>
+<p><strong>Examples</strong></p>
+<ol class="simple">
+<li><p><span class="math notranslate nohighlight">\(f(x) = 3x^4 - 3x \rightarrow f'(x) = 12x^3 - 3\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(g(x) = 5\sin(x) \rightarrow g'(x) = 5\cos(x)\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(h(x) = 2x^3 + 4\cos(x) + e^x  \rightarrow h'(x) = 6x^2 - 4\sin(x) + e^x\)</span></p></li>
+</ol>
+<p><strong>PRACTICE</strong></p>
+<p>Find the derivative of the following functions using our rules from above.</p>
+<ol class="simple">
+<li><p><span class="math notranslate nohighlight">\(f(x) = x^{12}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(g(x) = 4x^3 - 2x\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(h(x) = 3\sin(x) + 2e^x\)</span></p></li>
+</ol>
+</div>
+</div>
+<div class="section" id="interpretation-instantaneous-rate-of-change">
+<h3>Interpretation: Instantaneous Rate of Change<a class="headerlink" href="#interpretation-instantaneous-rate-of-change" title="Permalink to this headline">¶</a></h3>
+<p>A typical application of derivatives is to problems involving objects in motion, and their rate of change.  Specifically, we have relationships between <em>displacement, velocity</em>, and <em>acceleration</em>. If we recognize the derivative as capturing the notion of the instantaneous rate of change, we have that:</p>
+<ul class="simple">
+<li><p>velocity <span class="math notranslate nohighlight">\(\rightarrow\)</span> derivative of displacement</p></li>
+<li><p>acceleration <span class="math notranslate nohighlight">\(\rightarrow\)</span> derivative of velocity</p></li>
+</ul>
+<p><strong>EXAMPLE</strong></p>
+<p>A particle moves along the <span class="math notranslate nohighlight">\(x\)</span>-axis where positive direction is to the right and negative left.  The position of the particle at time <span class="math notranslate nohighlight">\(t\)</span> is given by <span class="math notranslate nohighlight">\(s(t) = t^3 - 4t + 2\)</span>.</p>
+<ul class="simple">
+<li><p>Find the derivative of <span class="math notranslate nohighlight">\(s(t)\)</span> which represents the velocity function <span class="math notranslate nohighlight">\(v(t)\)</span>.</p></li>
+<li><p>Use <span class="math notranslate nohighlight">\(v(t)\)</span> to deterime if the particle is moving to the left or right at <span class="math notranslate nohighlight">\(t = 1\)</span>?</p></li>
+<li><p>Find the derivative of <span class="math notranslate nohighlight">\(v(t)\)</span> which represents the acceleration of a particle <span class="math notranslate nohighlight">\(a(t)\)</span>.</p></li>
+<li><p>Use <span class="math notranslate nohighlight">\(a(t)\)</span> to determine if the particle is speeding up or slowing down at <span class="math notranslate nohighlight">\(t = 1\)</span></p></li>
+</ul>
+</div>
+<div class="section" id="a-function-and-its-derivative">
+<h3>A Function and its Derivative<a class="headerlink" href="#a-function-and-its-derivative" title="Permalink to this headline">¶</a></h3>
+<p>Let <span class="math notranslate nohighlight">\(f(x) = x^5 + 2x^4 - x^3 - 2x^2\)</span>.</p>
+<p>a. Find <span class="math notranslate nohighlight">\(f'(x)\)</span> and plot on [-2.5, 1.5].</p>
+<p>b. Over what intervals does the graph of <span class="math notranslate nohighlight">\(f\)</span> appear to be rising as you move left to right?</p>
+<p>c. Over what intervals does the graph of <span class="math notranslate nohighlight">\(f'\)</span> appear to be able the <span class="math notranslate nohighlight">\(x\)</span>-axis?</p>
+<p>d. Over what intervals does the graph of <span class="math notranslate nohighlight">\(f\)</span> appear to be falling as you move from left to right?</p>
+<p>e. Over what intervals does the graph of <span class="math notranslate nohighlight">\(f'\)</span> appear to be below the x-axis?</p>
+<p>f. What are the <span class="math notranslate nohighlight">\(x\)</span>-coordinates of all the high points and low points of the graph of <span class="math notranslate nohighlight">\(f\)</span>?</p>
+<p>g. For what value of <span class="math notranslate nohighlight">\(x\)</span> does the graph of <span class="math notranslate nohighlight">\(f'\)</span> appear to meet the <span class="math notranslate nohighlight">\(x\)</span>-axis?</p>
+<p>Repeat for <span class="math notranslate nohighlight">\(y = \frac{x}{1 + x^2}\)</span>.</p>
+<p>On the basis of these examples, write a statement that relates where a function is rising, is falling, and has a high point or low point to properties you observed about the graph of its derivative.</p>
+<div class="section" id="problem-ap-calculus-2017-free-response-3">
+<h4>PROBLEM: AP Calculus 2017 Free Response 3<a class="headerlink" href="#problem-ap-calculus-2017-free-response-3" title="Permalink to this headline">¶</a></h4>
+<p><img alt="" src="../_images/ap_frq_2017_dervs.png" /></p>
+</div>
+<div class="section" id="problem-ap-calculus-2015-free-response-5">
+<h4>Problem: AP Calculus 2015 Free Response 5<a class="headerlink" href="#problem-ap-calculus-2015-free-response-5" title="Permalink to this headline">¶</a></h4>
+<p><img alt="" src="../_images/ap_frq_2015_dervs.png" /></p>
+</div>
+</div>
+<div class="section" id="up-next">
+<h3>Up Next<a class="headerlink" href="#up-next" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Examine more complex rules for functions with products and quotients of functions</p></li>
+<li><p>Use second derivative to explore concavity</p></li>
+</ul>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./differentiation"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="../integration/gini_extra.html" title="previous page">Area Between Curves and Application to Equality</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By The Jupyter Book community<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="../_static/js/index.3da636dd464baa7582d2.js"></script>
+
+
+    
+  </body>
+</html>
