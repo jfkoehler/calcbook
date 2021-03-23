@@ -58,8 +58,6 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Area Between Curves and Wealth Distribution" href="gini_index.html" />
-    <link rel="prev" title="Riemann Sums and Definite Integrals" href="area.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -133,34 +131,34 @@
   Integration
  </span>
 </p>
-<ul class="current nav sidenav_l1">
+<ul class="nav sidenav_l1">
  <li class="toctree-l1">
-  <a class="reference internal" href="area.html">
+  <a class="reference internal" href="../integration/area.html">
    Riemann Sums and Definite Integrals
   </a>
  </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../integration/03_Calc_Assignment.html">
    Assignment 3: Definite Integral
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="gini_index.html">
+  <a class="reference internal" href="../integration/gini_index.html">
    Area Between Curves and Wealth Distribution
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="gini_index.html#wealth-distribution">
+  <a class="reference internal" href="../integration/gini_index.html#wealth-distribution">
    Wealth Distribution
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="gini_extra.html">
+  <a class="reference internal" href="../integration/gini_extra.html">
    Area Between Curves and Application to Equality
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="gini_extra.html#wealth-distribution-and-baseball">
+  <a class="reference internal" href="../integration/gini_extra.html#wealth-distribution-and-baseball">
    Wealth Distribution and Baseball
   </a>
  </li>
@@ -216,7 +214,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/integration/03_Calc_Assignment.ipynb"><button type="button"
+        <a class="dropdown-buttons" href="../_sources/solutions/03_Calc_Assignment_solns.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
@@ -241,7 +239,7 @@
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
-        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/integration/03_Calc_Assignment.ipynb"><button type="button"
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/solutions/03_Calc_Assignment_solns.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="../_static/images/logo_binder.svg"
@@ -249,7 +247,7 @@
         
         
         
-        <a class="colab-button" href="https://colab.research.google.com/github/executablebooks/jupyter-book/blob/master/integration/03_Calc_Assignment.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+        <a class="colab-button" href="https://colab.research.google.com/github/executablebooks/jupyter-book/blob/master/solutions/03_Calc_Assignment_solns.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
                 title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
                     src="../_static/images/logo_colab.png"
                     alt="Interact on Colab">Colab</button></a>
@@ -268,27 +266,32 @@
         </div>
         <nav id="bd-toc-nav">
             <ul class="nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Assignment 3: Definite Integral
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#problem-i-summation-notation">
    Problem I: Summation Notation
   </a>
  </li>
- <li class="toc-h2 nav-item toc-entry">
+ <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#problem-ii-probability-problems">
    Problem II: Probability Problems
   </a>
  </li>
- <li class="toc-h2 nav-item toc-entry">
+ <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#problem-iii-riemann-sums">
    Problem III: Riemann Sums
   </a>
  </li>
- <li class="toc-h2 nav-item toc-entry">
+ <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#problem-iv-definite-integral">
    Problem IV: Definite Integral
   </a>
  </li>
- <li class="toc-h2 nav-item toc-entry">
+ <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#problem-v-net-change-theorem">
    Problem V: Net Change Theorem
   </a>
@@ -314,9 +317,10 @@
 <li><p>Use Definite Integrals to solve area problems</p></li>
 <li><p>Use Definite Integrals to solve Net Change problems</p></li>
 </ul>
+</div>
 <hr class="docutils" />
 <div class="section" id="problem-i-summation-notation">
-<h2>Problem I: Summation Notation<a class="headerlink" href="#problem-i-summation-notation" title="Permalink to this headline">¶</a></h2>
+<h1>Problem I: Summation Notation<a class="headerlink" href="#problem-i-summation-notation" title="Permalink to this headline">¶</a></h1>
 <ol class="simple">
 <li><p>Evaluate <span class="math notranslate nohighlight">\(\sum_{i = 1} ^ 5 3i^2 - 2\)</span>.</p></li>
 <li><p>Rewrite in summation notation: <span class="math notranslate nohighlight">\(1 + 3 + 5 + 7 + 9\)</span></p></li>
@@ -384,7 +388,7 @@
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;BarContainer object of 21 artists&gt;
 </pre></div>
 </div>
-<img alt="../_images/03_Calc_Assignment_8_1.png" src="../_images/03_Calc_Assignment_8_1.png" />
+<img alt="../_images/03_Calc_Assignment_solns_9_1.png" src="../_images/03_Calc_Assignment_solns_9_1.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -401,7 +405,7 @@
 </div>
 </div>
 <div class="section" id="problem-ii-probability-problems">
-<h2>Problem II: Probability Problems<a class="headerlink" href="#problem-ii-probability-problems" title="Permalink to this headline">¶</a></h2>
+<h1>Problem II: Probability Problems<a class="headerlink" href="#problem-ii-probability-problems" title="Permalink to this headline">¶</a></h1>
 <ol class="simple">
 <li><p>What is the probability that in 20 coin flips we get 9 Heads – assuming a fair coin.</p></li>
 <li><p>Explain what the 21’s mean in the triangle below:</p></li>
@@ -438,7 +442,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/03_Calc_Assignment_13_0.png" src="../_images/03_Calc_Assignment_13_0.png" />
+<img alt="../_images/03_Calc_Assignment_solns_15_0.png" src="../_images/03_Calc_Assignment_solns_15_0.png" />
 </div>
 </div>
 <ol class="simple">
@@ -458,7 +462,7 @@
 </div>
 </div>
 <div class="section" id="problem-iii-riemann-sums">
-<h2>Problem III: Riemann Sums<a class="headerlink" href="#problem-iii-riemann-sums" title="Permalink to this headline">¶</a></h2>
+<h1>Problem III: Riemann Sums<a class="headerlink" href="#problem-iii-riemann-sums" title="Permalink to this headline">¶</a></h1>
 <ol class="simple">
 <li><p>Write a formula for the area approximations below for <span class="math notranslate nohighlight">\(R(6)\)</span> (b) in the image below where <span class="math notranslate nohighlight">\(f(x) = \frac{x^2}{2}\)</span>. Evaluate.</p></li>
 <li><p>Write a formula for the area approximation in the image below for <span class="math notranslate nohighlight">\(L(6)\)</span> (a) where <span class="math notranslate nohighlight">\(f(x) = \frac{x^2}{2}\)</span>. Evaluate.</p></li>
@@ -469,7 +473,7 @@
 </ol>
 </div>
 <div class="section" id="problem-iv-definite-integral">
-<h2>Problem IV: Definite Integral<a class="headerlink" href="#problem-iv-definite-integral" title="Permalink to this headline">¶</a></h2>
+<h1>Problem IV: Definite Integral<a class="headerlink" href="#problem-iv-definite-integral" title="Permalink to this headline">¶</a></h1>
 <ol class="simple">
 <li><p>What does <span class="math notranslate nohighlight">\(\int_0^3 \sqrt{x} ~dx\)</span> mean?</p></li>
 <li><p>Evaluate the integral <span class="math notranslate nohighlight">\(\int_0^3 \sqrt{x} ~dx\)</span>.</p></li>
@@ -487,10 +491,10 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.lines.Line2D at 0x7ff268bb8e50&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.lines.Line2D at 0x7fda10735cd0&gt;
 </pre></div>
 </div>
-<img alt="../_images/03_Calc_Assignment_26_1.png" src="../_images/03_Calc_Assignment_26_1.png" />
+<img alt="../_images/03_Calc_Assignment_solns_28_1.png" src="../_images/03_Calc_Assignment_solns_28_1.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -526,13 +530,12 @@
 </div>
 </div>
 <div class="section" id="problem-v-net-change-theorem">
-<h2>Problem V: Net Change Theorem<a class="headerlink" href="#problem-v-net-change-theorem" title="Permalink to this headline">¶</a></h2>
+<h1>Problem V: Net Change Theorem<a class="headerlink" href="#problem-v-net-change-theorem" title="Permalink to this headline">¶</a></h1>
 <ol class="simple">
 <li><p>Given a velocity function  <span class="math notranslate nohighlight">\(v(t) = 5t - 1\)</span>  (in meters per second) for a particle in motion from time  <span class="math notranslate nohighlight">\(t = 0\)</span>  to time  <span class="math notranslate nohighlight">\(t = 4\)</span>,  find the net displacement of the particle.</p></li>
 <li><p>Find the total distance traveled of the particle above.</p></li>
 <li><p>If the motor on a motorboat is started at  <span class="math notranslate nohighlight">\(t = 0\)</span>  and the boat consumes gasoline at the rate of  <span class="math notranslate nohighlight">\(7 - t^3\)</span>  gal/hr, how much gasoline is used in the first  3  hours?</p></li>
 </ol>
-</div>
 </div>
 
     <script type="text/x-thebe-config">
@@ -548,7 +551,7 @@
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./integration"
+            path: "./solutions"
         },
         predefinedOutput: true
     }
@@ -563,8 +566,6 @@
     
     <div class='prev-next-bottom'>
         
-    <a class='left-prev' id="prev-link" href="area.html" title="previous page">Riemann Sums and Definite Integrals</a>
-    <a class='right-next' id="next-link" href="gini_index.html" title="next page">Area Between Curves and Wealth Distribution</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">
