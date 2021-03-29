@@ -1,0 +1,587 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Using Derivatives to Find Maximum and Minimum Values &#8212; Calculus: Finite and Infinite</title>
+    
+  <link rel="stylesheet" href="../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.3da636dd464baa7582d2.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.18.0/dist/embed-amd.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Newton’s Method" href="newtons_method.html" />
+    <link rel="prev" title="Introduction to Derivatives" href="intro_to_derivatives.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../index.html">
+  
+  <img src="../_static/lion.jpg" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">Calculus: Finite and Infinite</h1>
+  
+</a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../syllabus.html">
+   Calculus: Spring 2021 Version
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Introduction and Review
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../intro/functions.html">
+   Functions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../intro/assignment_1_functions.html">
+   Problem Set I: Functions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../intro/probability.html">
+   Introduction to Probability
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../intro/stats.html">
+   Probability and Statistics
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../intro/02_calc_assign.html">
+   Assignment 2
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Integration
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../integration/area.html">
+   Riemann Sums and Definite Integrals
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../integration/03_Calc_Assignment.html">
+   Assignment 3: Definite Integral
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../integration/gini_index.html">
+   Area Between Curves and Wealth Distribution
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../integration/gini_index.html#wealth-distribution">
+   Wealth Distribution
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../integration/gini_extra.html">
+   Area Between Curves and Application to Equality
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../integration/gini_extra.html#wealth-distribution-and-baseball">
+   Wealth Distribution and Baseball
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Differentiation
+ </span>
+</p>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro_to_derivatives.html">
+   Introduction to Derivatives
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Using Derivatives to Find Maximum and Minimum Values
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="newtons_method.html">
+   Newton’s Method
+  </a>
+ </li>
+</ul>
+
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/differentiation/optimization_I.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+        <!-- Source interaction buttons -->
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/differentiation/optimization_I.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        <a class="colab-button" href="https://colab.research.google.com/github/executablebooks/jupyter-book/blob/master/differentiation/optimization_I.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
+                    src="../_static/images/logo_colab.png"
+                    alt="Interact on Colab">Colab</button></a>
+        
+        
+    </div>
+</div>
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#review-finding-and-interpreting-derivatives">
+   Review: Finding and Interpreting Derivatives
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#review-shapes-of-graphs-and-derivatives">
+   Review: Shapes of Graphs and Derivatives
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#optimization-and-extremum-fermat-s-theorem">
+   Optimization and Extremum: Fermat’s Theorem
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#critical-points">
+     Critical Points
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#first-derivative-to-determine-maximum-or-minimum">
+     First Derivative to determine Maximum or Minimum
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#second-derivative-test">
+     Second Derivative Test
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+        </nav>
+        
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="using-derivatives-to-find-maximum-and-minimum-values">
+<h1>Using Derivatives to Find Maximum and Minimum Values<a class="headerlink" href="#using-derivatives-to-find-maximum-and-minimum-values" title="Permalink to this headline">¶</a></h1>
+<p><strong>OBJECTIVES</strong></p>
+<ul class="simple">
+<li><p>Use Derivatives to find maximum and minimum values</p></li>
+<li><p>Understand what a <em>critical point</em> is and how to find them.</p></li>
+<li><p>Use first derivatives to explore behavior near critical points</p></li>
+<li><p>Use second derivatives to determine nature of critical point</p></li>
+</ul>
+<div class="section" id="review-finding-and-interpreting-derivatives">
+<h2>Review: Finding and Interpreting Derivatives<a class="headerlink" href="#review-finding-and-interpreting-derivatives" title="Permalink to this headline">¶</a></h2>
+<p>The problems below are meant to review our work finding derivatives of functions using rules and symbolic computer systems. In the questions below, your small group can use a table like that from <a class="reference external" href="https://openstax.org/books/calculus-volume-1/pages/b-table-of-derivatives">OpenStax</a>, use <a class="reference external" href="https://www.wolframalpha.com/">Wolfram Alpha</a>, or the <code class="docutils literal notranslate"><span class="pre">sympy</span></code> library in Python to determine your derivatives as necessary.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">sympy</span> <span class="k">as</span> <span class="nn">sy</span>
+<span class="kn">from</span> <span class="nn">scipy.integrate</span> <span class="kn">import</span> <span class="n">quad</span>
+</pre></div>
+</div>
+</div>
+</div>
+<hr class="docutils" />
+<p><strong>PROBLEMS</strong></p>
+<ol class="simple">
+<li><p>Find an equation of the line tangent to the graph of <span class="math notranslate nohighlight">\(f(x) = x(1 - 2x)^3\)</span> at the point <span class="math notranslate nohighlight">\((1, -1)\)</span>.</p></li>
+<li><p>If <span class="math notranslate nohighlight">\(f(x) = \sin(x)\)</span> then <span class="math notranslate nohighlight">\(f'(\frac{\pi}{3}) = \)</span>?</p></li>
+<li><p>If <span class="math notranslate nohighlight">\(f(x) = \sqrt{2x}\)</span> then <span class="math notranslate nohighlight">\(f'(2)=\)</span>?</p></li>
+<li><p>A particle moves along the <span class="math notranslate nohighlight">\(x\)</span>-axis so that at any time <span class="math notranslate nohighlight">\(t \geq 0\)</span> its position is given by <span class="math notranslate nohighlight">\(x(t) = t^3 - 3t^2 - 9t + 1\)</span>.  For what values of <span class="math notranslate nohighlight">\(t\)</span> is the particle at rest?</p></li>
+<li><p>The area of the region enclosed by the graphs of <span class="math notranslate nohighlight">\(y = x\)</span> and <span class="math notranslate nohighlight">\(y = x^2 - 3x + 3\)</span> is?</p></li>
+</ol>
+</div>
+<hr class="docutils" />
+<div class="section" id="review-shapes-of-graphs-and-derivatives">
+<h2>Review: Shapes of Graphs and Derivatives<a class="headerlink" href="#review-shapes-of-graphs-and-derivatives" title="Permalink to this headline">¶</a></h2>
+<p><img alt="Source: https://opentextbc.ca/calculusv1openstax/chapter/derivatives-and-the-shape-of-a-graph/" src="https://s3-us-west-2.amazonaws.com/courses-images/wp-content/uploads/sites/2332/2018/01/11210914/CNX_Calc_Figure_04_05_002.jpg" /></p>
+<p>Use what you know about finding derivatives to complete the following sentences:</p>
+<ol class="simple">
+<li><p>If the function <span class="math notranslate nohighlight">\(f\)</span> is increasing its derivative <span class="math notranslate nohighlight">\(f'\)</span> is ______ ?</p></li>
+<li><p>If the function <span class="math notranslate nohighlight">\(f\)</span> is decreasing its derivative <span class="math notranslate nohighlight">\(f'\)</span> is ______ ?</p></li>
+<li><p>If a function <span class="math notranslate nohighlight">\(f\)</span> is concave up on some interval, it’s derivative <span class="math notranslate nohighlight">\(f'\)</span> is _________ ?</p></li>
+<li><p>If a function <span class="math notranslate nohighlight">\(f\)</span> is concave down on some interval, it’s derivative <span class="math notranslate nohighlight">\(f'\)</span> is _________ ?</p></li>
+</ol>
+<p><strong>EXAMPLES</strong></p>
+<ol class="simple">
+<li><p>Use the function <span class="math notranslate nohighlight">\(f'(x) = 3x^2 - 6x - 9\)</span> to determine where the function <span class="math notranslate nohighlight">\(f\)</span> is increasing, decreasing, concave up, and concave down on the interval <span class="math notranslate nohighlight">\([-4, 7]\)</span>.</p></li>
+<li><p>For <span class="math notranslate nohighlight">\(f(x) = x^3 + \frac{3}{2}x^2 + 18x\)</span>, find all intervals where <span class="math notranslate nohighlight">\(f\)</span> is concave up and all intervals where <span class="math notranslate nohighlight">\(f\)</span> is concave down.</p></li>
+</ol>
+</div>
+<div class="section" id="optimization-and-extremum-fermat-s-theorem">
+<h2>Optimization and Extremum: Fermat’s Theorem<a class="headerlink" href="#optimization-and-extremum-fermat-s-theorem" title="Permalink to this headline">¶</a></h2>
+<p><img alt="" src="https://upload.wikimedia.org/wikipedia/commons/f/f3/Pierre_de_Fermat.jpg" /></p>
+<p>One way to state Fermat’s theorem is that, if a function has a local extremum at some point and is differentiable there, then the function’s derivative at that point must be zero. In precise mathematical language:</p>
+<p>Let <span class="math notranslate nohighlight">\({\displaystyle f\colon (a,b)\rightarrow \mathbb {R} }f\colon (a,b) \rightarrow \mathbb{R}\)</span> be a function and suppose that <span class="math notranslate nohighlight">\({\displaystyle x_{0}\in (a,b)}{\displaystyle x_{0}\in (a,b)}\)</span> is a point where <span class="math notranslate nohighlight">\({\displaystyle f}\)</span> has a local extremum. If <span class="math notranslate nohighlight">\(f\)</span> is differentiable at <span class="math notranslate nohighlight">\(\displaystyle x_{0}\)</span>, then <span class="math notranslate nohighlight">\(f'(x_{0})=0\)</span>.</p>
+<div class="section" id="critical-points">
+<h3>Critical Points<a class="headerlink" href="#critical-points" title="Permalink to this headline">¶</a></h3>
+<div class = "alert-info">
+    <p style="color:white"><strong>DEFINITION</strong></p>
+    <p>When dealing with functions of a real variable, a <strong style="color:white">critical point</strong> is a point in the domain of the function where the function is either not differentiable or the derivative is equal to zero.</p>
+</div><ol class="simple">
+<li><p>Use the function <span class="math notranslate nohighlight">\(f'(x) = 3x^2 - 6x - 9\)</span> to determine critical points of <span class="math notranslate nohighlight">\(f\)</span>.</p></li>
+<li><p>For <span class="math notranslate nohighlight">\(f(x) = x^3 + \frac{3}{2}x^2 + 18x\)</span>, find all critical points.</p></li>
+</ol>
+</div>
+<div class="section" id="first-derivative-to-determine-maximum-or-minimum">
+<h3>First Derivative to determine Maximum or Minimum<a class="headerlink" href="#first-derivative-to-determine-maximum-or-minimum" title="Permalink to this headline">¶</a></h3>
+<ol class="simple">
+<li><p>Find all critical points of <span class="math notranslate nohighlight">\(f\)</span>.</p></li>
+<li><p>Analyze the sign of <span class="math notranslate nohighlight">\(f'\)</span> on intervals determined by the critical points.</p></li>
+<li><p>If <span class="math notranslate nohighlight">\(f'\)</span> goes from + to -, we have a maximum, from - to + we have a minimum, if the sign does not change we have neither.</p></li>
+</ol>
+<p>Use our critical points from above to analyze the nature of the critical points.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">IFrame</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">IFrame</span><span class="p">(</span><span class="n">src</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">width</span> <span class="o">=</span> <span class="mi">300</span><span class="p">,</span> <span class="n">height</span> <span class="o">=</span> <span class="mi">400</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+<iframe
+    width="300"
+    height="400"
+    src=""
+    frameborder="0"
+    allowfullscreen
+></iframe>
+</div></div>
+</div>
+<p><strong>PROBLEM</strong></p>
+<p>Use the first derivative test to find the location of all local extrema for:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(f(x) = 5x^{1/3} - x^{5/3}\)</span>.</p></li>
+<li><p><span class="math notranslate nohighlight">\(g(x) = \sqrt[3]{x-1}\)</span></p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sympy.functions.elementary.miscellaneous</span> <span class="kn">import</span> <span class="n">cbrt</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">x</span><span class="p">):</span> <span class="k">return</span> <span class="mi">5</span><span class="o">*</span><span class="n">cbrt</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">-</span> <span class="n">cbrt</span><span class="p">(</span><span class="n">x</span><span class="o">**</span><span class="mi">5</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">sy</span><span class="o">.</span><span class="n">Symbol</span><span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sy</span><span class="o">.</span><span class="n">diff</span><span class="p">(</span><span class="n">f</span><span class="p">(</span><span class="n">x</span><span class="p">),</span> <span class="n">x</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle - \frac{5 \sqrt[3]{x^{5}}}{3 x} + \frac{5}{3 x^{\frac{2}{3}}}\]</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">equation</span> <span class="o">=</span> <span class="n">sy</span><span class="o">.</span><span class="n">Eq</span><span class="p">(</span><span class="n">sy</span><span class="o">.</span><span class="n">diff</span><span class="p">(</span><span class="n">f</span><span class="p">(</span><span class="n">x</span><span class="p">),</span> <span class="n">x</span><span class="p">),</span> <span class="mi">0</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sy</span><span class="o">.</span><span class="n">solve</span><span class="p">(</span><span class="n">equation</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[-1, 1, -I, I]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">g</span><span class="p">(</span><span class="n">x</span><span class="p">):</span> <span class="k">return</span> <span class="n">cbrt</span><span class="p">(</span><span class="n">x</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sy</span><span class="o">.</span><span class="n">diff</span><span class="p">(</span><span class="n">g</span><span class="p">(</span><span class="n">x</span><span class="p">),</span> <span class="n">x</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle \frac{1}{3 \left(x - 1\right)^{\frac{2}{3}}}\]</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">equation</span> <span class="o">=</span> <span class="n">sy</span><span class="o">.</span><span class="n">diff</span><span class="p">(</span><span class="n">g</span><span class="p">(</span><span class="n">x</span><span class="p">),</span> <span class="n">x</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sy</span><span class="o">.</span><span class="n">solve</span><span class="p">(</span><span class="n">equation</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[]
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="second-derivative-test">
+<h3>Second Derivative Test<a class="headerlink" href="#second-derivative-test" title="Permalink to this headline">¶</a></h3>
+<p>Suppose that we have a critical point <span class="math notranslate nohighlight">\(x = c\)</span>. If:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(f''(c) &gt; 0\)</span>, then <span class="math notranslate nohighlight">\(f\)</span> has a local minimum at <span class="math notranslate nohighlight">\(c\)</span>.</p></li>
+<li><p><span class="math notranslate nohighlight">\(f''(c) &lt; 0\)</span>, then <span class="math notranslate nohighlight">\(f\)</span> has a local maximum at <span class="math notranslate nohighlight">\(c\)</span>.</p></li>
+<li><p><span class="math notranslate nohighlight">\(f''(c) = 0\)</span>, then the test is inconclusive.</p></li>
+</ul>
+<p><strong>EXAMPLE</strong></p>
+<p>Use the second derivative to find the location of all local extrema for <span class="math notranslate nohighlight">\(f(x) = x^5 - 5x^3\)</span>.</p>
+<p><strong>PROBLEM</strong></p>
+<p>AP Calculus Free-Response Question 2017 Problem 5.</p>
+<p><img alt="" src="../_images/ap_frq_2017_5.png" /></p>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./differentiation"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="intro_to_derivatives.html" title="previous page">Introduction to Derivatives</a>
+    <a class='right-next' id="next-link" href="newtons_method.html" title="next page">Newton’s Method</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By The Jupyter Book community<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="../_static/js/index.3da636dd464baa7582d2.js"></script>
+
+
+    
+  </body>
+</html>

@@ -137,4 +137,6 @@ integration/gini_extra
 :caption: Differentiation
 
 differentiation/intro_to_derivatives
+differentiation/optimization_I
+differentiation/newtons_method
 ```

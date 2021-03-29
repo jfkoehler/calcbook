@@ -1,2 +1,5 @@
 title: "Calculus: Finite and Infinite"
 logo: images/lion.jpg
+
+launch_buttons:
+  colab_url: "https://colab.research.google.com"

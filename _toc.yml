@@ -18,5 +18,7 @@
 - part: Differentiation
   chapters:
   - file: differentiation/intro_to_derivatives
+  - file: differentiation/optimization_I
+  - file: differentiation/newtons_method
 
 
