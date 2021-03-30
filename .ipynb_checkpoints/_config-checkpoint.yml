@@ -1,5 +1,9 @@
 title: "Calculus: Finite and Infinite"
 logo: images/lion.jpg
 
+# Information about where the book exists on the web
+repository:
+  url                       : https://github.com/jfkoehler/calcbook  
+  
 launch_buttons:
   colab_url: "https://colab.research.google.com"
