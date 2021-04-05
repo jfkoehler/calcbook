@@ -138,5 +138,6 @@ integration/gini_extra
 
 differentiation/intro_to_derivatives
 differentiation/optimization_I
+differentiation/applied_optimization
 differentiation/newtons_method
 ```

@@ -19,6 +19,7 @@
   chapters:
   - file: differentiation/intro_to_derivatives
   - file: differentiation/optimization_I
+  - file: differentiation/applied_optimization
   - file: differentiation/newtons_method
 
 
