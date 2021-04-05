@@ -182,6 +182,11 @@
   </a>
  </li>
  <li class="toctree-l1">
+  <a class="reference internal" href="../differentiation/applied_optimization.html">
+   Applied Optimization
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="../differentiation/newtons_method.html">
    Newton’s Method
   </a>
@@ -516,7 +521,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7fec616d8970&gt;]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7f80581c7c40&gt;]
 </pre></div>
 </div>
 <img alt="../_images/gini_extra_18_1.png" src="../_images/gini_extra_18_1.png" />
@@ -588,93 +593,59 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_html"><div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">-------------------------------------------------------</span>
+<span class="ne">ValueError</span><span class="g g-Whitespace">            </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">22</span><span class="o">-</span><span class="mi">1</span><span class="n">be6560d3ba1</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1">#</span>
+<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_html</span><span class="p">(</span><span class="n">url</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span><span class="c1">#gives me the first table from the page</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
+<span class="nn">~/opt/anaconda3/envs/for_ds/lib/python3.8/site-packages/pandas/util/_decorators.py</span> in <span class="ni">wrapper</span><span class="nt">(*args, **kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">294</span>                 <span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">295</span>                 <span class="n">warnings</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="n">msg</span><span class="p">,</span> <span class="ne">FutureWarning</span><span class="p">,</span> <span class="n">stacklevel</span><span class="o">=</span><span class="n">stacklevel</span><span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">296</span>             <span class="k">return</span> <span class="n">func</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">297</span> 
+<span class="g g-Whitespace">    </span><span class="mi">298</span>         <span class="k">return</span> <span class="n">wrapper</span>
 
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>rank</th>
-      <th>Name</th>
-      <th>Team</th>
-      <th>POS</th>
-      <th>Salary</th>
-      <th>Years</th>
-      <th>Total Value</th>
-      <th>Avg Annual</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>--</td>
-      <td>Max Scherzer</td>
-      <td>WSH</td>
-      <td>SP</td>
-      <td>$42,142,857</td>
-      <td>7 (2015-21)</td>
-      <td>$210,000,000</td>
-      <td>$30,000,000</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>--</td>
-      <td>Stephen Strasburg</td>
-      <td>WSH</td>
-      <td>SP</td>
-      <td>$36,428,571</td>
-      <td>7 (2017-23)</td>
-      <td>$175,000,000</td>
-      <td>$25,000,000</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>--</td>
-      <td>Mike Trout</td>
-      <td>LAA</td>
-      <td>CF</td>
-      <td>$34,083,333</td>
-      <td>6 (2015-20)</td>
-      <td>$144,500,000</td>
-      <td>$24,083,333</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>--</td>
-      <td>Zack Greinke</td>
-      <td>ARI</td>
-      <td>SP</td>
-      <td>$32,421,884</td>
-      <td>6 (2016-21)</td>
-      <td>$206,500,000</td>
-      <td>$34,416,667</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>--</td>
-      <td>David Price</td>
-      <td>BOS</td>
-      <td>SP</td>
-      <td>$31,000,000</td>
-      <td>7 (2016-22)</td>
-      <td>$217,000,000</td>
-      <td>$31,000,000</td>
-    </tr>
-  </tbody>
-</table>
-</div></div></div>
+<span class="nn">~/opt/anaconda3/envs/for_ds/lib/python3.8/site-packages/pandas/io/html.py</span> in <span class="ni">read_html</span><span class="nt">(io, match, flavor, header, index_col, skiprows, attrs, parse_dates, thousands, encoding, decimal, converters, na_values, keep_default_na, displayed_only)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1084</span>         <span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1085</span>     <span class="n">validate_header_arg</span><span class="p">(</span><span class="n">header</span><span class="p">)</span>
+<span class="ne">-&gt; </span><span class="mi">1086</span>     <span class="k">return</span> <span class="n">_parse</span><span class="p">(</span>
+<span class="g g-Whitespace">   </span><span class="mi">1087</span>         <span class="n">flavor</span><span class="o">=</span><span class="n">flavor</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1088</span>         <span class="n">io</span><span class="o">=</span><span class="n">io</span><span class="p">,</span>
+
+<span class="nn">~/opt/anaconda3/envs/for_ds/lib/python3.8/site-packages/pandas/io/html.py</span> in <span class="ni">_parse</span><span class="nt">(flavor, io, match, attrs, encoding, displayed_only, **kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">915</span>             <span class="k">break</span>
+<span class="g g-Whitespace">    </span><span class="mi">916</span>     <span class="k">else</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">917</span>         <span class="k">raise</span> <span class="n">retained</span>
+<span class="g g-Whitespace">    </span><span class="mi">918</span> 
+<span class="g g-Whitespace">    </span><span class="mi">919</span>     <span class="n">ret</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="nn">~/opt/anaconda3/envs/for_ds/lib/python3.8/site-packages/pandas/io/html.py</span> in <span class="ni">_parse</span><span class="nt">(flavor, io, match, attrs, encoding, displayed_only, **kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">896</span> 
+<span class="g g-Whitespace">    </span><span class="mi">897</span>         <span class="k">try</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">898</span>             <span class="n">tables</span> <span class="o">=</span> <span class="n">p</span><span class="o">.</span><span class="n">parse_tables</span><span class="p">()</span>
+<span class="g g-Whitespace">    </span><span class="mi">899</span>         <span class="k">except</span> <span class="ne">ValueError</span> <span class="k">as</span> <span class="n">caught</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">900</span>             <span class="c1"># if `io` is an io-like object, check if it&#39;s seekable</span>
+
+<span class="nn">~/opt/anaconda3/envs/for_ds/lib/python3.8/site-packages/pandas/io/html.py</span> in <span class="ni">parse_tables</span><span class="nt">(self)</span>
+<span class="g g-Whitespace">    </span><span class="mi">215</span>         <span class="nb">list</span> <span class="n">of</span> <span class="n">parsed</span> <span class="p">(</span><span class="n">header</span><span class="p">,</span> <span class="n">body</span><span class="p">,</span> <span class="n">footer</span><span class="p">)</span> <span class="n">tuples</span> <span class="kn">from</span> <span class="nn">tables.</span>
+<span class="g g-Whitespace">    </span><span class="mi">216</span>         <span class="s2">&quot;&quot;&quot;</span>
+<span class="ne">--&gt; </span><span class="mi">217</span><span class="s2">         tables = self._parse_tables(self._build_doc(), self.match, self.attrs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">218</span><span class="s2">         return (self._parse_thead_tbody_tfoot(table) for table in tables)</span>
+<span class="g g-Whitespace">    </span><span class="mi">219</span><span class="s2"> </span>
+
+<span class="nn">~/opt/anaconda3/envs/for_ds/lib/python3.8/site-packages/pandas/io/html.py</span> in <span class="ni">_parse_tables</span><span class="nt">(self, doc, match, attrs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">545</span><span class="s2"> </span>
+<span class="g g-Whitespace">    </span><span class="mi">546</span><span class="s2">         if not tables:</span>
+<span class="ne">--&gt; </span><span class="mi">547</span><span class="s2">             raise ValueError(&quot;No tables found&quot;)</span>
+<span class="g g-Whitespace">    </span><span class="mi">548</span><span class="s2"> </span>
+<span class="g g-Whitespace">    </span><span class="mi">549</span><span class="s2">         result = []</span>
+
+<span class="ne">ValueError</span>: No tables found
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -689,12 +660,6 @@
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;AxesSubplot:&gt;
-</pre></div>
-</div>
-<img alt="../_images/gini_extra_29_1.png" src="../_images/gini_extra_29_1.png" />
-</div>
 </div>
 <div class="section" id="looking-at-percentiles">
 <h2>Looking at Percentiles<a class="headerlink" href="#looking-at-percentiles" title="Permalink to this headline">¶</a></h2>
@@ -703,22 +668,6 @@
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#sort the data</span>
 <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Salary&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sort_values</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>876      555000.0
-852      555000.0
-851      555000.0
-850      555000.0
-849      555000.0
-          ...    
-4      31000000.0
-3      32421884.0
-2      34083333.0
-1      36428571.0
-0      42142857.0
-Name: Salary, Length: 877, dtype: float64
 </pre></div>
 </div>
 </div>
@@ -733,11 +682,6 @@ Name: Salary, Length: 877, dtype: float64
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">877</span><span class="o">/</span><span class="mi">5</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>175.4
 </pre></div>
 </div>
 </div>
@@ -772,16 +716,6 @@ Name: Salary, Length: 877, dtype: float64
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[0,
- 0.0246974041808471,
- 0.050100914346043655,
- 0.11520477612967696,
- 0.32324618696393237,
- 1.0]
-</pre></div>
-</div>
-</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -790,9 +724,6 @@ Name: Salary, Length: 877, dtype: float64
 <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Wealth Distribution in Baseball Salaries&#39;</span><span class="p">);</span>
 </pre></div>
 </div>
-</div>
-<div class="cell_output docutils container">
-<img alt="../_images/gini_extra_37_0.png" src="../_images/gini_extra_37_0.png" />
 </div>
 </div>
 </div>
@@ -812,23 +743,11 @@ Name: Salary, Length: 877, dtype: float64
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([ 3.73412249e+00, -4.40141273e+00,  1.76900998e+00, -1.02976053e-01,
-        6.28153587e-04])
-</pre></div>
-</div>
-</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#shortcut to evaluate the polynomial</span>
 <span class="n">np</span><span class="o">.</span><span class="n">polyval</span><span class="p">(</span><span class="n">coefs</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([6.28153587e-04, 2.15566362e-02, 5.63824502e-02, 1.08923240e-01,
-       3.26386955e-01, 9.99371846e-01])
 </pre></div>
 </div>
 </div>
@@ -844,18 +763,10 @@ Name: Salary, Length: 877, dtype: float64
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<img alt="../_images/gini_extra_42_0.png" src="../_images/gini_extra_42_0.png" />
-</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">coefs</span><span class="p">,</span> <span class="n">decimals</span> <span class="o">=</span> <span class="mi">3</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([ 3.734e+00, -4.401e+00,  1.769e+00, -1.030e-01,  1.000e-03])
 </pre></div>
 </div>
 </div>
@@ -892,9 +803,6 @@ Name: Salary, Length: 877, dtype: float64
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<img alt="../_images/gini_extra_48_0.png" src="../_images/gini_extra_48_0.png" />
-</div>
 </div>
 </div>
 <div class="section" id="gini-index">
@@ -913,9 +821,6 @@ Name: Salary, Length: 877, dtype: float64
 <span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">();</span>
 </pre></div>
 </div>
-</div>
-<div class="cell_output docutils container">
-<img alt="../_images/gini_extra_50_0.png" src="../_images/gini_extra_50_0.png" />
 </div>
 </div>
 </div>
@@ -942,20 +847,10 @@ Name: Salary, Length: 877, dtype: float64
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.3158333333333334
-</pre></div>
-</div>
-</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">2</span><span class="o">*</span><span class="n">quad</span><span class="p">(</span><span class="n">a1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.6316666666666668
 </pre></div>
 </div>
 </div>
@@ -986,11 +881,6 @@ Name: Salary, Length: 877, dtype: float64
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>WARNING:root:Requests made without an app_token will be subject to strict throttling limits.
-</pre></div>
-</div>
-</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -998,24 +888,10 @@ Name: Salary, Length: 877, dtype: float64
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>count     10000
-unique        2
-top        2020
-freq       8634
-Name: fiscal_year, dtype: object
-</pre></div>
-</div>
-</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">last_year_salaries</span><span class="p">[</span><span class="n">last_year_salaries</span><span class="p">[</span><span class="s1">&#39;fiscal_year&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;2020&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">shape</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(8634, 17)
 </pre></div>
 </div>
 </div>
@@ -1033,34 +909,6 @@ Name: fiscal_year, dtype: object
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
-Int64Index: 8634 entries, 0 to 8633
-Data columns (total 17 columns):
- #   Column                      Non-Null Count  Dtype 
----  ------                      --------------  ----- 
- 0   fiscal_year                 8634 non-null   object
- 1   payroll_number              8634 non-null   object
- 2   agency_name                 8634 non-null   object
- 3   last_name                   8634 non-null   object
- 4   first_name                  8634 non-null   object
- 5   agency_start_date           8634 non-null   object
- 6   work_location_borough       8634 non-null   object
- 7   title_description           8634 non-null   object
- 8   leave_status_as_of_july_31  8634 non-null   object
- 9   base_salary                 8634 non-null   object
- 10  pay_basis                   8634 non-null   object
- 11  regular_hours               8634 non-null   object
- 12  regular_gross_paid          8634 non-null   object
- 13  ot_hours                    8634 non-null   object
- 14  total_ot_paid               8634 non-null   object
- 15  total_other_pay             8634 non-null   object
- 16  mid_init                    5816 non-null   object
-dtypes: object(17)
-memory usage: 1.2+ MB
-</pre></div>
-</div>
-</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1068,88 +916,6 @@ memory usage: 1.2+ MB
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_html"><div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>fiscal_year</th>
-      <th>payroll_number</th>
-      <th>agency_name</th>
-      <th>last_name</th>
-      <th>first_name</th>
-      <th>agency_start_date</th>
-      <th>work_location_borough</th>
-      <th>title_description</th>
-      <th>leave_status_as_of_july_31</th>
-      <th>base_salary</th>
-      <th>pay_basis</th>
-      <th>regular_hours</th>
-      <th>regular_gross_paid</th>
-      <th>ot_hours</th>
-      <th>total_ot_paid</th>
-      <th>total_other_pay</th>
-      <th>mid_init</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>2020</td>
-      <td>67</td>
-      <td>ADMIN FOR CHILDREN'S SVCS</td>
-      <td>MAKHRINSKY</td>
-      <td>IRINA</td>
-      <td>2011-10-03T00:00:00.000</td>
-      <td>MANHATTAN</td>
-      <td>STAFF ANALYST</td>
-      <td>ACTIVE</td>
-      <td>81509.00</td>
-      <td>per Annum</td>
-      <td>1820.00</td>
-      <td>79329.44</td>
-      <td>0.00</td>
-      <td>0.00</td>
-      <td>0.00</td>
-      <td>NaN</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>2020</td>
-      <td>67</td>
-      <td>ADMIN FOR CHILDREN'S SVCS</td>
-      <td>ACEVEDO</td>
-      <td>MIGUELINA</td>
-      <td>2006-02-27T00:00:00.000</td>
-      <td>BRONX</td>
-      <td>CHILD PROTECTIVE SPECIALIST SUPERVISOR</td>
-      <td>ACTIVE</td>
-      <td>86096.00</td>
-      <td>per Annum</td>
-      <td>1820.00</td>
-      <td>89599.83</td>
-      <td>142.25</td>
-      <td>9830.52</td>
-      <td>4501.92</td>
-      <td>P</td>
-    </tr>
-  </tbody>
-</table>
-</div></div></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1163,9 +929,6 @@ memory usage: 1.2+ MB
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">last_year_salaries</span><span class="p">[</span><span class="s1">&#39;base_salary&#39;</span><span class="p">],</span> <span class="n">bins</span> <span class="o">=</span> <span class="mi">30</span><span class="p">,</span> <span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.4</span><span class="p">,</span> <span class="n">edgecolor</span> <span class="o">=</span> <span class="s1">&#39;black&#39;</span><span class="p">);</span>
 </pre></div>
 </div>
-</div>
-<div class="cell_output docutils container">
-<img alt="../_images/gini_extra_65_0.png" src="../_images/gini_extra_65_0.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -1245,7 +1008,7 @@ memory usage: 2.6+ MB
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;AxesSubplot:&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.axes._subplots.AxesSubplot at 0x7ff0078bc850&gt;
 </pre></div>
 </div>
 <img alt="../_images/gini_extra_71_1.png" src="../_images/gini_extra_71_1.png" />
@@ -1470,7 +1233,7 @@ Name: base_salary, dtype: float64
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7fec6169fd90&gt;]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7ff007659ed0&gt;]
 </pre></div>
 </div>
 <img alt="../_images/gini_extra_91_1.png" src="../_images/gini_extra_91_1.png" />
@@ -1505,7 +1268,7 @@ Name: base_salary, dtype: float64
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7fec624cba00&gt;]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7ff0075ff6d0&gt;]
 </pre></div>
 </div>
 <img alt="../_images/gini_extra_94_1.png" src="../_images/gini_extra_94_1.png" />
@@ -1635,7 +1398,7 @@ Name: base_salary, dtype: float64
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7fec40a62910&gt;]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7ff00f0ecd50&gt;]
 </pre></div>
 </div>
 <img alt="../_images/gini_extra_104_1.png" src="../_images/gini_extra_104_1.png" />
