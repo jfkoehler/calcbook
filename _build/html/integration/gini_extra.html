@@ -4,7 +4,7 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Area Between Curves and Application to Equality &#8212; Calculus: Finite and Infinite</title>
     
   <link rel="stylesheet" href="../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
@@ -25,8 +25,8 @@
     href="../_static/vendor/lato_latin-ext/1.44.1/index.css">
 
     
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
@@ -40,6 +40,7 @@
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
     <script src="../_static/togglebutton.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
@@ -92,7 +93,7 @@
     <ul class="nav sidenav_l1">
  <li class="toctree-l1">
   <a class="reference internal" href="../syllabus.html">
-   Calculus: Spring 2021 Version
+   Calculus: Fall 2022 Version
   </a>
  </li>
 </ul>
@@ -372,6 +373,12 @@
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/opt/anaconda3/lib/python3.8/site-packages/scipy/__init__.py:146: UserWarning: A NumPy version &gt;=1.16.5 and &lt;1.23.0 is required for this version of SciPy (detected version 1.23.2
+  warnings.warn(f&quot;A NumPy version &gt;={np_minversion} and &lt;{np_maxversion}&quot;
+</pre></div>
+</div>
+</div>
 </div>
 <div class="math notranslate nohighlight">
 \[f(x) = \sqrt(x) \quad g(x) = x^2\]</div>
@@ -521,7 +528,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7f80581c7c40&gt;]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7fa04be8b940&gt;]
 </pre></div>
 </div>
 <img alt="../_images/gini_extra_18_1.png" src="../_images/gini_extra_18_1.png" />
@@ -593,54 +600,54 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">-------------------------------------------------------</span>
-<span class="ne">ValueError</span><span class="g g-Whitespace">            </span>Traceback (most recent call last)
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ValueError</span><span class="g g-Whitespace">                                </span>Traceback (most recent call last)
 <span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">22</span><span class="o">-</span><span class="mi">1</span><span class="n">be6560d3ba1</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1">#</span>
 <span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_html</span><span class="p">(</span><span class="n">url</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span><span class="c1">#gives me the first table from the page</span>
 <span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 
-<span class="nn">~/opt/anaconda3/envs/for_ds/lib/python3.8/site-packages/pandas/util/_decorators.py</span> in <span class="ni">wrapper</span><span class="nt">(*args, **kwargs)</span>
-<span class="g g-Whitespace">    </span><span class="mi">294</span>                 <span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">295</span>                 <span class="n">warnings</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="n">msg</span><span class="p">,</span> <span class="ne">FutureWarning</span><span class="p">,</span> <span class="n">stacklevel</span><span class="o">=</span><span class="n">stacklevel</span><span class="p">)</span>
-<span class="ne">--&gt; </span><span class="mi">296</span>             <span class="k">return</span> <span class="n">func</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">297</span> 
-<span class="g g-Whitespace">    </span><span class="mi">298</span>         <span class="k">return</span> <span class="n">wrapper</span>
+<span class="nn">/opt/anaconda3/lib/python3.8/site-packages/pandas/util/_decorators.py</span> in <span class="ni">wrapper</span><span class="nt">(*args, **kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">309</span>                     <span class="n">stacklevel</span><span class="o">=</span><span class="n">stacklevel</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">310</span>                 <span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">311</span>             <span class="k">return</span> <span class="n">func</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">312</span> 
+<span class="g g-Whitespace">    </span><span class="mi">313</span>         <span class="k">return</span> <span class="n">wrapper</span>
 
-<span class="nn">~/opt/anaconda3/envs/for_ds/lib/python3.8/site-packages/pandas/io/html.py</span> in <span class="ni">read_html</span><span class="nt">(io, match, flavor, header, index_col, skiprows, attrs, parse_dates, thousands, encoding, decimal, converters, na_values, keep_default_na, displayed_only)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1084</span>         <span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1085</span>     <span class="n">validate_header_arg</span><span class="p">(</span><span class="n">header</span><span class="p">)</span>
-<span class="ne">-&gt; </span><span class="mi">1086</span>     <span class="k">return</span> <span class="n">_parse</span><span class="p">(</span>
-<span class="g g-Whitespace">   </span><span class="mi">1087</span>         <span class="n">flavor</span><span class="o">=</span><span class="n">flavor</span><span class="p">,</span>
-<span class="g g-Whitespace">   </span><span class="mi">1088</span>         <span class="n">io</span><span class="o">=</span><span class="n">io</span><span class="p">,</span>
+<span class="nn">/opt/anaconda3/lib/python3.8/site-packages/pandas/io/html.py</span> in <span class="ni">read_html</span><span class="nt">(io, match, flavor, header, index_col, skiprows, attrs, parse_dates, thousands, encoding, decimal, converters, na_values, keep_default_na, displayed_only)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1111</span>     <span class="n">io</span> <span class="o">=</span> <span class="n">stringify_path</span><span class="p">(</span><span class="n">io</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1112</span> 
+<span class="ne">-&gt; </span><span class="mi">1113</span>     <span class="k">return</span> <span class="n">_parse</span><span class="p">(</span>
+<span class="g g-Whitespace">   </span><span class="mi">1114</span>         <span class="n">flavor</span><span class="o">=</span><span class="n">flavor</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1115</span>         <span class="n">io</span><span class="o">=</span><span class="n">io</span><span class="p">,</span>
 
-<span class="nn">~/opt/anaconda3/envs/for_ds/lib/python3.8/site-packages/pandas/io/html.py</span> in <span class="ni">_parse</span><span class="nt">(flavor, io, match, attrs, encoding, displayed_only, **kwargs)</span>
-<span class="g g-Whitespace">    </span><span class="mi">915</span>             <span class="k">break</span>
-<span class="g g-Whitespace">    </span><span class="mi">916</span>     <span class="k">else</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">917</span>         <span class="k">raise</span> <span class="n">retained</span>
-<span class="g g-Whitespace">    </span><span class="mi">918</span> 
-<span class="g g-Whitespace">    </span><span class="mi">919</span>     <span class="n">ret</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="nn">/opt/anaconda3/lib/python3.8/site-packages/pandas/io/html.py</span> in <span class="ni">_parse</span><span class="nt">(flavor, io, match, attrs, encoding, displayed_only, **kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">937</span>     <span class="k">else</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">938</span>         <span class="k">assert</span> <span class="n">retained</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span>  <span class="c1"># for mypy</span>
+<span class="ne">--&gt; </span><span class="mi">939</span>         <span class="k">raise</span> <span class="n">retained</span>
+<span class="g g-Whitespace">    </span><span class="mi">940</span> 
+<span class="g g-Whitespace">    </span><span class="mi">941</span>     <span class="n">ret</span> <span class="o">=</span> <span class="p">[]</span>
 
-<span class="nn">~/opt/anaconda3/envs/for_ds/lib/python3.8/site-packages/pandas/io/html.py</span> in <span class="ni">_parse</span><span class="nt">(flavor, io, match, attrs, encoding, displayed_only, **kwargs)</span>
-<span class="g g-Whitespace">    </span><span class="mi">896</span> 
-<span class="g g-Whitespace">    </span><span class="mi">897</span>         <span class="k">try</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">898</span>             <span class="n">tables</span> <span class="o">=</span> <span class="n">p</span><span class="o">.</span><span class="n">parse_tables</span><span class="p">()</span>
-<span class="g g-Whitespace">    </span><span class="mi">899</span>         <span class="k">except</span> <span class="ne">ValueError</span> <span class="k">as</span> <span class="n">caught</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">900</span>             <span class="c1"># if `io` is an io-like object, check if it&#39;s seekable</span>
+<span class="nn">/opt/anaconda3/lib/python3.8/site-packages/pandas/io/html.py</span> in <span class="ni">_parse</span><span class="nt">(flavor, io, match, attrs, encoding, displayed_only, **kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">917</span> 
+<span class="g g-Whitespace">    </span><span class="mi">918</span>         <span class="k">try</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">919</span>             <span class="n">tables</span> <span class="o">=</span> <span class="n">p</span><span class="o">.</span><span class="n">parse_tables</span><span class="p">()</span>
+<span class="g g-Whitespace">    </span><span class="mi">920</span>         <span class="k">except</span> <span class="ne">ValueError</span> <span class="k">as</span> <span class="n">caught</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">921</span>             <span class="c1"># if `io` is an io-like object, check if it&#39;s seekable</span>
 
-<span class="nn">~/opt/anaconda3/envs/for_ds/lib/python3.8/site-packages/pandas/io/html.py</span> in <span class="ni">parse_tables</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">    </span><span class="mi">215</span>         <span class="nb">list</span> <span class="n">of</span> <span class="n">parsed</span> <span class="p">(</span><span class="n">header</span><span class="p">,</span> <span class="n">body</span><span class="p">,</span> <span class="n">footer</span><span class="p">)</span> <span class="n">tuples</span> <span class="kn">from</span> <span class="nn">tables.</span>
-<span class="g g-Whitespace">    </span><span class="mi">216</span>         <span class="s2">&quot;&quot;&quot;</span>
-<span class="ne">--&gt; </span><span class="mi">217</span><span class="s2">         tables = self._parse_tables(self._build_doc(), self.match, self.attrs)</span>
-<span class="g g-Whitespace">    </span><span class="mi">218</span><span class="s2">         return (self._parse_thead_tbody_tfoot(table) for table in tables)</span>
-<span class="g g-Whitespace">    </span><span class="mi">219</span><span class="s2"> </span>
+<span class="nn">/opt/anaconda3/lib/python3.8/site-packages/pandas/io/html.py</span> in <span class="ni">parse_tables</span><span class="nt">(self)</span>
+<span class="g g-Whitespace">    </span><span class="mi">237</span>         <span class="nb">list</span> <span class="n">of</span> <span class="n">parsed</span> <span class="p">(</span><span class="n">header</span><span class="p">,</span> <span class="n">body</span><span class="p">,</span> <span class="n">footer</span><span class="p">)</span> <span class="n">tuples</span> <span class="kn">from</span> <span class="nn">tables.</span>
+<span class="g g-Whitespace">    </span><span class="mi">238</span>         <span class="s2">&quot;&quot;&quot;</span>
+<span class="ne">--&gt; </span><span class="mi">239</span><span class="s2">         tables = self._parse_tables(self._build_doc(), self.match, self.attrs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">240</span><span class="s2">         return (self._parse_thead_tbody_tfoot(table) for table in tables)</span>
+<span class="g g-Whitespace">    </span><span class="mi">241</span><span class="s2"> </span>
 
-<span class="nn">~/opt/anaconda3/envs/for_ds/lib/python3.8/site-packages/pandas/io/html.py</span> in <span class="ni">_parse_tables</span><span class="nt">(self, doc, match, attrs)</span>
-<span class="g g-Whitespace">    </span><span class="mi">545</span><span class="s2"> </span>
-<span class="g g-Whitespace">    </span><span class="mi">546</span><span class="s2">         if not tables:</span>
-<span class="ne">--&gt; </span><span class="mi">547</span><span class="s2">             raise ValueError(&quot;No tables found&quot;)</span>
-<span class="g g-Whitespace">    </span><span class="mi">548</span><span class="s2"> </span>
-<span class="g g-Whitespace">    </span><span class="mi">549</span><span class="s2">         result = []</span>
+<span class="nn">/opt/anaconda3/lib/python3.8/site-packages/pandas/io/html.py</span> in <span class="ni">_parse_tables</span><span class="nt">(self, doc, match, attrs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">567</span><span class="s2"> </span>
+<span class="g g-Whitespace">    </span><span class="mi">568</span><span class="s2">         if not tables:</span>
+<span class="ne">--&gt; </span><span class="mi">569</span><span class="s2">             raise ValueError(&quot;No tables found&quot;)</span>
+<span class="g g-Whitespace">    </span><span class="mi">570</span><span class="s2"> </span>
+<span class="g g-Whitespace">    </span><span class="mi">571</span><span class="s2">         result = []</span>
 
 <span class="ne">ValueError</span>: No tables found
 </pre></div>
