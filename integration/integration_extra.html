@@ -1,9 +1,10 @@
 
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Integration: Extra Examples &#8212; Calculus: Finite and Infinite</title>
     
   <link rel="stylesheet" href="../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
@@ -35,27 +36,27 @@
     
   <link rel="preload" as="script" href="../_static/js/index.3da636dd464baa7582d2.js">
 
-    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-    <script type="text/javascript" src="../_static/jquery.js"></script>
-    <script type="text/javascript" src="../_static/underscore.js"></script>
-    <script type="text/javascript" src="../_static/doctools.js"></script>
-    <script type="text/javascript" src="../_static/language_data.js"></script>
-    <script type="text/javascript" src="../_static/togglebutton.js"></script>
-    <script type="text/javascript" src="../_static/clipboard.min.js"></script>
-    <script type="text/javascript" src="../_static/copybutton.js"></script>
-    <script type="text/javascript">var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script type="text/javascript" src="../_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
-    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-    <script type="text/javascript" src="https://unpkg.com/@jupyter-widgets/html-manager@^0.18.0/dist/embed-amd.js"></script>
-    <script async="async" type="text/javascript" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
-    <script type="text/javascript">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.18.0/dist/embed-amd.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
         const thebe_selector = ".thebe"
         const thebe_selector_input = "pre"
         const thebe_selector_output = ".output"
     </script>
-    <script async="async" type="text/javascript" src="../_static/sphinx-thebe.js"></script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
 
@@ -90,7 +91,7 @@
     <ul class="nav sidenav_l1">
  <li class="toctree-l1">
   <a class="reference internal" href="../syllabus.html">
-   Calculus: Spring 2022 Version
+   Calculus: Fall 2022 Version
   </a>
  </li>
 </ul>
@@ -336,7 +337,7 @@
 <h2>Riemann Sums<a class="headerlink" href="#riemann-sums" title="Permalink to this headline">¶</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="k">import</span> <span class="n">IFrame</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">IFrame</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
@@ -884,7 +885,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.collections.PolyCollection at 0x7fa8382c5d90&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.collections.PolyCollection at 0x7fc71e8c9a60&gt;
 </pre></div>
 </div>
 <img alt="../_images/integration_extra_40_1.png" src="../_images/integration_extra_40_1.png" />
@@ -899,7 +900,7 @@
     <span class="n">ax</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">random_x</span><span class="p">,</span> <span class="n">f</span><span class="p">(</span><span class="n">random_x</span><span class="p">),</span> <span class="s1">&#39;o&#39;</span><span class="p">)</span>
     <span class="n">ax</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="n">f</span><span class="p">(</span><span class="n">random_x</span><span class="p">))</span>
     <span class="n">ax</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">fill_between</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">f</span><span class="p">(</span><span class="n">random_x</span><span class="p">),</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;gray&#39;</span><span class="p">,</span> <span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.2</span><span class="p">)</span>
-    <span class="n">ax</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;Approximation </span><span class="si">{i}</span><span class="se">\n</span><span class="s1">Area {f(random_x):.3f}&#39;</span><span class="p">)</span>
+    <span class="n">ax</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Approximation </span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="se">\n</span><span class="s1">Area </span><span class="si">{</span><span class="n">f</span><span class="p">(</span><span class="n">random_x</span><span class="p">)</span><span class="si">:</span><span class="s1">.3f</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -919,7 +920,7 @@
         <span class="n">ax</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">random_x</span><span class="p">,</span> <span class="n">f</span><span class="p">(</span><span class="n">random_x</span><span class="p">),</span> <span class="s1">&#39;o&#39;</span><span class="p">)</span>
         <span class="n">ax</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">]</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="n">f</span><span class="p">(</span><span class="n">random_x</span><span class="p">))</span>
         <span class="n">ax</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">]</span><span class="o">.</span><span class="n">fill_between</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">f</span><span class="p">(</span><span class="n">random_x</span><span class="p">),</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;gray&#39;</span><span class="p">,</span> <span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.2</span><span class="p">)</span>
-        <span class="n">ax</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;Area {f(random_x):.3f}&#39;</span><span class="p">)</span>
+        <span class="n">ax</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Area </span><span class="si">{</span><span class="n">f</span><span class="p">(</span><span class="n">random_x</span><span class="p">)</span><span class="si">:</span><span class="s1">.3f</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
 <span class="n">fig</span><span class="o">.</span><span class="n">suptitle</span><span class="p">(</span><span class="s1">&#39;More Approximations with Monte Carlo&#39;</span><span class="p">);</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">();</span>
 </pre></div>
@@ -936,26 +937,26 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([0.56456456, 0.11611612, 0.09109109, 0.34834835, 0.68268268,
-       0.34134134, 0.33633634, 0.23423423, 0.47047047, 0.65465465,
-       0.32232232, 0.10510511, 0.76176176, 0.04204204, 0.36236236,
-       0.5045045 , 0.1991992 , 0.84284284, 0.56656657, 0.51151151,
-       0.94494494, 0.4994995 , 0.46046046, 0.07407407, 0.995996  ,
-       0.63163163, 0.93293293, 0.88988989, 0.13113113, 0.44044044,
-       0.69469469, 0.61261261, 0.16916917, 0.57857858, 0.67567568,
-       0.87287287, 0.28828829, 0.15915916, 0.96796797, 0.7957958 ,
-       0.45545546, 0.43443443, 0.7017017 , 0.46446446, 0.69369369,
-       0.62962963, 0.73273273, 0.001001  , 0.98798799, 0.03403403,
-       0.7987988 , 0.96096096, 0.18418418, 0.15715716, 0.81881882,
-       0.18518519, 0.18318318, 0.54454454, 0.36936937, 0.96596597,
-       0.99399399, 0.22422422, 0.78378378, 0.77277277, 0.84284284,
-       0.28828829, 0.5045045 , 0.21221221, 0.997998  , 0.56056056,
-       0.61661662, 0.53353353, 0.53653654, 0.82182182, 0.70770771,
-       0.6966967 , 0.11011011, 0.62862863, 0.61561562, 0.67267267,
-       0.74774775, 0.38138138, 0.41041041, 0.21621622, 0.76876877,
-       0.27727728, 0.03103103, 0.33633634, 0.96096096, 0.43243243,
-       0.46346346, 0.60560561, 0.36136136, 0.44444444, 0.1951952 ,
-       0.43743744, 0.54254254, 0.30930931, 0.60960961, 0.96496496])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([0.48048048, 0.45245245, 0.32132132, 0.04604605, 0.1991992 ,
+       0.83583584, 0.28428428, 0.42642643, 0.86786787, 0.73873874,
+       0.54654655, 0.01101101, 0.82482482, 0.67367367, 0.        ,
+       0.81681682, 0.81081081, 0.37137137, 0.71171171, 0.85885886,
+       0.4004004 , 0.92392392, 0.9039039 , 0.42842843, 0.36536537,
+       0.74674675, 0.63263263, 0.00700701, 0.40540541, 0.66766767,
+       0.02302302, 0.95695696, 0.22322322, 0.18818819, 0.75675676,
+       0.72572573, 0.8008008 , 0.43343343, 0.0950951 , 0.4034034 ,
+       0.67567568, 0.37037037, 0.46446446, 0.47447447, 0.38938939,
+       0.52552553, 0.95995996, 0.81281281, 0.22522523, 0.8028028 ,
+       0.79079079, 0.21321321, 0.51551552, 0.50850851, 0.15815816,
+       0.71971972, 0.41741742, 0.43043043, 0.14114114, 0.88888889,
+       0.68068068, 0.92692693, 0.96796797, 0.41341341, 0.45845846,
+       0.78378378, 0.84984985, 0.98598599, 0.62362362, 0.02802803,
+       0.33933934, 0.33033033, 0.41741742, 0.92892893, 0.66966967,
+       0.88788789, 0.81081081, 0.27427427, 0.78078078, 0.35235235,
+       0.48648649, 0.04404404, 0.7037037 , 0.73673674, 0.53753754,
+       0.76176176, 0.56856857, 0.07107107, 0.27727728, 0.9039039 ,
+       0.42242242, 0.65665666, 0.92692693, 0.73973974, 0.28328328,
+       0.64964965, 0.93993994, 0.23723724, 0.98298298, 0.39039039])
 </pre></div>
 </div>
 </div>
@@ -967,7 +968,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.2650227805382961
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.3386016146276406
 </pre></div>
 </div>
 </div>
@@ -1030,8 +1031,8 @@
       <td>0.1145833333</td>
       <td>0.3437500000</td>
       <td>0.0104166667</td>
-      <td>0.4343349856</td>
-      <td>0.1010016523</td>
+      <td>0.3668282898</td>
+      <td>0.0334949564</td>
     </tr>
     <tr>
       <th>1</th>
@@ -1040,8 +1041,8 @@
       <td>0.0123958333</td>
       <td>0.3334375000</td>
       <td>0.0001041667</td>
-      <td>0.3447976756</td>
-      <td>0.0114643422</td>
+      <td>0.2739936633</td>
+      <td>0.0593396700</td>
     </tr>
     <tr>
       <th>2</th>
@@ -1050,8 +1051,8 @@
       <td>0.0012489583</td>
       <td>0.3333343750</td>
       <td>0.0000010417</td>
-      <td>0.3026382263</td>
-      <td>0.0306951070</td>
+      <td>0.3263190117</td>
+      <td>0.0070143216</td>
     </tr>
     <tr>
       <th>3</th>
@@ -1060,8 +1061,8 @@
       <td>0.0001249896</td>
       <td>0.3333333438</td>
       <td>0.0000000104</td>
-      <td>0.3267879008</td>
-      <td>0.0065454326</td>
+      <td>0.3316146026</td>
+      <td>0.0017187307</td>
     </tr>
     <tr>
       <th>4</th>
@@ -1070,8 +1071,8 @@
       <td>0.0000124999</td>
       <td>0.3333333334</td>
       <td>0.0000000001</td>
-      <td>0.3318433499</td>
-      <td>0.0014899835</td>
+      <td>0.3321295339</td>
+      <td>0.0012037994</td>
     </tr>
     <tr>
       <th>5</th>
@@ -1080,8 +1081,8 @@
       <td>0.0000012500</td>
       <td>0.3333333333</td>
       <td>0.0000000000</td>
-      <td>0.3333443953</td>
-      <td>0.0000110620</td>
+      <td>0.3335588746</td>
+      <td>0.0002255413</td>
     </tr>
   </tbody>
 </table>
