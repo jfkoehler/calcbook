@@ -5,7 +5,11 @@
  * This script contains the language-specific data used by searchtools.js,
  * namely the list of stopwords, stemmer, scorer and splitter.
  *
+<<<<<<< HEAD
  * :copyright: Copyright 2007-2020 by the Sphinx team, see AUTHORS.
+=======
+ * :copyright: Copyright 2007-2019 by the Sphinx team, see AUTHORS.
+>>>>>>> d1a3331c4bb70eb63f6c667c0eee992efd40248b
  * :license: BSD, see LICENSE for details.
  *
  */
