@@ -1,7 +1,11 @@
 #!/usr/bin/env python
 # coding: utf-8
 
+<<<<<<< HEAD
 # # Calculus: Fall 2022 Version
+=======
+# # Calculus: Spring 2022 Version
+>>>>>>> d1a3331c4bb70eb63f6c667c0eee992efd40248b
 # 
 # This class is taught at The New School in Eugene Lange College.  I exist within the Department of Natural Sciences and Mathematics, though this course is not aligned with any explicit major.  I do not expect that you have had much experience with mathematics or computers, but that with a semester worth of hard work you can, and must learn.  
 # 
@@ -13,7 +17,10 @@
 # 
 # - Course Title: Calculus I
 # - Course Number: LMTH 2041
+<<<<<<< HEAD
 # - Course CRN: 8536
+=======
+>>>>>>> d1a3331c4bb70eb63f6c667c0eee992efd40248b
 # - Instructor Name: Jacob F. Koehler
 # - email: koehlerj@newschool.edu
 # 
@@ -41,17 +48,27 @@
 
 # ### Course Structure
 # 
+<<<<<<< HEAD
 # - **In Person Meetings**: *Monday and Wednesdays* 10:00 am - 11:40 am
 # - **Class Discussions**: Weekly in Slack
 # 
 # Because we are operating in a virtual classroom enviornment, my aim is to automate the content delivery portion of the class from that of the problem solving, individual, and group work.  I will release lecture videos for the week on Monday with the expectation that you watch these and note any questions.  You should have these clearly formulated and posted on Piazza prior to class on Wednesday.  We will address any issues in the lectures and work together on a subset of our weekly problem set, focusing on how to use technology to solve these problems and share your solutions.  Following this meeting, you will be responsible for posting a solution to a specific problem every week for which your small group will also be responsible for checking.  
 # 
 # - *Asynchronous Activities*: Watch Video Lectures, Ask Questions on Piazza, Post Solutions in Piazza
+=======
+# - **In Person Meetings**: *Mondays and Wednesdays through Zoom* 10:00 am - 11:40 am
+# 
+# 
+# Because we are operating in a virtual classroom enviornment, my aim is to automate the content delivery portion of the class from that of the problem solving, individual, and group work.  I will release lecture videos for the week on Monday with the expectation that you watch these and note any questions.  You should have these clearly formulated and posted on Piazza prior to class on Wednesday.  We will address any issues in the lectures and work together on a subset of our weekly problem set, focusing on how to use technology to solve these problems and share your solutions.  Following this meeting, you will be responsible for posting a solution to a specific problem every week for which your small group will also be responsible for checking.  
+# 
+# - *Asynchronous Activities*: Watch Video Lectures
+>>>>>>> d1a3331c4bb70eb63f6c667c0eee992efd40248b
 # - *Synchronous Activities*: Problem discussion and solutions, technical tutorials
 
 # ### Schedule
 # 
 # 
+<<<<<<< HEAD
 # | **Week** | **Topic** | 
 # | -------- | --------- | 
 # |   0.    | *Functions* | 
@@ -66,6 +83,24 @@
 # | 9 | *Optimization: Approximate and Exact* |
 # | 10 - 13 | *TBD* |
 # 
+=======
+# | **Week** | **Topic** | **Materials** |
+# | -------- | --------- | -------------- | 
+# |   0.    | *Functions* | <ul><li>Videos</li><li>Problems</li><li>Piazza Solutions</li> |
+# | 1 | *Sequences and Summations* | <ul><li>Videos</li><li>Problems</li><li>Piazza Solutions</li> |
+# | 2 | *Discrete Probability and Riemann Sums* | <ul><li>Videos</li><li>Problems</li><li>Piazza Solutions</li> |
+# | 3 | *Definite integral and Continuous Probability Distributions* | <ul><li>Videos</li><li>Problems</li><li>Piazza Solutions</li> |
+# | 4 | *Project I: Gini* | <ul><li>Videos</li><li>Problems</li><li>Piazza Solutions</li> |
+# | 5 | *Discrete Change and Finite Differences* | <ul><li>Videos</li><li>Problems</li><li>Piazza Solutions</li> |
+# | 6 | *Continuous Change and a Definition of the Derivative* | <ul><li>Videos</li><li>Problems</li><li>Piazza Solutions</li> |
+# | 7 | *Rules of Differentiation: The Chain Rule* | <ul><li>Videos</li><li>Problems</li><li>Piazza Solutions</li> |
+# | 8 | *Application of Derivatives: Ordinary Least Squares* | <ul><li>Videos</li><li>Problems</li><li>Piazza Solutions</li> |
+# | 9 | *Project II: Regression* | <ul><li>Videos</li><li>Problems</li><li>Piazza Solutions</li> |
+# | 10 | *Differential Equations: Basic Models and Approximate Solutions* | <ul><li>Videos</li><li>Problems</li><li>Piazza Solutions</li> |
+# | 11 | *Differential Equations: Systems and Exact Solutions* | <ul><li>Videos</li><li>Problems</li><li>Piazza Solutions</li> |
+# | 12 | *Optimization Revisited: Gradient Descent* | <ul><li>Videos</li><li>Problems</li><li>Piazza Solutions</li> |
+# | 13 | *Constrained Optimization: Production and Regularization* | <ul><li>Videos</li><li>Problems</li><li>Piazza Solutions</li> |
+>>>>>>> d1a3331c4bb70eb63f6c667c0eee992efd40248b
 #  
 
 # **Final Grade Calculation**
