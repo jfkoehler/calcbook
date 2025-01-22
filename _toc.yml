@@ -1,5 +1,7 @@
 # In _toc.yml
 format: jb-book
 root: syllabus
-chapters:
-- file: intro/functions
+parts:
+  - caption: Functions and Models
+    chapters:
+    - file: intro/functions
