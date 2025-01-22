@@ -1,364 +1,385 @@
 
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+
+<html lang="en" data-content_root="../" >
+
   <head>
     <meta charset="utf-8" />
-<<<<<<< HEAD
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-=======
->>>>>>> d1a3331c4bb70eb63f6c667c0eee992efd40248b
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
     <title>Integration: Extra Examples &#8212; Calculus: Finite and Infinite</title>
-    
-  <link rel="stylesheet" href="../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
 
-    
-  <link rel="stylesheet"
-    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
-    
-      
-  <link rel="stylesheet"
-    href="../_static/vendor/open-sans_all/1.44.1/index.css">
-  <link rel="stylesheet"
-    href="../_static/vendor/lato_latin-ext/1.44.1/index.css">
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    
-    <link rel="stylesheet" href="../_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
-    
-  <link rel="preload" as="script" href="../_static/js/index.3da636dd464baa7582d2.js">
-
-<<<<<<< HEAD
-    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script src="../_static/language_data.js"></script>
-    <script src="../_static/togglebutton.js"></script>
-    <script src="../_static/clipboard.min.js"></script>
-    <script src="../_static/copybutton.js"></script>
-    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-=======
-    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-    <script type="text/javascript" src="../_static/jquery.js"></script>
-    <script type="text/javascript" src="../_static/underscore.js"></script>
-    <script type="text/javascript" src="../_static/doctools.js"></script>
-    <script type="text/javascript" src="../_static/language_data.js"></script>
-    <script type="text/javascript" src="../_static/togglebutton.js"></script>
-    <script type="text/javascript" src="../_static/clipboard.min.js"></script>
-    <script type="text/javascript" src="../_static/copybutton.js"></script>
-    <script type="text/javascript">var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script type="text/javascript" src="../_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
-    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
->>>>>>> d1a3331c4bb70eb63f6c667c0eee992efd40248b
-    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-    <script type="text/javascript" src="https://unpkg.com/@jupyter-widgets/html-manager@^0.18.0/dist/embed-amd.js"></script>
-    <script async="async" type="text/javascript" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
-    <script type="text/javascript">
-        const thebe_selector = ".thebe"
-        const thebe_selector_input = "pre"
-        const thebe_selector_output = ".output"
-    </script>
-    <script async="async" type="text/javascript" src="../_static/sphinx-thebe.js"></script>
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'integration/integration_extra';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="en" />
-
-
-
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
-    
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
 
-    <div class="container-xl">
-      <div class="row">
-          
-<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
     
-        <div class="navbar-brand-box">
-<a class="navbar-brand text-wrap" href="../index.html">
-  
-  <img src="../_static/lion.jpg" class="logo" alt="logo">
-  
-  
-  <h1 class="site-logo" id="site-title">Calculus: Finite and Infinite</h1>
-  
-</a>
-</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
-  <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
 </form>
-<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
-    <ul class="nav sidenav_l1">
- <li class="toctree-l1">
-  <a class="reference internal" href="../syllabus.html">
-<<<<<<< HEAD
-   Calculus: Fall 2022 Version
-=======
-   Calculus: Spring 2022 Version
->>>>>>> d1a3331c4bb70eb63f6c667c0eee992efd40248b
-  </a>
- </li>
-</ul>
-<p class="caption collapsible-parent">
- <span class="caption-text">
-  Introduction and Review
- </span>
-</p>
-<ul class="nav sidenav_l1">
- <li class="toctree-l1">
-  <a class="reference internal" href="../intro/functions.html">
-   Functions
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../intro/assignment_1_functions.html">
-   Problem Set I: Functions
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../intro/probability.html">
-   Introduction to Probability
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../intro/stats.html">
-   Probability and Statistics
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../intro/02_calc_assign.html">
-   Assignment 2
-  </a>
- </li>
-</ul>
-<p class="caption collapsible-parent">
- <span class="caption-text">
-  Integration
- </span>
-</p>
-<ul class="nav sidenav_l1">
- <li class="toctree-l1">
-  <a class="reference internal" href="area.html">
-   Riemann Sums and Definite Integrals
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="03_Calc_Assignment.html">
-   Assignment 3: Definite Integral
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="gini_index.html">
-   Area Between Curves and Wealth Distribution
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="gini_index.html#wealth-distribution">
-   Wealth Distribution
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="gini_extra.html">
-   Area Between Curves and Application to Equality
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="gini_extra.html#wealth-distribution-and-baseball">
-   Wealth Distribution and Baseball
-  </a>
- </li>
-</ul>
-<p class="caption collapsible-parent">
- <span class="caption-text">
-  Differentiation
- </span>
-</p>
-<ul class="nav sidenav_l1">
- <li class="toctree-l1">
-  <a class="reference internal" href="../differentiation/intro_to_derivatives.html">
-   Introduction to Derivatives
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../differentiation/optimization_I.html">
-   Using Derivatives to Find Maximum and Minimum Values
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../differentiation/applied_optimization.html">
-   Applied Optimization
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../differentiation/newtons_method.html">
-   Newton’s Method
-  </a>
- </li>
-</ul>
+  </dialog>
 
-</nav> <!-- To handle the deprecated key -->
-
-<div class="navbar_extra_footer">
-  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
 </div>
 
-</div>
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
 
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
 
-          
-
-
-          
-<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+  
+  <div class="sidebar-header-items sidebar-primary__section">
     
-    <div class="row topbar fixed-top container-xl">
-    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
-    </div>
-    <div class="col pl-2 topbar-main">
-        
-        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
-            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
-            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
-            <i class="fas fa-bars"></i>
-            <i class="fas fa-arrow-left"></i>
-            <i class="fas fa-arrow-up"></i>
-        </button>
-        
-        
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
-            class="fas fa-download"></i></button>
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
 
-    <div class="dropdown-buttons">
-        <!-- ipynb file if we had a myst markdown file -->
-        
-        <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/integration/integration_extra.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.ipynb</button></a>
-        <!-- Download PDF via print -->
-        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
-            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
-    </div>
-</div>
+  
+    
+  
 
-        <!-- Source interaction buttons -->
+<a class="navbar-brand logo" href="../syllabus.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/lion.jpg" class="logo__image only-light" alt="Calculus: Finite and Infinite - Home"/>
+    <img src="../_static/lion.jpg" class="logo__image only-dark pst-js-only" alt="Calculus: Finite and Infinite - Home"/>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
 
-
-        <!-- Full screen (wrap in <a> to have style consistency -->
-        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
-                title="Fullscreen mode"><i
-                    class="fas fa-expand"></i></button></a>
-
-        <!-- Launch buttons -->
-
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
-    <div class="dropdown-buttons">
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
         
-        <a class="binder-button" href="https://mybinder.org/v2/gh/jfkoehler/calcbook/master?urlpath=tree/integration/integration_extra.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
-                data-placement="left"><img class="binder-button-logo"
-                    src="../_static/images/logo_binder.svg"
-                    alt="Interact on binder">Binder</button></a>
-        
-        
-        
-        <a class="colab-button" href="https://colab.research.google.com/github/jfkoehler/calcbook/blob/master/integration/integration_extra.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
-                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
-                    src="../_static/images/logo_colab.png"
-                    alt="Interact on Colab">Colab</button></a>
-        
-        
-    </div>
-</div>
-
-    </div>
-
-    <!-- Table of contents -->
-    <div class="d-none d-md-block col-md-2 bd-toc show">
-        
-        <div class="tocsection onthispage pt-5 pb-3">
-            <i class="fas fa-list"></i> Contents
-        </div>
-        <nav id="bd-toc-nav">
-            <ul class="nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#riemann-sums">
-   Riemann Sums
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#symbolic-solution">
-     Symbolic Solution
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#compare-to-our-approximation">
-     Compare to our Approximation
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#trapezoid-rule">
-     Trapezoid Rule
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#alternative-approach-monte-carlo-integration">
-     Alternative Approach: Monte Carlo Integration
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#problems">
-     Problems
-    </a>
-   </li>
-  </ul>
- </li>
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../syllabus.html">
+                    Course Description
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../intro/functions.html">Functions</a></li>
 </ul>
 
-        </nav>
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
         
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/jfkoehler/calcbook/blob/master/integration/integration_extra.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Colab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Colab logo" src="../_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/integration/integration_extra.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Integration: Extra Examples</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#riemann-sums">Riemann Sums</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#symbolic-solution">Symbolic Solution</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#compare-to-our-approximation">Compare to our Approximation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#trapezoid-rule">Trapezoid Rule</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#alternative-approach-monte-carlo-integration">Alternative Approach: Monte Carlo Integration</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#problems">Problems</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
     </div>
 </div>
-    <div id="main-content" class="row">
-        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
-        
-              <div>
+
+              
                 
-  <div class="section" id="integration-extra-examples">
-<h1>Integration: Extra Examples<a class="headerlink" href="#integration-extra-examples" title="Permalink to this headline">¶</a></h1>
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="integration-extra-examples">
+<h1>Integration: Extra Examples<a class="headerlink" href="#integration-extra-examples" title="Link to this heading">#</a></h1>
 <p><strong>OBJECTIVES</strong></p>
 <ul class="simple">
 <li><p>Use Riemann Sums to approximate Areas</p></li>
 <li><p>Develop and Implement Trapezoidal Rule for Area Approximation</p></li>
 <li><p>Introduce Monte Carlo methods for Area Approximation</p></li>
 </ul>
-<div class="section" id="riemann-sums">
-<h2>Riemann Sums<a class="headerlink" href="#riemann-sums" title="Permalink to this headline">¶</a></h2>
+<section id="riemann-sums">
+<h2>Riemann Sums<a class="headerlink" href="#riemann-sums" title="Link to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="k">import</span> <span class="n">IFrame</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">IFrame</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
@@ -392,7 +413,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/integration_extra_5_0.png" src="../_images/integration_extra_5_0.png" />
+<img alt="../_images/6c4626015f7b3e67c2a33cae7804279f05c6f21692833d5ceb0c137df152d766.png" src="../_images/6c4626015f7b3e67c2a33cae7804279f05c6f21692833d5ceb0c137df152d766.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -403,17 +424,18 @@
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-<iframe
-    width="400"
-    height="600"
-    src=""
-    frameborder="0"
-    allowfullscreen
-></iframe>
-</div></div>
+        <iframe
+            width="400"
+            height="600"
+            src=""
+            frameborder="0"
+            allowfullscreen
+            
+        ></iframe>
+        </div></div>
 </div>
-<div class="section" id="symbolic-solution">
-<h3>Symbolic Solution<a class="headerlink" href="#symbolic-solution" title="Permalink to this headline">¶</a></h3>
+<section id="symbolic-solution">
+<h3>Symbolic Solution<a class="headerlink" href="#symbolic-solution" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sympy</span> <span class="k">as</span> <span class="nn">sy</span>
@@ -461,13 +483,13 @@
 \[\displaystyle \frac{1}{3}\]</div>
 </div>
 </div>
-</div>
-<div class="section" id="compare-to-our-approximation">
-<h3>Compare to our Approximation<a class="headerlink" href="#compare-to-our-approximation" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="compare-to-our-approximation">
+<h3>Compare to our Approximation<a class="headerlink" href="#compare-to-our-approximation" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">riemann</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
-    <span class="sd">&#39;&#39;&#39;</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
 <span class="sd">    This function computes a left-handed</span>
 <span class="sd">    riemann approximation for area under</span>
 <span class="sd">    a function f over an interval x</span>
@@ -617,9 +639,9 @@
 </table>
 </div></div></div>
 </div>
-</div>
-<div class="section" id="trapezoid-rule">
-<h3>Trapezoid Rule<a class="headerlink" href="#trapezoid-rule" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="trapezoid-rule">
+<h3>Trapezoid Rule<a class="headerlink" href="#trapezoid-rule" title="Link to this heading">#</a></h3>
 <center>
  <img src = https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Trapezoid.svg/440px-Trapezoid.svg.png />
 </center><div class="math notranslate nohighlight">
@@ -641,7 +663,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/integration_extra_23_0.png" src="../_images/integration_extra_23_0.png" />
+<img alt="../_images/76dd5ae99f5b2adf3bf6475cd9dc99c237fa53e22cbb469195bd29ba20a9eba5.png" src="../_images/76dd5ae99f5b2adf3bf6475cd9dc99c237fa53e22cbb469195bd29ba20a9eba5.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -652,14 +674,15 @@
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-<iframe
-    width="400"
-    height="600"
-    src=""
-    frameborder="0"
-    allowfullscreen
-></iframe>
-</div></div>
+        <iframe
+            width="400"
+            height="600"
+            src=""
+            frameborder="0"
+            allowfullscreen
+            
+        ></iframe>
+        </div></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -704,7 +727,7 @@
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">.</span><span class="mi">2</span><span class="o">*</span><span class="nb">sum</span><span class="p">(</span><span class="n">f</span><span class="p">(</span><span class="n">x2</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">2</span><span class="o">*</span><span class="n">f</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">x2</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">]])</span> <span class="o">+</span> <span class="n">f</span><span class="p">(</span><span class="n">x2</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span> <span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mf">.2</span><span class="o">*</span><span class="nb">sum</span><span class="p">(</span><span class="n">f</span><span class="p">(</span><span class="n">x2</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">2</span><span class="o">*</span><span class="n">f</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">x2</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">]])</span> <span class="o">+</span> <span class="n">f</span><span class="p">(</span><span class="n">x2</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span> <span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -716,7 +739,7 @@
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">.</span><span class="mi">2</span><span class="o">/</span><span class="mi">2</span><span class="o">*</span><span class="nb">sum</span><span class="p">(</span><span class="n">f</span><span class="p">(</span><span class="n">x2</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="o">+</span> <span class="mi">2</span><span class="o">*</span><span class="n">f</span><span class="p">(</span><span class="n">x2</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span> <span class="o">+</span> <span class="n">f</span><span class="p">(</span><span class="n">x2</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]))</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mf">.2</span><span class="o">/</span><span class="mi">2</span><span class="o">*</span><span class="nb">sum</span><span class="p">(</span><span class="n">f</span><span class="p">(</span><span class="n">x2</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="o">+</span> <span class="mi">2</span><span class="o">*</span><span class="n">f</span><span class="p">(</span><span class="n">x2</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span> <span class="o">+</span> <span class="n">f</span><span class="p">(</span><span class="n">x2</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]))</span>
 </pre></div>
 </div>
 </div>
@@ -728,7 +751,7 @@
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">1</span><span class="o">/</span><span class="mi">3</span> <span class="o">-</span> <span class="o">.</span><span class="mi">2</span><span class="o">/</span><span class="mi">2</span><span class="o">*</span><span class="nb">sum</span><span class="p">(</span><span class="n">f</span><span class="p">(</span><span class="n">x2</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="o">+</span> <span class="mi">2</span><span class="o">*</span><span class="n">f</span><span class="p">(</span><span class="n">x2</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span> <span class="o">+</span> <span class="n">f</span><span class="p">(</span><span class="n">x2</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]))</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">1</span><span class="o">/</span><span class="mi">3</span> <span class="o">-</span> <span class="mf">.2</span><span class="o">/</span><span class="mi">2</span><span class="o">*</span><span class="nb">sum</span><span class="p">(</span><span class="n">f</span><span class="p">(</span><span class="n">x2</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="o">+</span> <span class="mi">2</span><span class="o">*</span><span class="n">f</span><span class="p">(</span><span class="n">x2</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span> <span class="o">+</span> <span class="n">f</span><span class="p">(</span><span class="n">x2</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]))</span>
 </pre></div>
 </div>
 </div>
@@ -741,7 +764,7 @@
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">trapezoid_approx</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
-    <span class="sd">&#39;&#39;&#39;</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
 <span class="sd">    This function computes a </span>
 <span class="sd">    trapezoidal approximation for </span>
 <span class="sd">    the area under function f on x</span>
@@ -877,9 +900,9 @@
 </table>
 </div></div></div>
 </div>
-</div>
-<div class="section" id="alternative-approach-monte-carlo-integration">
-<h3>Alternative Approach: Monte Carlo Integration<a class="headerlink" href="#alternative-approach-monte-carlo-integration" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="alternative-approach-monte-carlo-integration">
+<h3>Alternative Approach: Monte Carlo Integration<a class="headerlink" href="#alternative-approach-monte-carlo-integration" title="Link to this heading">#</a></h3>
 <center>
  <img src = https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Le_casino_de_Monte-Carlo.JPG/440px-Le_casino_de_Monte-Carlo.JPG />
  </center><div class="cell docutils container">
@@ -906,14 +929,10 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<<<<<<< HEAD
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.collections.PolyCollection at 0x7fc71e8c9a60&gt;
-=======
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.collections.PolyCollection at 0x7fa8382c5d90&gt;
->>>>>>> d1a3331c4bb70eb63f6c667c0eee992efd40248b
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.collections.PolyCollection at 0x121556db0&gt;
 </pre></div>
 </div>
-<img alt="../_images/integration_extra_40_1.png" src="../_images/integration_extra_40_1.png" />
+<img alt="../_images/923f2d6cfbb0110797682545aa03ad63eef846fb77f4154baf1bee0b724e803e.png" src="../_images/923f2d6cfbb0110797682545aa03ad63eef846fb77f4154baf1bee0b724e803e.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -925,12 +944,12 @@
     <span class="n">ax</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">random_x</span><span class="p">,</span> <span class="n">f</span><span class="p">(</span><span class="n">random_x</span><span class="p">),</span> <span class="s1">&#39;o&#39;</span><span class="p">)</span>
     <span class="n">ax</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="n">f</span><span class="p">(</span><span class="n">random_x</span><span class="p">))</span>
     <span class="n">ax</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">fill_between</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">f</span><span class="p">(</span><span class="n">random_x</span><span class="p">),</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;gray&#39;</span><span class="p">,</span> <span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.2</span><span class="p">)</span>
-    <span class="n">ax</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;Approximation </span><span class="si">{i}</span><span class="se">\n</span><span class="s1">Area {f(random_x):.3f}&#39;</span><span class="p">)</span>
+    <span class="n">ax</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Approximation </span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="se">\n</span><span class="s1">Area </span><span class="si">{</span><span class="n">f</span><span class="p">(</span><span class="n">random_x</span><span class="p">)</span><span class="si">:</span><span class="s1">.3f</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/integration_extra_41_0.png" src="../_images/integration_extra_41_0.png" />
+<img alt="../_images/2be7a7d1dc17c035462793379df0f91486c138a6d55127520b68aba72f86e535.png" src="../_images/2be7a7d1dc17c035462793379df0f91486c138a6d55127520b68aba72f86e535.png" />
 </div>
 </div>
 <div class="math notranslate nohighlight">
@@ -945,14 +964,14 @@
         <span class="n">ax</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">random_x</span><span class="p">,</span> <span class="n">f</span><span class="p">(</span><span class="n">random_x</span><span class="p">),</span> <span class="s1">&#39;o&#39;</span><span class="p">)</span>
         <span class="n">ax</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">]</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="n">f</span><span class="p">(</span><span class="n">random_x</span><span class="p">))</span>
         <span class="n">ax</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">]</span><span class="o">.</span><span class="n">fill_between</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">f</span><span class="p">(</span><span class="n">random_x</span><span class="p">),</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;gray&#39;</span><span class="p">,</span> <span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.2</span><span class="p">)</span>
-        <span class="n">ax</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;Area {f(random_x):.3f}&#39;</span><span class="p">)</span>
+        <span class="n">ax</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Area </span><span class="si">{</span><span class="n">f</span><span class="p">(</span><span class="n">random_x</span><span class="p">)</span><span class="si">:</span><span class="s1">.3f</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
 <span class="n">fig</span><span class="o">.</span><span class="n">suptitle</span><span class="p">(</span><span class="s1">&#39;More Approximations with Monte Carlo&#39;</span><span class="p">);</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">();</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/integration_extra_43_0.png" src="../_images/integration_extra_43_0.png" />
+<img alt="../_images/f5d69aedc941a93ca90dc0bc689d53069bae20c1d315f19fc12cf8cc27927318.png" src="../_images/f5d69aedc941a93ca90dc0bc689d53069bae20c1d315f19fc12cf8cc27927318.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -962,49 +981,26 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<<<<<<< HEAD
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([0.48048048, 0.45245245, 0.32132132, 0.04604605, 0.1991992 ,
-       0.83583584, 0.28428428, 0.42642643, 0.86786787, 0.73873874,
-       0.54654655, 0.01101101, 0.82482482, 0.67367367, 0.        ,
-       0.81681682, 0.81081081, 0.37137137, 0.71171171, 0.85885886,
-       0.4004004 , 0.92392392, 0.9039039 , 0.42842843, 0.36536537,
-       0.74674675, 0.63263263, 0.00700701, 0.40540541, 0.66766767,
-       0.02302302, 0.95695696, 0.22322322, 0.18818819, 0.75675676,
-       0.72572573, 0.8008008 , 0.43343343, 0.0950951 , 0.4034034 ,
-       0.67567568, 0.37037037, 0.46446446, 0.47447447, 0.38938939,
-       0.52552553, 0.95995996, 0.81281281, 0.22522523, 0.8028028 ,
-       0.79079079, 0.21321321, 0.51551552, 0.50850851, 0.15815816,
-       0.71971972, 0.41741742, 0.43043043, 0.14114114, 0.88888889,
-       0.68068068, 0.92692693, 0.96796797, 0.41341341, 0.45845846,
-       0.78378378, 0.84984985, 0.98598599, 0.62362362, 0.02802803,
-       0.33933934, 0.33033033, 0.41741742, 0.92892893, 0.66966967,
-       0.88788789, 0.81081081, 0.27427427, 0.78078078, 0.35235235,
-       0.48648649, 0.04404404, 0.7037037 , 0.73673674, 0.53753754,
-       0.76176176, 0.56856857, 0.07107107, 0.27727728, 0.9039039 ,
-       0.42242242, 0.65665666, 0.92692693, 0.73973974, 0.28328328,
-       0.64964965, 0.93993994, 0.23723724, 0.98298298, 0.39039039])
-=======
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([0.56456456, 0.11611612, 0.09109109, 0.34834835, 0.68268268,
-       0.34134134, 0.33633634, 0.23423423, 0.47047047, 0.65465465,
-       0.32232232, 0.10510511, 0.76176176, 0.04204204, 0.36236236,
-       0.5045045 , 0.1991992 , 0.84284284, 0.56656657, 0.51151151,
-       0.94494494, 0.4994995 , 0.46046046, 0.07407407, 0.995996  ,
-       0.63163163, 0.93293293, 0.88988989, 0.13113113, 0.44044044,
-       0.69469469, 0.61261261, 0.16916917, 0.57857858, 0.67567568,
-       0.87287287, 0.28828829, 0.15915916, 0.96796797, 0.7957958 ,
-       0.45545546, 0.43443443, 0.7017017 , 0.46446446, 0.69369369,
-       0.62962963, 0.73273273, 0.001001  , 0.98798799, 0.03403403,
-       0.7987988 , 0.96096096, 0.18418418, 0.15715716, 0.81881882,
-       0.18518519, 0.18318318, 0.54454454, 0.36936937, 0.96596597,
-       0.99399399, 0.22422422, 0.78378378, 0.77277277, 0.84284284,
-       0.28828829, 0.5045045 , 0.21221221, 0.997998  , 0.56056056,
-       0.61661662, 0.53353353, 0.53653654, 0.82182182, 0.70770771,
-       0.6966967 , 0.11011011, 0.62862863, 0.61561562, 0.67267267,
-       0.74774775, 0.38138138, 0.41041041, 0.21621622, 0.76876877,
-       0.27727728, 0.03103103, 0.33633634, 0.96096096, 0.43243243,
-       0.46346346, 0.60560561, 0.36136136, 0.44444444, 0.1951952 ,
-       0.43743744, 0.54254254, 0.30930931, 0.60960961, 0.96496496])
->>>>>>> d1a3331c4bb70eb63f6c667c0eee992efd40248b
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([0.89189189, 0.20520521, 0.72372372, 0.74474474, 0.33933934,
+       0.85885886, 0.25125125, 0.98698699, 0.48848849, 0.7957958 ,
+       0.72372372, 0.72472472, 0.65265265, 0.66566567, 0.64764765,
+       0.99199199, 0.32732733, 0.51151151, 0.7967968 , 0.36636637,
+       0.68168168, 0.2982983 , 0.36836837, 0.34334334, 0.23423423,
+       0.50850851, 0.16316316, 0.43443443, 0.27327327, 0.2012012 ,
+       0.08908909, 0.47247247, 0.61961962, 0.24524525, 0.16316316,
+       0.02502503, 0.86486486, 0.79279279, 0.84884885, 0.53453453,
+       0.07807808, 0.05505506, 0.33333333, 0.91391391, 0.03403403,
+       0.8958959 , 0.03203203, 0.64964965, 0.48248248, 0.7967968 ,
+       0.53253253, 0.84484484, 0.26626627, 0.32932933, 0.04604605,
+       0.01801802, 0.36336336, 0.53053053, 0.27527528, 0.41941942,
+       0.28528529, 0.91391391, 0.24324324, 0.65165165, 0.7997998 ,
+       0.31931932, 0.5985986 , 0.73173173, 0.94094094, 0.78478478,
+       0.56956957, 0.19119119, 0.02402402, 0.90690691, 0.92292292,
+       0.05405405, 0.75575576, 0.15015015, 0.24524525, 0.06506507,
+       0.86086086, 0.37637638, 0.69469469, 0.47547548, 0.18218218,
+       0.85985986, 0.91091091, 0.22422422, 0.17217217, 0.55555556,
+       0.83483483, 0.80580581, 0.10910911, 0.65565566, 0.25225225,
+       0.6956957 , 0.75275275, 0.39239239, 0.62562563, 0.99199199])
 </pre></div>
 </div>
 </div>
@@ -1016,11 +1012,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<<<<<<< HEAD
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.3386016146276406
-=======
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.2650227805382961
->>>>>>> d1a3331c4bb70eb63f6c667c0eee992efd40248b
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.29160767373980584
 </pre></div>
 </div>
 </div>
@@ -1083,13 +1075,8 @@
       <td>0.1145833333</td>
       <td>0.3437500000</td>
       <td>0.0104166667</td>
-<<<<<<< HEAD
-      <td>0.3668282898</td>
-      <td>0.0334949564</td>
-=======
-      <td>0.4343349856</td>
-      <td>0.1010016523</td>
->>>>>>> d1a3331c4bb70eb63f6c667c0eee992efd40248b
+      <td>0.2402497593</td>
+      <td>0.0930835741</td>
     </tr>
     <tr>
       <th>1</th>
@@ -1098,13 +1085,8 @@
       <td>0.0123958333</td>
       <td>0.3334375000</td>
       <td>0.0001041667</td>
-<<<<<<< HEAD
-      <td>0.2739936633</td>
-      <td>0.0593396700</td>
-=======
-      <td>0.3447976756</td>
-      <td>0.0114643422</td>
->>>>>>> d1a3331c4bb70eb63f6c667c0eee992efd40248b
+      <td>0.3360818276</td>
+      <td>0.0027484942</td>
     </tr>
     <tr>
       <th>2</th>
@@ -1113,13 +1095,8 @@
       <td>0.0012489583</td>
       <td>0.3333343750</td>
       <td>0.0000010417</td>
-<<<<<<< HEAD
-      <td>0.3263190117</td>
-      <td>0.0070143216</td>
-=======
-      <td>0.3026382263</td>
-      <td>0.0306951070</td>
->>>>>>> d1a3331c4bb70eb63f6c667c0eee992efd40248b
+      <td>0.3536618024</td>
+      <td>0.0203284691</td>
     </tr>
     <tr>
       <th>3</th>
@@ -1128,13 +1105,8 @@
       <td>0.0001249896</td>
       <td>0.3333333438</td>
       <td>0.0000000104</td>
-<<<<<<< HEAD
-      <td>0.3316146026</td>
-      <td>0.0017187307</td>
-=======
-      <td>0.3267879008</td>
-      <td>0.0065454326</td>
->>>>>>> d1a3331c4bb70eb63f6c667c0eee992efd40248b
+      <td>0.3285478644</td>
+      <td>0.0047854689</td>
     </tr>
     <tr>
       <th>4</th>
@@ -1143,13 +1115,8 @@
       <td>0.0000124999</td>
       <td>0.3333333334</td>
       <td>0.0000000001</td>
-<<<<<<< HEAD
-      <td>0.3321295339</td>
-      <td>0.0012037994</td>
-=======
-      <td>0.3318433499</td>
-      <td>0.0014899835</td>
->>>>>>> d1a3331c4bb70eb63f6c667c0eee992efd40248b
+      <td>0.3342971380</td>
+      <td>0.0009638047</td>
     </tr>
     <tr>
       <th>5</th>
@@ -1158,29 +1125,24 @@
       <td>0.0000012500</td>
       <td>0.3333333333</td>
       <td>0.0000000000</td>
-<<<<<<< HEAD
-      <td>0.3335588746</td>
-      <td>0.0002255413</td>
-=======
-      <td>0.3333443953</td>
-      <td>0.0000110620</td>
->>>>>>> d1a3331c4bb70eb63f6c667c0eee992efd40248b
+      <td>0.3336694786</td>
+      <td>0.0003361453</td>
     </tr>
   </tbody>
 </table>
 </div></div></div>
 </div>
-</div>
-<div class="section" id="problems">
-<h3>Problems<a class="headerlink" href="#problems" title="Permalink to this headline">¶</a></h3>
-<ol class="simple">
+</section>
+<section id="problems">
+<h3>Problems<a class="headerlink" href="#problems" title="Link to this heading">#</a></h3>
+<ol class="arabic simple">
 <li><p>Compare the left-handed riemann approximation with <span class="math notranslate nohighlight">\(n = 100\)</span>, trapezoidal approximation with <span class="math notranslate nohighlight">\(n = 100\)</span>, and monte carlo approximation with <span class="math notranslate nohighlight">\(n = 100\)</span> for the following functions on the given interval:</p></li>
 </ol>
 <ul class="simple">
 <li><p><span class="math notranslate nohighlight">\(f(x) = \sin(\sin(x) - x)dx \quad [0, 2\pi]\)</span></p></li>
 <li><p><span class="math notranslate nohighlight">\(g(x) = \cos^{2020}(x) dx \quad [0, 2\pi]\)</span></p></li>
 </ul>
-<ol class="simple">
+<ol class="arabic simple" start="2">
 <li><p>Approximating <span class="math notranslate nohighlight">\(\pi\)</span>.  The circular region in the first quadrant can be defined by <span class="math notranslate nohighlight">\(y = \sqrt{1 - x^2}\)</span>.  We can determine an approximation for <span class="math notranslate nohighlight">\(\pi\)</span> by doing the following:</p></li>
 </ol>
 <ul class="simple">
@@ -1189,9 +1151,9 @@
 <li><p>Determine the ratio of points dropped to points counted, multiply by 4</p></li>
 </ul>
 <p>Write a small python program to conduct this simulation and plot the results coloring the points accepted and rejected blue and red respectively.  How good was your approximation?</p>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -1205,7 +1167,7 @@
             mode: "python"
         },
         kernelOptions: {
-            kernelName: "python3",
+            name: "python3",
             path: "./integration"
         },
         predefinedOutput: true
@@ -1213,36 +1175,93 @@
     </script>
     <script>kernelName = 'python3'</script>
 
-              </div>
+                </article>
               
-        </div>
-    </div>
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#riemann-sums">Riemann Sums</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#symbolic-solution">Symbolic Solution</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#compare-to-our-approximation">Compare to our Approximation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#trapezoid-rule">Trapezoid Rule</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#alternative-approach-monte-carlo-integration">Alternative Approach: Monte Carlo Integration</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#problems">Problems</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
     
+<p class="component-author">
+By The Jupyter Book community
+</p>
+
+  </div>
+  
+  <div class="footer-item">
     
-    <div class='prev-next-bottom'>
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
         
 
+      </main>
     </div>
-    <footer class="footer mt-5 mt-md-0">
-    <div class="container">
-      <p>
-        
-          By The Jupyter Book community<br/>
-        
-            &copy; Copyright 2020.<br/>
-      </p>
-    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
   </footer>
-</main>
-
-
-      </div>
-    </div>
-
-    
-  <script src="../_static/js/index.3da636dd464baa7582d2.js"></script>
-
-
-    
   </body>
 </html>

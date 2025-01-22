@@ -1,471 +1,426 @@
 
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+
+<html lang="en" data-content_root="../" >
+
   <head>
     <meta charset="utf-8" />
-<<<<<<< HEAD
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-=======
->>>>>>> d1a3331c4bb70eb63f6c667c0eee992efd40248b
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
     <title>Problem Set I: Functions &#8212; Calculus: Finite and Infinite</title>
-    
-  <link rel="stylesheet" href="../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
 
-    
-  <link rel="stylesheet"
-    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
-    
-      
-  <link rel="stylesheet"
-    href="../_static/vendor/open-sans_all/1.44.1/index.css">
-  <link rel="stylesheet"
-    href="../_static/vendor/lato_latin-ext/1.44.1/index.css">
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    
-    <link rel="stylesheet" href="../_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
-    
-  <link rel="preload" as="script" href="../_static/js/index.3da636dd464baa7582d2.js">
-
-<<<<<<< HEAD
-    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script src="../_static/language_data.js"></script>
-    <script src="../_static/togglebutton.js"></script>
-    <script src="../_static/clipboard.min.js"></script>
-    <script src="../_static/copybutton.js"></script>
-    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-=======
-    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-    <script type="text/javascript" src="../_static/jquery.js"></script>
-    <script type="text/javascript" src="../_static/underscore.js"></script>
-    <script type="text/javascript" src="../_static/doctools.js"></script>
-    <script type="text/javascript" src="../_static/language_data.js"></script>
-    <script type="text/javascript" src="../_static/togglebutton.js"></script>
-    <script type="text/javascript" src="../_static/clipboard.min.js"></script>
-    <script type="text/javascript" src="../_static/copybutton.js"></script>
-    <script type="text/javascript">var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script type="text/javascript" src="../_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
-    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
->>>>>>> d1a3331c4bb70eb63f6c667c0eee992efd40248b
-    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-    <script type="text/javascript" src="https://unpkg.com/@jupyter-widgets/html-manager@^0.18.0/dist/embed-amd.js"></script>
-    <script async="async" type="text/javascript" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
-    <script type="text/javascript">
-        const thebe_selector = ".thebe"
-        const thebe_selector_input = "pre"
-        const thebe_selector_output = ".output"
-    </script>
-    <script async="async" type="text/javascript" src="../_static/sphinx-thebe.js"></script>
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'intro/assignment_1_functions';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Introduction to Probability" href="probability.html" />
-    <link rel="prev" title="Functions" href="functions.html" />
-
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="en" />
-
-
-
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
-    
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
 
-    <div class="container-xl">
-      <div class="row">
-          
-<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
     
-        <div class="navbar-brand-box">
-<a class="navbar-brand text-wrap" href="../index.html">
-  
-  <img src="../_static/lion.jpg" class="logo" alt="logo">
-  
-  
-  <h1 class="site-logo" id="site-title">Calculus: Finite and Infinite</h1>
-  
-</a>
-</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
-  <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
 </form>
-<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
-    <ul class="nav sidenav_l1">
- <li class="toctree-l1">
-  <a class="reference internal" href="../syllabus.html">
-<<<<<<< HEAD
-   Calculus: Fall 2022 Version
-=======
-   Calculus: Spring 2022 Version
->>>>>>> d1a3331c4bb70eb63f6c667c0eee992efd40248b
-  </a>
- </li>
-</ul>
-<p class="caption collapsible-parent">
- <span class="caption-text">
-  Introduction and Review
- </span>
-</p>
-<ul class="current nav sidenav_l1">
- <li class="toctree-l1">
-  <a class="reference internal" href="functions.html">
-   Functions
-  </a>
- </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
-   Problem Set I: Functions
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="probability.html">
-   Introduction to Probability
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="stats.html">
-   Probability and Statistics
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="02_calc_assign.html">
-   Assignment 2
-  </a>
- </li>
-</ul>
-<p class="caption collapsible-parent">
- <span class="caption-text">
-  Integration
- </span>
-</p>
-<ul class="nav sidenav_l1">
- <li class="toctree-l1">
-  <a class="reference internal" href="../integration/area.html">
-   Riemann Sums and Definite Integrals
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../integration/03_Calc_Assignment.html">
-   Assignment 3: Definite Integral
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../integration/gini_index.html">
-   Area Between Curves and Wealth Distribution
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../integration/gini_index.html#wealth-distribution">
-   Wealth Distribution
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../integration/gini_extra.html">
-   Area Between Curves and Application to Equality
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../integration/gini_extra.html#wealth-distribution-and-baseball">
-   Wealth Distribution and Baseball
-  </a>
- </li>
-</ul>
-<p class="caption collapsible-parent">
- <span class="caption-text">
-  Differentiation
- </span>
-</p>
-<ul class="nav sidenav_l1">
- <li class="toctree-l1">
-  <a class="reference internal" href="../differentiation/intro_to_derivatives.html">
-   Introduction to Derivatives
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../differentiation/optimization_I.html">
-   Using Derivatives to Find Maximum and Minimum Values
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../differentiation/applied_optimization.html">
-   Applied Optimization
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../differentiation/newtons_method.html">
-   Newton’s Method
-  </a>
- </li>
-</ul>
+  </dialog>
 
-</nav> <!-- To handle the deprecated key -->
-
-<div class="navbar_extra_footer">
-  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
 </div>
 
-</div>
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
 
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
 
-          
-
-
-          
-<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+  
+  <div class="sidebar-header-items sidebar-primary__section">
     
-    <div class="row topbar fixed-top container-xl">
-    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
-    </div>
-    <div class="col pl-2 topbar-main">
-        
-        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
-            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
-            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
-            <i class="fas fa-bars"></i>
-            <i class="fas fa-arrow-left"></i>
-            <i class="fas fa-arrow-up"></i>
-        </button>
-        
-        
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
-            class="fas fa-download"></i></button>
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
 
-    <div class="dropdown-buttons">
-        <!-- ipynb file if we had a myst markdown file -->
-        
-        <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/intro/assignment_1_functions.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.ipynb</button></a>
-        <!-- Download PDF via print -->
-        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
-            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
-    </div>
-</div>
+  
+    
+  
 
-        <!-- Source interaction buttons -->
+<a class="navbar-brand logo" href="../syllabus.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/lion.jpg" class="logo__image only-light" alt="Calculus: Finite and Infinite - Home"/>
+    <img src="../_static/lion.jpg" class="logo__image only-dark pst-js-only" alt="Calculus: Finite and Infinite - Home"/>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
 
-
-        <!-- Full screen (wrap in <a> to have style consistency -->
-        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
-                title="Fullscreen mode"><i
-                    class="fas fa-expand"></i></button></a>
-
-        <!-- Launch buttons -->
-
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
-    <div class="dropdown-buttons">
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
         
-        <a class="binder-button" href="https://mybinder.org/v2/gh/jfkoehler/calcbook/master?urlpath=tree/intro/assignment_1_functions.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
-                data-placement="left"><img class="binder-button-logo"
-                    src="../_static/images/logo_binder.svg"
-                    alt="Interact on binder">Binder</button></a>
-        
-        
-        
-        <a class="colab-button" href="https://colab.research.google.com/github/jfkoehler/calcbook/blob/master/intro/assignment_1_functions.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
-                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
-                    src="../_static/images/logo_colab.png"
-                    alt="Interact on Colab">Colab</button></a>
-        
-        
-    </div>
-</div>
-
-    </div>
-
-    <!-- Table of contents -->
-    <div class="d-none d-md-block col-md-2 bd-toc show">
-        
-        <div class="tocsection onthispage pt-5 pb-3">
-            <i class="fas fa-list"></i> Contents
-        </div>
-        <nav id="bd-toc-nav">
-            <ul class="nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#basic-definitions-and-plotting">
-   Basic Definitions and Plotting
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#problem-1">
-     Problem 1
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#problem-2">
-     Problem 2
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#problem-3">
-     Problem 3
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#problem-4">
-     Problem 4
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#problem-5">
-     Problem 5
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#problem-6">
-     Problem 6
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#problem-7">
-     Problem 7
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#problem-8">
-     Problem 8
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#problem-9">
-     Problem 9
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#problem-10">
-     Problem 10
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#problem-11">
-     Problem 11
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#problem-12">
-     Problem 12
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#functions-and-data">
-   Functions and Data
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#problem-13">
-     Problem 13
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#problem-14">
-     Problem 14
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#problem-15">
-     Problem 15
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#problem-16">
-     Problem 16
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#using-models">
-   Using Models
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#problem-17-iris-data">
-     Problem 17: Iris Data
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#problem-18-cars">
-     Problem 18: Cars
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#problem-19">
-     Problem 19
-    </a>
-   </li>
-  </ul>
- </li>
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../syllabus.html">
+                    Course Description
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="functions.html">Functions</a></li>
 </ul>
 
-        </nav>
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
         
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/jfkoehler/calcbook/blob/master/intro/assignment_1_functions.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Colab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Colab logo" src="../_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/intro/assignment_1_functions.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Problem Set I: Functions</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#basic-definitions-and-plotting">Basic Definitions and Plotting</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#problem-1">Problem 1</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#problem-2">Problem 2</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#problem-3">Problem 3</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#problem-4">Problem 4</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#problem-5">Problem 5</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#problem-6">Problem 6</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#problem-7">Problem 7</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#problem-8">Problem 8</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#problem-9">Problem 9</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#problem-10">Problem 10</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#problem-11">Problem 11</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#problem-12">Problem 12</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#functions-and-data">Functions and Data</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#problem-13">Problem 13</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#problem-14">Problem 14</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#problem-15">Problem 15</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#problem-16">Problem 16</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#using-models">Using Models</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#problem-17-iris-data">Problem 17: Iris Data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#problem-18-cars">Problem 18: Cars</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#problem-19">Problem 19</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
     </div>
 </div>
-    <div id="main-content" class="row">
-        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
-        
-              <div>
+
+              
                 
-  <div class="section" id="problem-set-i-functions">
-<h1>Problem Set I: Functions<a class="headerlink" href="#problem-set-i-functions" title="Permalink to this headline">¶</a></h1>
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="problem-set-i-functions">
+<h1>Problem Set I: Functions<a class="headerlink" href="#problem-set-i-functions" title="Link to this heading">#</a></h1>
 <p><strong>OBJECTIVES</strong></p>
 <ul class="simple">
 <li><p>Represent functions with symbols, graphs, tables, and words</p></li>
 <li><p>Interpret key characteristics of <em>polynomial</em>, <em>logarithmic</em>, and <em>trigonometric</em> functions</p></li>
 </ul>
-<div class="section" id="basic-definitions-and-plotting">
-<h2>Basic Definitions and Plotting<a class="headerlink" href="#basic-definitions-and-plotting" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="problem-1">
-<h3>Problem 1<a class="headerlink" href="#problem-1" title="Permalink to this headline">¶</a></h3>
+<section id="basic-definitions-and-plotting">
+<h2>Basic Definitions and Plotting<a class="headerlink" href="#basic-definitions-and-plotting" title="Link to this heading">#</a></h2>
+<section id="problem-1">
+<h3>Problem 1<a class="headerlink" href="#problem-1" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p>Define a function <span class="math notranslate nohighlight">\(f(x) = x^2\)</span></p></li>
 <li><p>Create a plot of this function on the domain <span class="math notranslate nohighlight">\(x \in [-3, 3]\)</span>.</p></li>
 <li><p>Where does <span class="math notranslate nohighlight">\(f(x) = 0\)</span>?</p></li>
 </ul>
-</div>
-<div class="section" id="problem-2">
-<h3>Problem 2<a class="headerlink" href="#problem-2" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="problem-2">
+<h3>Problem 2<a class="headerlink" href="#problem-2" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p>Define a function <span class="math notranslate nohighlight">\(f(x) = x^2 + 2x - 3\)</span></p></li>
 <li><p>Plot this function on the domain <span class="math notranslate nohighlight">\(x \in [-2, 5]\)</span></p></li>
 <li><p>Where does <span class="math notranslate nohighlight">\(f(x) = 0\)</span>?  How can you be sure?</p></li>
 </ul>
-</div>
-<div class="section" id="problem-3">
-<h3>Problem 3<a class="headerlink" href="#problem-3" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="problem-3">
+<h3>Problem 3<a class="headerlink" href="#problem-3" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p>Define a function <span class="math notranslate nohighlight">\(h(x) = \frac{1}{x + 4}\)</span></p></li>
 <li><p>Plot this function on the domain <span class="math notranslate nohighlight">\(x \in [-5, -3]\)</span>.  Is the function defined everywhere?  Explain.</p></li>
 </ul>
-</div>
-<div class="section" id="problem-4">
-<h3>Problem 4<a class="headerlink" href="#problem-4" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="problem-4">
+<h3>Problem 4<a class="headerlink" href="#problem-4" title="Link to this heading">#</a></h3>
 <p>A company is interested in predicting the amount of revenue it will receive depending on the price it charges for a particular item. Using the data from Table 1.6, the company arrives at the following quadratic function to model revenue <span class="math notranslate nohighlight">\(R\)</span> (in thousands of dollars) as a function of price per item <span class="math notranslate nohighlight">\(p\)</span>:</p>
 <div class="math notranslate nohighlight">
 \[R(p)=p·(−1.04p+26)=−1.04p^2+26p\]</div>
@@ -476,9 +431,9 @@
 <li><p>Sketch a graph of <span class="math notranslate nohighlight">\(R\)</span>.</p></li>
 <li><p>Use the graph to determine the value of <span class="math notranslate nohighlight">\(p\)</span> that maximizes revenue. Find the maximum revenue.</p></li>
 </ul>
-</div>
-<div class="section" id="problem-5">
-<h3>Problem 5<a class="headerlink" href="#problem-5" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="problem-5">
+<h3>Problem 5<a class="headerlink" href="#problem-5" title="Link to this heading">#</a></h3>
 <p>Starting with the function <span class="math notranslate nohighlight">\(f(x) = x^2\)</span> on the domain <span class="math notranslate nohighlight">\(x \in [-5, 5]\)</span>, describe the effect of the following transformations:</p>
 <ul class="simple">
 <li><p><span class="math notranslate nohighlight">\(f(x) = -x^2\)</span></p></li>
@@ -486,31 +441,31 @@
 <li><p><span class="math notranslate nohighlight">\(f(x) = (x - 1)^2\)</span></p></li>
 </ul>
 <p>Your answer should be a single plot with 4 appropriate labels.</p>
-</div>
-<div class="section" id="problem-6">
-<h3>Problem 6<a class="headerlink" href="#problem-6" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="problem-6">
+<h3>Problem 6<a class="headerlink" href="#problem-6" title="Link to this heading">#</a></h3>
 <p>In the context of artificial neural networks, the rectifier is an activation function defined as the positive part of its argument:</p>
 <p><span class="math notranslate nohighlight">\(\displaystyle f(x)=x^{+}=\max(0,x)\)</span></p>
 <p>where x is the input to a neuron. This is also known as a ramp function and is analogous to half-wave rectification in electrical engineering.  We can rewrite this as a piecewise function:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\displaystyle f(x)={\begin{cases}x&amp;{\text{if }}x&gt;0,\\0&amp;{\text{otherwise}}.\end{cases}}\end{split}\]</div>
 <p>Define and plot the function on the domain <span class="math notranslate nohighlight">\(x \in [-5, 5]\)</span> below.</p>
-</div>
-<div class="section" id="problem-7">
-<h3>Problem 7<a class="headerlink" href="#problem-7" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="problem-7">
+<h3>Problem 7<a class="headerlink" href="#problem-7" title="Link to this heading">#</a></h3>
 <p>The cost of mailing a letter is a function of the weight of the letter. Suppose the cost of mailing a letter is 49¢ for the first ounce and 21¢ for each additional ounce. Write a piecewise-defined function describing the cost <span class="math notranslate nohighlight">\(C\)</span> as a function of the weight <span class="math notranslate nohighlight">\(x\)</span> for <span class="math notranslate nohighlight">\(0 \leq x \leq 3\)</span>, where <span class="math notranslate nohighlight">\(C\)</span> is measured in cents and <span class="math notranslate nohighlight">\(x\)</span> is measured in ounces.</p>
-</div>
-<div class="section" id="problem-8">
-<h3>Problem 8<a class="headerlink" href="#problem-8" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="problem-8">
+<h3>Problem 8<a class="headerlink" href="#problem-8" title="Link to this heading">#</a></h3>
 <p>Given the pair of points <span class="math notranslate nohighlight">\(A = (-3, 3)\)</span> and <span class="math notranslate nohighlight">\(B = (2, 1)\)</span>, find:</p>
 <ul class="simple">
 <li><p>The slope of the line through the points</p></li>
 <li><p>An equation of a line through the points</p></li>
 <li><p>Plot the points and line on the same graph.</p></li>
 </ul>
-</div>
-<div class="section" id="problem-9">
-<h3>Problem 9<a class="headerlink" href="#problem-9" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="problem-9">
+<h3>Problem 9<a class="headerlink" href="#problem-9" title="Link to this heading">#</a></h3>
 <p>Total online shopping during the Christmas holidays has increased dramatically during the past 5 years. In 2012 <span class="math notranslate nohighlight">\((t = 0)\)</span>, total online holiday sales were <span class="math notranslate nohighlight">\(\$42.3\)</span> billion, whereas in 2013 they were <span class="math notranslate nohighlight">\(\$48.1\)</span> billion.</p>
 <ul class="simple">
 <li><p>Find a linear function <span class="math notranslate nohighlight">\(S\)</span> that estimates the total online holiday sales in the year t.</p></li>
@@ -518,18 +473,18 @@
 <li><p>Use your equation to predict the year when online shopping during Christmas will reach <span class="math notranslate nohighlight">\(\$60\)</span> billion.</p></li>
 <li><p>Plot your function and its prediction.</p></li>
 </ul>
-</div>
-<div class="section" id="problem-10">
-<h3>Problem 10<a class="headerlink" href="#problem-10" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="problem-10">
+<h3>Problem 10<a class="headerlink" href="#problem-10" title="Link to this heading">#</a></h3>
 <p>A house purchased for $250,000 is expected to be worth twice its purchase price in 18 years.</p>
 <ul class="simple">
 <li><p>Find a linear function that models the price P of the house versus the number of years t since the original purchase.</p></li>
 <li><p>Interpret the slope of the graph of P.</p></li>
 <li><p>Find the price of the house 15 years from when it was originally purchased.</p></li>
 </ul>
-</div>
-<div class="section" id="problem-11">
-<h3>Problem 11<a class="headerlink" href="#problem-11" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="problem-11">
+<h3>Problem 11<a class="headerlink" href="#problem-11" title="Link to this heading">#</a></h3>
 <p>Define and plot the following functions on the domain <span class="math notranslate nohighlight">\(x \in [-6, 6]\)</span>:</p>
 <ul class="simple">
 <li><p><span class="math notranslate nohighlight">\(f(x) = \sin{x}\)</span></p></li>
@@ -537,9 +492,9 @@
 <li><p><span class="math notranslate nohighlight">\(h(x) = e ^x\)</span></p></li>
 <li><p><span class="math notranslate nohighlight">\(j(x) = \sin(x^2)\)</span></p></li>
 </ul>
-</div>
-<div class="section" id="problem-12">
-<h3>Problem 12<a class="headerlink" href="#problem-12" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="problem-12">
+<h3>Problem 12<a class="headerlink" href="#problem-12" title="Link to this heading">#</a></h3>
 <p>The number of hours of daylight in a northeast city is modeled by the function</p>
 <p>$<span class="math notranslate nohighlight">\(N(t) = 12 + 3\sin[\frac{2\pi}{365}(t-79)]\)</span>$,</p>
 <p>where t is the number of days after January 1.</p>
@@ -550,17 +505,17 @@
 <li><p>Determine the number of hours of daylight 90 days after January 1.</p></li>
 <li><p>Sketch the graph of the function for one period starting on January 1.</p></li>
 </ul>
-</div>
-</div>
-<div class="section" id="functions-and-data">
-<h2>Functions and Data<a class="headerlink" href="#functions-and-data" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="problem-13">
-<h3>Problem 13<a class="headerlink" href="#problem-13" title="Permalink to this headline">¶</a></h3>
+</section>
+</section>
+<section id="functions-and-data">
+<h2>Functions and Data<a class="headerlink" href="#functions-and-data" title="Link to this heading">#</a></h2>
+<section id="problem-13">
+<h3>Problem 13<a class="headerlink" href="#problem-13" title="Link to this heading">#</a></h3>
 <p>For each of the problems below, you are given a table and graph of a real world dataset.  You are asked to choose what kind of function you believe would be a good model of the data; <em>linear, quadratic, exponential</em>, or <em>trigonometric</em>.</p>
 <p>The dataset below is on measurements of three different species of <em>iris</em> flowers. We have plotted the petal length on the horizontal axis and petal width on the vertical axis.  What kind of function would be a more appropriate model for this data where we input a measure of a petal length, and output a width?</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.datasets</span> <span class="k">import</span> <span class="n">load_boston</span><span class="p">,</span> <span class="n">load_diabetes</span><span class="p">,</span> <span class="n">load_iris</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.datasets</span> <span class="kn">import</span> <span class="n">load_boston</span><span class="p">,</span> <span class="n">load_diabetes</span><span class="p">,</span> <span class="n">load_iris</span>
 <span class="n">iris</span> <span class="o">=</span> <span class="n">load_iris</span><span class="p">()</span>
 <span class="n">iris</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">iris</span><span class="o">.</span><span class="n">data</span><span class="p">,</span> <span class="n">columns</span> <span class="o">=</span> <span class="n">iris</span><span class="o">.</span><span class="n">feature_names</span><span class="p">)</span>
 <span class="n">iris</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
@@ -568,24 +523,72 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<<<<<<< HEAD
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/opt/anaconda3/lib/python3.8/site-packages/scipy/__init__.py:146: UserWarning: A NumPy version &gt;=1.16.5 and &lt;1.23.0 is required for this version of SciPy (detected version 1.23.2
-  warnings.warn(f&quot;A NumPy version &gt;={np_minversion} and &lt;{np_maxversion}&quot;
-</pre></div>
-</div>
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-=======
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">-------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
->>>>>>> d1a3331c4bb70eb63f6c667c0eee992efd40248b
-<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">1</span><span class="o">-</span><span class="n">c9c8ed0a7770</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="kn">from</span> <span class="nn">sklearn.datasets</span> <span class="kn">import</span> <span class="n">load_boston</span><span class="p">,</span> <span class="n">load_diabetes</span><span class="p">,</span> <span class="n">load_iris</span>
+<span class="ne">ImportError</span><span class="g g-Whitespace">                               </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">from</span> <span class="nn">sklearn.datasets</span> <span class="kn">import</span> <span class="n">load_boston</span><span class="p">,</span> <span class="n">load_diabetes</span><span class="p">,</span> <span class="n">load_iris</span>
 <span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">iris</span> <span class="o">=</span> <span class="n">load_iris</span><span class="p">()</span>
-<span class="ne">----&gt; </span><span class="mi">3</span> <span class="n">iris</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">iris</span><span class="o">.</span><span class="n">data</span><span class="p">,</span> <span class="n">columns</span> <span class="o">=</span> <span class="n">iris</span><span class="o">.</span><span class="n">feature_names</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="n">iris</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">iris</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">iris</span><span class="o">.</span><span class="n">data</span><span class="p">,</span> <span class="n">columns</span> <span class="o">=</span> <span class="n">iris</span><span class="o">.</span><span class="n">feature_names</span><span class="p">)</span>
 
-<span class="ne">NameError</span>: name &#39;pd&#39; is not defined
+<span class="nn">File /Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/sklearn/datasets/__init__.py:156,</span> in <span class="ni">__getattr__</span><span class="nt">(name)</span>
+<span class="g g-Whitespace">    </span><span class="mi">105</span> <span class="k">if</span> <span class="n">name</span> <span class="o">==</span> <span class="s2">&quot;load_boston&quot;</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">106</span>     <span class="n">msg</span> <span class="o">=</span> <span class="n">textwrap</span><span class="o">.</span><span class="n">dedent</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">107</span><span class="w">         </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="g g-Whitespace">    </span><span class="mi">108</span><span class="sd">         `load_boston` has been removed from scikit-learn since version 1.2.</span>
+<span class="sd">   (...)</span>
+<span class="g g-Whitespace">    </span><span class="mi">154</span><span class="sd">         &quot;&quot;&quot;</span>
+<span class="g g-Whitespace">    </span><span class="mi">155</span>     <span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">156</span>     <span class="k">raise</span> <span class="ne">ImportError</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">157</span> <span class="k">try</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">158</span>     <span class="k">return</span> <span class="nb">globals</span><span class="p">()[</span><span class="n">name</span><span class="p">]</span>
+
+<span class="ne">ImportError</span>: 
+<span class="err">`</span><span class="n">load_boston</span><span class="err">`</span> <span class="n">has</span> <span class="n">been</span> <span class="n">removed</span> <span class="kn">from</span> <span class="nn">scikit</span><span class="o">-</span><span class="n">learn</span> <span class="n">since</span> <span class="n">version</span> <span class="mf">1.2</span><span class="o">.</span>
+
+<span class="n">The</span> <span class="n">Boston</span> <span class="n">housing</span> <span class="n">prices</span> <span class="n">dataset</span> <span class="n">has</span> <span class="n">an</span> <span class="n">ethical</span> <span class="n">problem</span><span class="p">:</span> <span class="k">as</span>
+<span class="n">investigated</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">the</span> <span class="n">authors</span> <span class="n">of</span> <span class="n">this</span> <span class="n">dataset</span> <span class="n">engineered</span> <span class="n">a</span>
+<span class="n">non</span><span class="o">-</span><span class="n">invertible</span> <span class="n">variable</span> <span class="s2">&quot;B&quot;</span> <span class="n">assuming</span> <span class="n">that</span> <span class="n">racial</span> <span class="bp">self</span><span class="o">-</span><span class="n">segregation</span> <span class="n">had</span> <span class="n">a</span>
+<span class="n">positive</span> <span class="n">impact</span> <span class="n">on</span> <span class="n">house</span> <span class="n">prices</span> <span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span> <span class="n">Furthermore</span> <span class="n">the</span> <span class="n">goal</span> <span class="n">of</span> <span class="n">the</span>
+<span class="n">research</span> <span class="n">that</span> <span class="n">led</span> <span class="n">to</span> <span class="n">the</span> <span class="n">creation</span> <span class="n">of</span> <span class="n">this</span> <span class="n">dataset</span> <span class="n">was</span> <span class="n">to</span> <span class="n">study</span> <span class="n">the</span>
+<span class="n">impact</span> <span class="n">of</span> <span class="n">air</span> <span class="n">quality</span> <span class="n">but</span> <span class="n">it</span> <span class="n">did</span> <span class="ow">not</span> <span class="n">give</span> <span class="n">adequate</span> <span class="n">demonstration</span> <span class="n">of</span> <span class="n">the</span>
+<span class="n">validity</span> <span class="n">of</span> <span class="n">this</span> <span class="n">assumption</span><span class="o">.</span>
+
+<span class="n">The</span> <span class="n">scikit</span><span class="o">-</span><span class="n">learn</span> <span class="n">maintainers</span> <span class="n">therefore</span> <span class="n">strongly</span> <span class="n">discourage</span> <span class="n">the</span> <span class="n">use</span> <span class="n">of</span>
+<span class="n">this</span> <span class="n">dataset</span> <span class="n">unless</span> <span class="n">the</span> <span class="n">purpose</span> <span class="n">of</span> <span class="n">the</span> <span class="n">code</span> <span class="ow">is</span> <span class="n">to</span> <span class="n">study</span> <span class="ow">and</span> <span class="n">educate</span>
+<span class="n">about</span> <span class="n">ethical</span> <span class="n">issues</span> <span class="ow">in</span> <span class="n">data</span> <span class="n">science</span> <span class="ow">and</span> <span class="n">machine</span> <span class="n">learning</span><span class="o">.</span>
+
+<span class="n">In</span> <span class="n">this</span> <span class="n">special</span> <span class="n">case</span><span class="p">,</span> <span class="n">you</span> <span class="n">can</span> <span class="n">fetch</span> <span class="n">the</span> <span class="n">dataset</span> <span class="kn">from</span> <span class="nn">the</span> <span class="n">original</span>
+<span class="ne">source</span>::
+
+    <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+    <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+    <span class="n">data_url</span> <span class="o">=</span> <span class="s2">&quot;http://lib.stat.cmu.edu/datasets/boston&quot;</span>
+    <span class="n">raw_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">data_url</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s2">&quot;\s+&quot;</span><span class="p">,</span> <span class="n">skiprows</span><span class="o">=</span><span class="mi">22</span><span class="p">,</span> <span class="n">header</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">hstack</span><span class="p">([</span><span class="n">raw_df</span><span class="o">.</span><span class="n">values</span><span class="p">[::</span><span class="mi">2</span><span class="p">,</span> <span class="p">:],</span> <span class="n">raw_df</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="mi">1</span><span class="p">::</span><span class="mi">2</span><span class="p">,</span> <span class="p">:</span><span class="mi">2</span><span class="p">]])</span>
+    <span class="n">target</span> <span class="o">=</span> <span class="n">raw_df</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="mi">1</span><span class="p">::</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span>
+
+<span class="n">Alternative</span> <span class="n">datasets</span> <span class="n">include</span> <span class="n">the</span> <span class="n">California</span> <span class="n">housing</span> <span class="n">dataset</span> <span class="ow">and</span> <span class="n">the</span>
+<span class="n">Ames</span> <span class="n">housing</span> <span class="n">dataset</span><span class="o">.</span> <span class="n">You</span> <span class="n">can</span> <span class="n">load</span> <span class="n">the</span> <span class="n">datasets</span> <span class="k">as</span> <span class="n">follows</span><span class="p">::</span>
+
+    <span class="kn">from</span> <span class="nn">sklearn.datasets</span> <span class="kn">import</span> <span class="n">fetch_california_housing</span>
+    <span class="n">housing</span> <span class="o">=</span> <span class="n">fetch_california_housing</span><span class="p">()</span>
+
+<span class="k">for</span> <span class="n">the</span> <span class="n">California</span> <span class="n">housing</span> <span class="n">dataset</span> <span class="ow">and</span><span class="p">::</span>
+
+    <span class="kn">from</span> <span class="nn">sklearn.datasets</span> <span class="kn">import</span> <span class="n">fetch_openml</span>
+    <span class="n">housing</span> <span class="o">=</span> <span class="n">fetch_openml</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;house_prices&quot;</span><span class="p">,</span> <span class="n">as_frame</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">the</span> <span class="n">Ames</span> <span class="n">housing</span> <span class="n">dataset</span><span class="o">.</span>
+
+<span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="n">M</span> <span class="n">Carlisle</span><span class="o">.</span>
+<span class="s2">&quot;Racist data destruction?&quot;</span>
+<span class="o">&lt;</span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">medium</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="nd">@docintangible</span><span class="o">/</span><span class="n">racist</span><span class="o">-</span><span class="n">data</span><span class="o">-</span><span class="n">destruction</span><span class="o">-</span><span class="mf">113e3</span><span class="n">eff54a8</span><span class="o">&gt;</span>
+
+<span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="n">Harrison</span> <span class="n">Jr</span><span class="p">,</span> <span class="n">David</span><span class="p">,</span> <span class="ow">and</span> <span class="n">Daniel</span> <span class="n">L</span><span class="o">.</span> <span class="n">Rubinfeld</span><span class="o">.</span>
+<span class="s2">&quot;Hedonic housing prices and the demand for clean air.&quot;</span>
+<span class="n">Journal</span> <span class="n">of</span> <span class="n">environmental</span> <span class="n">economics</span> <span class="ow">and</span> <span class="n">management</span> <span class="mf">5.1</span> <span class="p">(</span><span class="mi">1978</span><span class="p">):</span> <span class="mi">81</span><span class="o">-</span><span class="mf">102.</span>
+<span class="o">&lt;</span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">www</span><span class="o">.</span><span class="n">researchgate</span><span class="o">.</span><span class="n">net</span><span class="o">/</span><span class="n">publication</span><span class="o">/</span><span class="mi">4974606</span><span class="n">_Hedonic_housing_prices_and_the_demand_for_clean_air</span><span class="o">&gt;</span>
 </pre></div>
 </div>
 </div>
@@ -600,12 +603,12 @@
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;AxesSubplot:title={&#39;center&#39;:&#39;Petal Length vs. Petal Width&#39;}, xlabel=&#39;petal length (cm)&#39;, ylabel=&#39;petal width (cm)&#39;&gt;
 </pre></div>
 </div>
-<img alt="../_images/assignment_1_functions_55_1.png" src="../_images/assignment_1_functions_55_1.png" />
+<img alt="../_images/45188c413ae22d58caab4136c8d194fffa747c41ca5adb2048a715e2e849c03b.png" src="../_images/45188c413ae22d58caab4136c8d194fffa747c41ca5adb2048a715e2e849c03b.png" />
 </div>
 </div>
-</div>
-<div class="section" id="problem-14">
-<h3>Problem 14<a class="headerlink" href="#problem-14" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="problem-14">
+<h3>Problem 14<a class="headerlink" href="#problem-14" title="Link to this heading">#</a></h3>
 <p>The data below is from Motor Trend magazine and contains data on different models of cars from multiple manufacturers.  We have plotted the measurements for horsepower on the horizontal axis and miles per gallon on the vertical axis.  What kind of function do you think would be an appropriate model for this?</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -744,12 +747,12 @@
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;AxesSubplot:title={&#39;center&#39;:&#39;Horsepower vs. Miles Per Gallon&#39;}, xlabel=&#39;hp&#39;, ylabel=&#39;mpg&#39;&gt;
 </pre></div>
 </div>
-<img alt="../_images/assignment_1_functions_59_1.png" src="../_images/assignment_1_functions_59_1.png" />
+<img alt="../_images/b03d2d8dfbdaa1396d4989b25e0159fabf4ef964af37ec1fc061865f35c955ea.png" src="../_images/b03d2d8dfbdaa1396d4989b25e0159fabf4ef964af37ec1fc061865f35c955ea.png" />
 </div>
 </div>
-</div>
-<div class="section" id="problem-15">
-<h3>Problem 15<a class="headerlink" href="#problem-15" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="problem-15">
+<h3>Problem 15<a class="headerlink" href="#problem-15" title="Link to this heading">#</a></h3>
 <p>The data below comes from the gapminder organization and contains data on countries GDP, Life Expectancy, and Population.  We have plotted the data from life expectancy in 2007 on the horizontal axis and GDP on the vertical axis.  What kind of relationship would be an appropriate model for this relationship?</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -942,12 +945,12 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/assignment_1_functions_63_0.png" src="../_images/assignment_1_functions_63_0.png" />
+<img alt="../_images/45033eec8430c8e7fbc640e159425bcf5bf66e10c231712967f72ac30cff4ef6.png" src="../_images/45033eec8430c8e7fbc640e159425bcf5bf66e10c231712967f72ac30cff4ef6.png" />
 </div>
 </div>
-</div>
-<div class="section" id="problem-16">
-<h3>Problem 16<a class="headerlink" href="#problem-16" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="problem-16">
+<h3>Problem 16<a class="headerlink" href="#problem-16" title="Link to this heading">#</a></h3>
 <p>The data below comes from the Central Park weather station for the maximum temperature on each day since 1870.  We have plotted the most recent five years of the data where the date is on the horizontal axis and temperature on vertical.  What kind of a function would be the right model for this data?</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1036,21 +1039,21 @@
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0.5, 1.0, &#39;Temperatures in Central Park&#39;)
 </pre></div>
 </div>
-<img alt="../_images/assignment_1_functions_67_1.png" src="../_images/assignment_1_functions_67_1.png" />
+<img alt="../_images/76ae051b16116b618a0f031bce411331989739b1ba5354ad468e5265d182a976.png" src="../_images/76ae051b16116b618a0f031bce411331989739b1ba5354ad468e5265d182a976.png" />
 </div>
 </div>
-</div>
-</div>
-<div class="section" id="using-models">
-<h2>Using Models<a class="headerlink" href="#using-models" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="using-models">
+<h2>Using Models<a class="headerlink" href="#using-models" title="Link to this heading">#</a></h2>
 <p>For each of the questions below, you are given a model that your team of data scientists have developed based on a given dataset.  You are asked three main questions:</p>
-<ol class="simple">
+<ol class="arabic simple">
 <li><p>Evaluate model at given value.</p></li>
 <li><p>Compare model prediction to actual value.</p></li>
 <li><p>Discuss whether the model is a good model for the data and why or why not.</p></li>
 </ol>
-<div class="section" id="problem-17-iris-data">
-<h3>Problem 17: Iris Data<a class="headerlink" href="#problem-17-iris-data" title="Permalink to this headline">¶</a></h3>
+<section id="problem-17-iris-data">
+<h3>Problem 17: Iris Data<a class="headerlink" href="#problem-17-iris-data" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p><strong>Model</strong>: petal length = petal width <span class="math notranslate nohighlight">\(\times\)</span> .7 or <span class="math notranslate nohighlight">\(f(x) = .7x\)</span>.</p></li>
 </ul>
@@ -1071,9 +1074,9 @@ Name: 3, dtype: float64
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="problem-18-cars">
-<h3>Problem 18: Cars<a class="headerlink" href="#problem-18-cars" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="problem-18-cars">
+<h3>Problem 18: Cars<a class="headerlink" href="#problem-18-cars" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p><strong>Model</strong>: mpg = hp/10 or <span class="math notranslate nohighlight">\(f(x) = \frac{1}{10} x\)</span> .</p></li>
 </ul>
@@ -1102,17 +1105,17 @@ Name: 21, dtype: object
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="problem-19">
-<h3>Problem 19<a class="headerlink" href="#problem-19" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="problem-19">
+<h3>Problem 19<a class="headerlink" href="#problem-19" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p>Plot the function <span class="math notranslate nohighlight">\(f(x) = 3^x\)</span> on <span class="math notranslate nohighlight">\(x \in [-5, 5]\)</span>.</p></li>
 <li><p>Plot the function <span class="math notranslate nohighlight">\(g(x) = \ln(f(x))\)</span> on <span class="math notranslate nohighlight">\(x \in [-5, 5]\)</span>.</p></li>
 <li><p>Describe the transformation you observe.</p></li>
 </ul>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -1126,7 +1129,7 @@ Name: 21, dtype: object
             mode: "python"
         },
         kernelOptions: {
-            kernelName: "python3",
+            name: "python3",
             path: "./intro"
         },
         predefinedOutput: true
@@ -1134,38 +1137,113 @@ Name: 21, dtype: object
     </script>
     <script>kernelName = 'python3'</script>
 
-              </div>
+                </article>
               
-        </div>
-    </div>
-    
-    
-    <div class='prev-next-bottom'>
-        
-    <a class='left-prev' id="prev-link" href="functions.html" title="previous page">Functions</a>
-    <a class='right-next' id="next-link" href="probability.html" title="next page">Introduction to Probability</a>
 
-    </div>
-    <footer class="footer mt-5 mt-md-0">
-    <div class="container">
-      <p>
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#basic-definitions-and-plotting">Basic Definitions and Plotting</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#problem-1">Problem 1</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#problem-2">Problem 2</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#problem-3">Problem 3</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#problem-4">Problem 4</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#problem-5">Problem 5</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#problem-6">Problem 6</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#problem-7">Problem 7</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#problem-8">Problem 8</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#problem-9">Problem 9</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#problem-10">Problem 10</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#problem-11">Problem 11</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#problem-12">Problem 12</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#functions-and-data">Functions and Data</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#problem-13">Problem 13</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#problem-14">Problem 14</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#problem-15">Problem 15</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#problem-16">Problem 16</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#using-models">Using Models</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#problem-17-iris-data">Problem 17: Iris Data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#problem-18-cars">Problem 18: Cars</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#problem-19">Problem 19</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By The Jupyter Book community
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
         
-          By The Jupyter Book community<br/>
-        
-            &copy; Copyright 2020.<br/>
-      </p>
+
+      </main>
     </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
   </footer>
-</main>
-
-
-      </div>
-    </div>
-
-    
-  <script src="../_static/js/index.3da636dd464baa7582d2.js"></script>
-
-
-    
   </body>
 </html>

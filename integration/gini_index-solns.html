@@ -1,353 +1,374 @@
 
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+
+<html lang="en" data-content_root="../" >
+
   <head>
     <meta charset="utf-8" />
-<<<<<<< HEAD
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-=======
->>>>>>> d1a3331c4bb70eb63f6c667c0eee992efd40248b
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
     <title>Wealth Distribution &#8212; Calculus: Finite and Infinite</title>
-    
-  <link rel="stylesheet" href="../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
 
-    
-  <link rel="stylesheet"
-    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
-    
-      
-  <link rel="stylesheet"
-    href="../_static/vendor/open-sans_all/1.44.1/index.css">
-  <link rel="stylesheet"
-    href="../_static/vendor/lato_latin-ext/1.44.1/index.css">
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    
-    <link rel="stylesheet" href="../_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
-    
-  <link rel="preload" as="script" href="../_static/js/index.3da636dd464baa7582d2.js">
-
-<<<<<<< HEAD
-    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script src="../_static/language_data.js"></script>
-    <script src="../_static/togglebutton.js"></script>
-    <script src="../_static/clipboard.min.js"></script>
-    <script src="../_static/copybutton.js"></script>
-    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-=======
-    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-    <script type="text/javascript" src="../_static/jquery.js"></script>
-    <script type="text/javascript" src="../_static/underscore.js"></script>
-    <script type="text/javascript" src="../_static/doctools.js"></script>
-    <script type="text/javascript" src="../_static/language_data.js"></script>
-    <script type="text/javascript" src="../_static/togglebutton.js"></script>
-    <script type="text/javascript" src="../_static/clipboard.min.js"></script>
-    <script type="text/javascript" src="../_static/copybutton.js"></script>
-    <script type="text/javascript">var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script type="text/javascript" src="../_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
-    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
->>>>>>> d1a3331c4bb70eb63f6c667c0eee992efd40248b
-    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-    <script type="text/javascript" src="https://unpkg.com/@jupyter-widgets/html-manager@^0.18.0/dist/embed-amd.js"></script>
-    <script async="async" type="text/javascript" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
-    <script type="text/javascript">
-        const thebe_selector = ".thebe"
-        const thebe_selector_input = "pre"
-        const thebe_selector_output = ".output"
-    </script>
-    <script async="async" type="text/javascript" src="../_static/sphinx-thebe.js"></script>
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'integration/gini_index-solns';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="en" />
-
-
-
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
-    
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
 
-    <div class="container-xl">
-      <div class="row">
-          
-<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
     
-        <div class="navbar-brand-box">
-<a class="navbar-brand text-wrap" href="../index.html">
-  
-  <img src="../_static/lion.jpg" class="logo" alt="logo">
-  
-  
-  <h1 class="site-logo" id="site-title">Calculus: Finite and Infinite</h1>
-  
-</a>
-</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
-  <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
 </form>
-<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
-    <ul class="nav sidenav_l1">
- <li class="toctree-l1">
-  <a class="reference internal" href="../syllabus.html">
-<<<<<<< HEAD
-   Calculus: Fall 2022 Version
-=======
-   Calculus: Spring 2022 Version
->>>>>>> d1a3331c4bb70eb63f6c667c0eee992efd40248b
-  </a>
- </li>
-</ul>
-<p class="caption collapsible-parent">
- <span class="caption-text">
-  Introduction and Review
- </span>
-</p>
-<ul class="nav sidenav_l1">
- <li class="toctree-l1">
-  <a class="reference internal" href="../intro/functions.html">
-   Functions
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../intro/assignment_1_functions.html">
-   Problem Set I: Functions
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../intro/probability.html">
-   Introduction to Probability
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../intro/stats.html">
-   Probability and Statistics
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../intro/02_calc_assign.html">
-   Assignment 2
-  </a>
- </li>
-</ul>
-<p class="caption collapsible-parent">
- <span class="caption-text">
-  Integration
- </span>
-</p>
-<ul class="nav sidenav_l1">
- <li class="toctree-l1">
-  <a class="reference internal" href="area.html">
-   Riemann Sums and Definite Integrals
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="03_Calc_Assignment.html">
-   Assignment 3: Definite Integral
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="gini_index.html">
-   Area Between Curves and Wealth Distribution
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="gini_index.html#wealth-distribution">
-   Wealth Distribution
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="gini_extra.html">
-   Area Between Curves and Application to Equality
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="gini_extra.html#wealth-distribution-and-baseball">
-   Wealth Distribution and Baseball
-  </a>
- </li>
-</ul>
-<p class="caption collapsible-parent">
- <span class="caption-text">
-  Differentiation
- </span>
-</p>
-<ul class="nav sidenav_l1">
- <li class="toctree-l1">
-  <a class="reference internal" href="../differentiation/intro_to_derivatives.html">
-   Introduction to Derivatives
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../differentiation/optimization_I.html">
-   Using Derivatives to Find Maximum and Minimum Values
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../differentiation/applied_optimization.html">
-   Applied Optimization
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../differentiation/newtons_method.html">
-   Newton’s Method
-  </a>
- </li>
-</ul>
+  </dialog>
 
-</nav> <!-- To handle the deprecated key -->
-
-<div class="navbar_extra_footer">
-  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
 </div>
 
-</div>
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
 
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
 
-          
-
-
-          
-<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+  
+  <div class="sidebar-header-items sidebar-primary__section">
     
-    <div class="row topbar fixed-top container-xl">
-    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
-    </div>
-    <div class="col pl-2 topbar-main">
-        
-        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
-            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
-            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
-            <i class="fas fa-bars"></i>
-            <i class="fas fa-arrow-left"></i>
-            <i class="fas fa-arrow-up"></i>
-        </button>
-        
-        
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
-            class="fas fa-download"></i></button>
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
 
-    <div class="dropdown-buttons">
-        <!-- ipynb file if we had a myst markdown file -->
-        
-        <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/integration/gini_index-solns.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.ipynb</button></a>
-        <!-- Download PDF via print -->
-        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
-            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
-    </div>
-</div>
+  
+    
+  
 
-        <!-- Source interaction buttons -->
+<a class="navbar-brand logo" href="../syllabus.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/lion.jpg" class="logo__image only-light" alt="Calculus: Finite and Infinite - Home"/>
+    <img src="../_static/lion.jpg" class="logo__image only-dark pst-js-only" alt="Calculus: Finite and Infinite - Home"/>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
 
-
-        <!-- Full screen (wrap in <a> to have style consistency -->
-        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
-                title="Fullscreen mode"><i
-                    class="fas fa-expand"></i></button></a>
-
-        <!-- Launch buttons -->
-
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
-    <div class="dropdown-buttons">
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
         
-        <a class="binder-button" href="https://mybinder.org/v2/gh/jfkoehler/calcbook/master?urlpath=tree/integration/gini_index-solns.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
-                data-placement="left"><img class="binder-button-logo"
-                    src="../_static/images/logo_binder.svg"
-                    alt="Interact on binder">Binder</button></a>
-        
-        
-        
-        <a class="colab-button" href="https://colab.research.google.com/github/jfkoehler/calcbook/blob/master/integration/gini_index-solns.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
-                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
-                    src="../_static/images/logo_colab.png"
-                    alt="Interact on Colab">Colab</button></a>
-        
-        
-    </div>
-</div>
-
-    </div>
-
-    <!-- Table of contents -->
-    <div class="d-none d-md-block col-md-2 bd-toc show">
-        
-        <div class="tocsection onthispage pt-5 pb-3">
-            <i class="fas fa-list"></i> Contents
-        </div>
-        <nav id="bd-toc-nav">
-            <ul class="nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#quadratic-fit">
-   Quadratic Fit
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#getting-the-fit">
-     Getting the Fit
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#inequality-through-time">
-     Inequality through Time
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#census-bureau-data-and-pandas">
-     Census Bureau Data and Pandas
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#creating-the-dataframe">
-       Creating the DataFrame
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#problems">
-     Problems
-    </a>
-   </li>
-  </ul>
- </li>
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../syllabus.html">
+                    Course Description
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../intro/functions.html">Functions</a></li>
 </ul>
 
-        </nav>
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
         
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/jfkoehler/calcbook/blob/master/integration/gini_index-solns.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Colab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Colab logo" src="../_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/integration/gini_index-solns.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Wealth Distribution</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#quadratic-fit">Quadratic Fit</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#getting-the-fit">Getting the Fit</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#inequality-through-time">Inequality through Time</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#census-bureau-data-and-pandas">Census Bureau Data and Pandas</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-the-dataframe">Creating the DataFrame</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#problems">Problems</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
     </div>
 </div>
-    <div id="main-content" class="row">
-        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
-        
-              <div>
+
+              
                 
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
   <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -357,11 +378,11 @@
   ga('create', 'UA-50838873-3', 'auto');
   ga('send', 'pageview');
 
-</script><div class="section" id="wealth-distribution">
-<h1>Wealth Distribution<a class="headerlink" href="#wealth-distribution" title="Permalink to this headline">¶</a></h1>
+</script><section class="tex2jax_ignore mathjax_ignore" id="wealth-distribution">
+<h1>Wealth Distribution<a class="headerlink" href="#wealth-distribution" title="Link to this heading">#</a></h1>
 <p>One way that we might understand equality is through understanding the distribution of wealth in a society.  Perfect wealth distribution would mean that all participants have the same share of wealth as everyone else.  We can represent this situation mathematically with a function <span class="math notranslate nohighlight">\(L(x) = x\)</span> that we will call the <strong>Lorenz Curve</strong>.</p>
 <p>Concretely, if we were to look at every 20% of the population, we would see 20% of income.</p>
-<table class="colwidths-auto table">
+<div class="pst-scrollable-table-container"><table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p>Fifths of Households</p></th>
 <th class="head"><p>Percent of Wealth</p></th>
@@ -385,18 +406,13 @@
 </tr>
 </tbody>
 </table>
+</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-<span class="kn">from</span> <span class="nn">scipy.integrate</span> <span class="k">import</span> <span class="n">quad</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/opt/anaconda3/lib/python3.8/site-packages/scipy/__init__.py:146: UserWarning: A NumPy version &gt;=1.16.5 and &lt;1.23.0 is required for this version of SciPy (detected version 1.23.2
-  warnings.warn(f&quot;A NumPy version &gt;={np_minversion} and &lt;{np_maxversion}&quot;
+<span class="kn">from</span> <span class="nn">scipy.integrate</span> <span class="kn">import</span> <span class="n">quad</span>
 </pre></div>
 </div>
 </div>
@@ -420,11 +436,11 @@
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0.5, 1.0, &#39;Perfect Wealth Distribution&#39;)
 </pre></div>
 </div>
-<img alt="../_images/gini_index-solns_4_1.png" src="../_images/gini_index-solns_4_1.png" />
+<img alt="../_images/fadf011eca52bd3ce322c15fec1d97cdedc17c20f59b809cf296e83480c520f6.png" src="../_images/fadf011eca52bd3ce322c15fec1d97cdedc17c20f59b809cf296e83480c520f6.png" />
 </div>
 </div>
 <p>It is unlikely that we have perfect distribution of wealth in a society however.  For example, the following table describes the cumulative distribution of income in the United States for the year 1994.</p>
-<table class="colwidths-auto table">
+<div class="pst-scrollable-table-container"><table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p>Fifths of Households</p></th>
 <th class="head"><p>Percent of Wealth</p></th>
@@ -448,6 +464,7 @@
 </tr>
 </tbody>
 </table>
+</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">usa_94</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mf">0.042</span><span class="p">,</span> <span class="mf">0.142</span><span class="p">,</span> <span class="mf">0.299</span><span class="p">,</span> <span class="mf">0.532</span><span class="p">,</span> <span class="mf">1.00</span><span class="p">]</span>
@@ -466,20 +483,16 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<<<<<<< HEAD
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x7f94d888f5b0&gt;
-=======
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x7fb290a9b8d0&gt;
->>>>>>> d1a3331c4bb70eb63f6c667c0eee992efd40248b
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x127f0bd70&gt;
 </pre></div>
 </div>
-<img alt="../_images/gini_index-solns_7_1.png" src="../_images/gini_index-solns_7_1.png" />
+<img alt="../_images/576344b712e3f78b5225d5c1d5b8f018166acb6fd80c7d91cc3b1cd0797515cd.png" src="../_images/576344b712e3f78b5225d5c1d5b8f018166acb6fd80c7d91cc3b1cd0797515cd.png" />
 </div>
 </div>
 <p>The area between these curves can be understood to represent the discrepency between perfect wealth distribution and levels of inequality.  Further, if we examine the ratio between this area and that under the <strong>Lorenz Curve</strong> we get the <strong>Gini Index</strong>.</p>
 <p>One big issue remains however.  We don’t want to use rectangles to approximate these regions but we don’t have equations for the actual distribution of wealth.  We introduce two curve fitting techniques using <code class="docutils literal notranslate"><span class="pre">numpy</span></code> to address this problem.</p>
-<div class="section" id="quadratic-fit">
-<h2>Quadratic Fit<a class="headerlink" href="#quadratic-fit" title="Permalink to this headline">¶</a></h2>
+<section id="quadratic-fit">
+<h2>Quadratic Fit<a class="headerlink" href="#quadratic-fit" title="Link to this heading">#</a></h2>
 <p>The curve in the figure above representing the actual distribution of wealth in the USA in 1994 can be approximated by a polynomial function.  NumPy has a function called <code class="docutils literal notranslate"><span class="pre">polyfit</span></code> that will fit a polynomial to a set of points.  Here, we use <code class="docutils literal notranslate"><span class="pre">polyfit</span></code> to fit a quadratic function to the points.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -515,14 +528,10 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<<<<<<< HEAD
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7f94d8a90ee0&gt;]
-=======
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7fb2c078e810&gt;]
->>>>>>> d1a3331c4bb70eb63f6c667c0eee992efd40248b
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x1281098b0&gt;]
 </pre></div>
 </div>
-<img alt="../_images/gini_index-solns_13_1.png" src="../_images/gini_index-solns_13_1.png" />
+<img alt="../_images/d85fbc793ae11af0e0ac4cef601be5db9ef3d04d246c2ed2d2466222f8c820db.png" src="../_images/d85fbc793ae11af0e0ac4cef601be5db9ef3d04d246c2ed2d2466222f8c820db.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -567,18 +576,14 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<<<<<<< HEAD
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x7f94d8ac4ca0&gt;
-=======
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x7fb2a157df50&gt;
->>>>>>> d1a3331c4bb70eb63f6c667c0eee992efd40248b
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x127ef2b70&gt;
 </pre></div>
 </div>
-<img alt="../_images/gini_index-solns_17_1.png" src="../_images/gini_index-solns_17_1.png" />
+<img alt="../_images/daa16ea96ce282316323ea7cf397c18f4d38247a6d08e2a18f8c4eeddad7d0c2.png" src="../_images/daa16ea96ce282316323ea7cf397c18f4d38247a6d08e2a18f8c4eeddad7d0c2.png" />
 </div>
 </div>
-<div class="section" id="getting-the-fit">
-<h3>Getting the Fit<a class="headerlink" href="#getting-the-fit" title="Permalink to this headline">¶</a></h3>
+<section id="getting-the-fit">
+<h3>Getting the Fit<a class="headerlink" href="#getting-the-fit" title="Link to this heading">#</a></h3>
 <p>Below, we return to the complete picture where we plot our fitted function and the <strong>Lorenz Curve</strong> and shade the area that represents the difference in income distribution.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -592,14 +597,10 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<<<<<<< HEAD
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x7f94d8cec730&gt;
-=======
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x7fb2a15ec790&gt;
->>>>>>> d1a3331c4bb70eb63f6c667c0eee992efd40248b
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x1341b91f0&gt;
 </pre></div>
 </div>
-<img alt="../_images/gini_index-solns_19_1.png" src="../_images/gini_index-solns_19_1.png" />
+<img alt="../_images/19a575e58e9e3b849cadb2a66c55265713ea1acf489c036fb9ec7175b472dffa.png" src="../_images/19a575e58e9e3b849cadb2a66c55265713ea1acf489c036fb9ec7175b472dffa.png" />
 </div>
 </div>
 <p>Now, we want to compute the ratio between the area between the curves to that under the <strong>Lorenz Curve</strong>.  We can do this easily in Sympy but declaring <span class="math notranslate nohighlight">\(x\)</span> a symbol and substituting it into our fit function then integrating this.</p>
@@ -647,9 +648,9 @@
 \[\displaystyle 0.407559523809524\]</div>
 </div>
 </div>
-</div>
-<div class="section" id="inequality-through-time">
-<h3>Inequality through Time<a class="headerlink" href="#inequality-through-time" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="inequality-through-time">
+<h3>Inequality through Time<a class="headerlink" href="#inequality-through-time" title="Link to this heading">#</a></h3>
 <p>Now that we understand how to compute the Gini Index, we want to explore what improving the gap in wealth distribution would mean.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -668,23 +669,19 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<<<<<<< HEAD
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x7f94da6363a0&gt;
-=======
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x7fb280cd37d0&gt;
->>>>>>> d1a3331c4bb70eb63f6c667c0eee992efd40248b
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x134bd85c0&gt;
 </pre></div>
 </div>
-<img alt="../_images/gini_index-solns_27_1.png" src="../_images/gini_index-solns_27_1.png" />
+<img alt="../_images/6c34251ea73e054f8f96d1fbda0f0afb2a0c55d7ad0b54d349ee37a7766b9882.png" src="../_images/6c34251ea73e054f8f96d1fbda0f0afb2a0c55d7ad0b54d349ee37a7766b9882.png" />
 </div>
 </div>
 <p>Which of the above countries do you believe is the most equitable?  Why?</p>
-</div>
-<div class="section" id="census-bureau-data-and-pandas">
-<h3>Census Bureau Data and Pandas<a class="headerlink" href="#census-bureau-data-and-pandas" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="census-bureau-data-and-pandas">
+<h3>Census Bureau Data and Pandas<a class="headerlink" href="#census-bureau-data-and-pandas" title="Link to this heading">#</a></h3>
 <p>There are many organizations that use the Gini Index to this day.  The OECD, World Bank, and US Census all track Gini Indicies.  We want to investigate the real data much as we have with our smaller examples.  To do so, we will use the Pandas library.</p>
 <p>The table below gives distribution data for the years 1970, 1980, 1990, and 2000.</p>
-<table class="colwidths-auto table">
+<div class="pst-scrollable-table-container"><table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p>x</p></th>
 <th class="head"><p>0.0</p></th>
@@ -730,8 +727,9 @@
 </tr>
 </tbody>
 </table>
-<div class="section" id="creating-the-dataframe">
-<h4>Creating the DataFrame<a class="headerlink" href="#creating-the-dataframe" title="Permalink to this headline">¶</a></h4>
+</div>
+<section id="creating-the-dataframe">
+<h4>Creating the DataFrame<a class="headerlink" href="#creating-the-dataframe" title="Link to this heading">#</a></h4>
 <p>We will begin by creating a table from this data by entering lists with these values and creating a DataFrame from these lists.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -823,10 +821,10 @@
 </table>
 </div></div></div>
 </div>
-</div>
-</div>
-<div class="section" id="problems">
-<h3>Problems<a class="headerlink" href="#problems" title="Permalink to this headline">¶</a></h3>
+</section>
+</section>
+<section id="problems">
+<h3>Problems<a class="headerlink" href="#problems" title="Link to this heading">#</a></h3>
 <p><strong>Problem 1</strong>: Visit the WikiPedia page on <a class="reference external" href="https://en.wikipedia.org/wiki/Gini_coefficient"><strong>Gini Coefficients</strong></a>.  See if you can replicate the results in the table comparing the U.S. Gini Index in the 1970’s to that of the 2000’s.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -929,14 +927,10 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<<<<<<< HEAD
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7f94da971cd0&gt;]
-=======
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7fb2f071b750&gt;]
->>>>>>> d1a3331c4bb70eb63f6c667c0eee992efd40248b
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x135710890&gt;]
 </pre></div>
 </div>
-<img alt="../_images/gini_index-solns_36_1.png" src="../_images/gini_index-solns_36_1.png" />
+<img alt="../_images/2b9a760c437f1699743db87fa59dc6620502934a2eaf838cf53c5a088b7d4b46.png" src="../_images/2b9a760c437f1699743db87fa59dc6620502934a2eaf838cf53c5a088b7d4b46.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -980,18 +974,14 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<<<<<<< HEAD
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7f94da9e61c0&gt;]
-=======
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7fb2b07501d0&gt;]
->>>>>>> d1a3331c4bb70eb63f6c667c0eee992efd40248b
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x135778d10&gt;]
 </pre></div>
 </div>
-<img alt="../_images/gini_index-solns_40_1.png" src="../_images/gini_index-solns_40_1.png" />
+<img alt="../_images/f55b4906d3a00b5ee788871d44be4874955713191ae4067561779dd935eb88e1.png" src="../_images/f55b4906d3a00b5ee788871d44be4874955713191ae4067561779dd935eb88e1.png" />
 </div>
 </div>
 <p><strong>Problem 2</strong>: Use the table below to find the Lorenz curve for the data.</p>
-<table class="colwidths-auto table">
+<div class="pst-scrollable-table-container"><table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p>Fraction of People</p></th>
 <th class="head"><p>Fraction of Income</p></th>
@@ -1018,9 +1008,10 @@
 </tr>
 </tbody>
 </table>
+</div>
 <p><strong>Problem 3</strong>: Let the fraction of population be the variable <span class="math notranslate nohighlight">\(p\)</span> and the fraction of the resource to be <span class="math notranslate nohighlight">\(r\)</span>.  Use the symbols to write the equation for perfect equality.</p>
 <p><strong>Problem 4</strong>: The table below shows how arable land is distributed among farmers in Blivia, Denmark, and the United States.  In which country is the land most equally distributed?  The least?</p>
-<table class="colwidths-auto table">
+<div class="pst-scrollable-table-container"><table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p>Fraction of Farmers</p></th>
 <th class="head"><p>Fraction of Land Bolivia</p></th>
@@ -1086,9 +1077,10 @@
 </tr>
 </tbody>
 </table>
+</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">&#39;frac&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">,</span> <span class="mf">0.3</span><span class="p">,</span> <span class="o">.</span><span class="mi">4</span><span class="p">,</span> <span class="o">.</span><span class="mi">5</span><span class="p">,</span> <span class="o">.</span><span class="mi">6</span><span class="p">,</span> <span class="o">.</span><span class="mi">7</span><span class="p">,</span> <span class="o">.</span><span class="mi">8</span><span class="p">,</span> <span class="o">.</span><span class="mi">9</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">],</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">&#39;frac&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">,</span> <span class="mf">0.3</span><span class="p">,</span> <span class="mf">.4</span><span class="p">,</span> <span class="mf">.5</span><span class="p">,</span> <span class="mf">.6</span><span class="p">,</span> <span class="mf">.7</span><span class="p">,</span> <span class="mf">.8</span><span class="p">,</span> <span class="mf">.9</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">],</span>
                     <span class="s1">&#39;bolivia&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mf">0.01</span><span class="p">,</span> <span class="mf">0.016</span><span class="p">,</span> <span class="mf">0.022</span><span class="p">,</span> <span class="mf">0.03</span><span class="p">,</span> <span class="mf">0.04</span><span class="p">,</span> <span class="mi">1</span><span class="p">]})</span>
 </pre></div>
 </div>
@@ -1191,14 +1183,10 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<<<<<<< HEAD
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7f94daabba00&gt;]
-=======
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7fb2a16db390&gt;]
->>>>>>> d1a3331c4bb70eb63f6c667c0eee992efd40248b
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x1357d5af0&gt;]
 </pre></div>
 </div>
-<img alt="../_images/gini_index-solns_48_1.png" src="../_images/gini_index-solns_48_1.png" />
+<img alt="../_images/4db4f7478e3cbbd369a9260f611c7322c593943f4e99d22e23d0b8de40d82bd8.png" src="../_images/4db4f7478e3cbbd369a9260f611c7322c593943f4e99d22e23d0b8de40d82bd8.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -1214,7 +1202,7 @@
 </div>
 </div>
 <p><strong>Problem 5</strong>: The table below shows how population was divided among the 25 largest countries in 1963 and 1968.  Was there change in the population distribution between 1963 and 1968? How would the Lorenz curves for 1963 and 1968 compare?</p>
-<table class="colwidths-auto table">
+<div class="pst-scrollable-table-container"><table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p>Fraction of Countries</p></th>
 <th class="head"><p>Fraction of Population 1963</p></th>
@@ -1248,8 +1236,9 @@
 </tr>
 </tbody>
 </table>
+</div>
 <p><strong>Problem 6</strong>: The table below shows how total energy produced and total energy consumed was divided among the 25 largest producers and users of energy in 1963.  Draw the corresponding Lornez curves on the same set of coordinates.  Was production of energy more or less equally divided than was use of energy?</p>
-<table class="colwidths-auto table">
+<div class="pst-scrollable-table-container"><table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p>Fraction of Countries</p></th>
 <th class="head"><p>Energy Used</p></th>
@@ -1283,6 +1272,7 @@
 </tr>
 </tbody>
 </table>
+</div>
 <p><strong>Problem 7</strong>: Letting <span class="math notranslate nohighlight">\(p\)</span> stand for the fraction of the population and <span class="math notranslate nohighlight">\(r\)</span> for the fraction of the resource, consider the family of Lorenz curve given by the equation</p>
 <div class="math notranslate nohighlight">
 \[r = p^n; \quad n = 1,2,3,4,...\]</div>
@@ -1292,7 +1282,7 @@
 <li><p>To what situation does the Lorenz curve <span class="math notranslate nohighlight">\(r = p^n\)</span> correspond in the case as <span class="math notranslate nohighlight">\(n \to \infty\)</span></p></li>
 </ul>
 <p><strong>Problem 8</strong>: The table below shows how gross national product (GNP) is distributed among the countries of the world:</p>
-<table class="colwidths-auto table">
+<div class="pst-scrollable-table-container"><table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p>Fraction of Countries</p></th>
 <th class="head"><p>Fraction of GNP</p></th>
@@ -1334,14 +1324,15 @@
 </tr>
 </tbody>
 </table>
+</div>
 <p>a. Determine the Lorenz Curve for this data using the model you deem most appropriate.</p>
 <p>b. Draw the Lorenz Curve and the curve for completely unequal distribution on the same axes.</p>
 <p>c. Is the GNP divided equally or unequally among the countries of the world?</p>
 <p><strong>Problem 9</strong>: Use the library to find a research article that investigates the Gini Coefficient.  Describe the research, what were they investigating, what was the data, and what did they find.</p>
 <p><strong>Problem 10</strong>: The US Census provides data that could be used in an analysis of distribution of resources.  One such dataset is the <a class="reference external" href="https://www.census.gov/data/tables/2017/demo/wealth/wealth-asset-ownership.html">Wealth, Asset Ownership, &amp; Debt of Households</a>. Use this data to analyze the equality of the distribution of debt – or find another data table that is of interest and makes sense to use in an analysis of distribution of resources.</p>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -1355,7 +1346,7 @@
             mode: "python"
         },
         kernelOptions: {
-            kernelName: "python3",
+            name: "python3",
             path: "./integration"
         },
         predefinedOutput: true
@@ -1363,36 +1354,95 @@
     </script>
     <script>kernelName = 'python3'</script>
 
-              </div>
+                </article>
               
-        </div>
-    </div>
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#quadratic-fit">Quadratic Fit</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#getting-the-fit">Getting the Fit</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#inequality-through-time">Inequality through Time</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#census-bureau-data-and-pandas">Census Bureau Data and Pandas</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-the-dataframe">Creating the DataFrame</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#problems">Problems</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
     
+<p class="component-author">
+By The Jupyter Book community
+</p>
+
+  </div>
+  
+  <div class="footer-item">
     
-    <div class='prev-next-bottom'>
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
         
 
+      </main>
     </div>
-    <footer class="footer mt-5 mt-md-0">
-    <div class="container">
-      <p>
-        
-          By The Jupyter Book community<br/>
-        
-            &copy; Copyright 2020.<br/>
-      </p>
-    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
   </footer>
-</main>
-
-
-      </div>
-    </div>
-
-    
-  <script src="../_static/js/index.3da636dd464baa7582d2.js"></script>
-
-
-    
   </body>
 </html>
