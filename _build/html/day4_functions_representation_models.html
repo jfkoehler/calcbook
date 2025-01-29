@@ -1,0 +1,1466 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Plotting Functions &#8212; Calculus: Finite and Infinite</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'day4_functions_representation_models';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="syllabus.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/lion.jpg" class="logo__image only-light" alt="Calculus: Finite and Infinite - Home"/>
+    <img src="_static/lion.jpg" class="logo__image only-dark pst-js-only" alt="Calculus: Finite and Infinite - Home"/>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="syllabus.html">
+                    Calculus I: Spring 2025
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Functions and Models</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="intro/functions.html">Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="intro/functions_representation_models.html">Modeling with Sequences and Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="intro/probability.html">Introduction to Probability</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/jfkoehler/calcbook/blob/master/day4_functions_representation_models.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Colab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Colab logo" src="_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/day4_functions_representation_models.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Plotting Functions</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Plotting Functions</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#plotting-a-sequence">Plotting a Sequence</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#linear-functions-and-arithmetic-sequences">Linear Functions and Arithmetic Sequences</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#application-modeling-stock-data">Application: Modeling Stock Data</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#slope-and-intercept">Slope and Intercept</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#plotting-functions-with-matplotlib-and-numpy">Plotting Functions with <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> and <code class="docutils literal notranslate"><span class="pre">numpy</span></code></a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#geometric-sequences-and-exponential-functions">Geometric Sequences and Exponential Functions</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#trigonometric-sequences-and-functions">Trigonometric Sequences and Functions</a></li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <p><strong>OBJECTIVES</strong></p>
+<ul class="simple">
+<li><p>Graph functions using <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code></p></li>
+<li><p>Define functions using python</p></li>
+<li><p>Use functions to model data</p></li>
+</ul>
+<section id="plotting-functions">
+<h1>Plotting Functions<a class="headerlink" href="#plotting-functions" title="Link to this heading">#</a></h1>
+<ol class="arabic simple">
+<li><p>Define the function</p></li>
+<li><p>Plug in values of domain (inputs)</p></li>
+<li><p>Plot inputs vs outputs</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="plotting-a-sequence">
+<h1>Plotting a Sequence<a class="headerlink" href="#plotting-a-sequence" title="Link to this heading">#</a></h1>
+<p>Suppose we have a sequence of values <span class="math notranslate nohighlight">\(a_n = [3, 5, 7, 9, 11, 13]\)</span>.  Using the <code class="docutils literal notranslate"><span class="pre">plt.plot</span></code> function, a graph of the sequence is created with indicies on the <span class="math notranslate nohighlight">\(x\)</span> or horizontal axis and the sequence terms on the <span class="math notranslate nohighlight">\(y\)</span> or vertical axis.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sequence</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">13</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">sequence</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Plot of Sequence&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;index&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;term of sequence&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0, 0.5, &#39;term of sequence&#39;)
+</pre></div>
+</div>
+<img alt="_images/88ddbb0e42a8f4c08154ad0dffb051fdbfba5e0748c26b35f2b7dfabc2202755.png" src="_images/88ddbb0e42a8f4c08154ad0dffb051fdbfba5e0748c26b35f2b7dfabc2202755.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">sequence</span><span class="p">,</span> <span class="s1">&#39;-o&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Plot of Sequence&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;index&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;term of sequence&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0, 0.5, &#39;term of sequence&#39;)
+</pre></div>
+</div>
+<img alt="_images/f7ac4b643b4fb92a11c706442139c9ff64eec36adc193cc422f496c61af68782.png" src="_images/f7ac4b643b4fb92a11c706442139c9ff64eec36adc193cc422f496c61af68782.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">sequence</span><span class="p">,</span> <span class="s1">&#39;--x&#39;</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;red&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Plot of Sequence&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;index&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;term of sequence&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0, 0.5, &#39;term of sequence&#39;)
+</pre></div>
+</div>
+<img alt="_images/997022e01f0409acb0c482cffd19e3d380f2435734abf522c898d8bce0e427ab.png" src="_images/997022e01f0409acb0c482cffd19e3d380f2435734abf522c898d8bce0e427ab.png" />
+</div>
+</div>
+<p><strong>PROBLEMS</strong></p>
+<p>Plot the sequences below.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">seq_1</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="mi">36</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#plot here</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">seq_2</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#plot here</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">seq_3</span> <span class="o">=</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">1000</span><span class="p">,</span> <span class="mi">10000</span><span class="p">,</span> <span class="mi">100000</span><span class="p">,</span> <span class="mi">10000000</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#plot here</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="linear-functions-and-arithmetic-sequences">
+<h1>Linear Functions and Arithmetic Sequences<a class="headerlink" href="#linear-functions-and-arithmetic-sequences" title="Link to this heading">#</a></h1>
+<p>In general, we recognize sequences with constant change as “linear” functions.  We can define these by thinking recursively and using the representation $<span class="math notranslate nohighlight">\(f(n) = \text{starting value} + \text{change} \times n\)</span>$</p>
+<p>For example, the sequence <span class="math notranslate nohighlight">\(a_n = [3, 5, 7, 9, 11, 13]\)</span>, we have:</p>
+<div class="math notranslate nohighlight">
+\[\text{starting value} = 3\]</div>
+<div class="math notranslate nohighlight">
+\[\text{change} = 2\]</div>
+<p>thus;</p>
+<div class="math notranslate nohighlight">
+\[f(n) = 3 + 2n\]</div>
+</section>
+<section id="application-modeling-stock-data">
+<h1>Application: Modeling Stock Data<a class="headerlink" href="#application-modeling-stock-data" title="Link to this heading">#</a></h1>
+<p>Below, we load and display data from Microsoft’s stock price.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">yfinance</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: yfinance in /Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages (0.2.44)
+Requirement already satisfied: pandas&gt;=1.3.0 in /Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages (from yfinance) (2.2.3)
+Requirement already satisfied: numpy&gt;=1.16.5 in /Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages (from yfinance) (1.26.4)
+Requirement already satisfied: requests&gt;=2.31 in /Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages (from yfinance) (2.32.3)
+Requirement already satisfied: multitasking&gt;=0.0.7 in /Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages (from yfinance) (0.0.11)
+Requirement already satisfied: lxml&gt;=4.9.1 in /Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages (from yfinance) (5.1.0)
+Requirement already satisfied: platformdirs&gt;=2.0.0 in /Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages (from yfinance) (4.1.0)
+Requirement already satisfied: pytz&gt;=2022.5 in /Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages (from yfinance) (2023.3.post1)
+Requirement already satisfied: frozendict&gt;=2.3.4 in /Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages (from yfinance) (2.4.4)
+Requirement already satisfied: peewee&gt;=3.16.2 in /Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages (from yfinance) (3.17.6)
+Requirement already satisfied: beautifulsoup4&gt;=4.11.1 in /Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages (from yfinance) (4.12.2)
+Requirement already satisfied: html5lib&gt;=1.1 in /Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages (from yfinance) (1.1)
+Requirement already satisfied: soupsieve&gt;1.2 in /Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages (from beautifulsoup4&gt;=4.11.1-&gt;yfinance) (2.5)
+Requirement already satisfied: six&gt;=1.9 in /Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages (from html5lib&gt;=1.1-&gt;yfinance) (1.16.0)
+Requirement already satisfied: webencodings in /Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages (from html5lib&gt;=1.1-&gt;yfinance) (0.5.1)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: python-dateutil&gt;=2.8.2 in /Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages (from pandas&gt;=1.3.0-&gt;yfinance) (2.8.2)
+Requirement already satisfied: tzdata&gt;=2022.7 in /Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages (from pandas&gt;=1.3.0-&gt;yfinance) (2023.3)
+Requirement already satisfied: charset-normalizer&lt;4,&gt;=2 in /Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages (from requests&gt;=2.31-&gt;yfinance) (3.3.2)
+Requirement already satisfied: idna&lt;4,&gt;=2.5 in /Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages (from requests&gt;=2.31-&gt;yfinance) (3.6)
+Requirement already satisfied: urllib3&lt;3,&gt;=1.21.1 in /Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages (from requests&gt;=2.31-&gt;yfinance) (2.1.0)
+Requirement already satisfied: certifi&gt;=2017.4.17 in /Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages (from requests&gt;=2.31-&gt;yfinance) (2024.8.30)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Bold">[</span><span class=" -Color -Color-Blue">notice</span><span class=" -Color -Color-Bold">]</span> A new release of pip is available: <span class=" -Color -Color-Red">24.3.1</span> -&gt; <span class=" -Color -Color-Green">25.0</span>
+<span class=" -Color -Color-Bold">[</span><span class=" -Color -Color-Blue">notice</span><span class=" -Color -Color-Bold">]</span> To update, run: <span class=" -Color -Color-Green">pip install --upgrade pip</span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Note: you may need to restart the kernel to use updated packages.
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">yfinance</span> <span class="k">as</span> <span class="nn">yf</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">msft</span> <span class="o">=</span> <span class="n">yf</span><span class="o">.</span><span class="n">Ticker</span><span class="p">(</span><span class="s2">&quot;MSFT&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">msft_history</span> <span class="o">=</span> <span class="n">msft</span><span class="o">.</span><span class="n">history</span><span class="p">(</span><span class="n">start</span> <span class="o">=</span> <span class="s1">&#39;2024-01-02&#39;</span><span class="p">,</span> <span class="n">end</span> <span class="o">=</span> <span class="s1">&#39;2024-01-30&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">msft_history</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Open</th>
+      <th>High</th>
+      <th>Low</th>
+      <th>Close</th>
+      <th>Volume</th>
+      <th>Dividends</th>
+      <th>Stock Splits</th>
+    </tr>
+    <tr>
+      <th>Date</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>2024-01-02 00:00:00-05:00</th>
+      <td>371.085046</td>
+      <td>373.109913</td>
+      <td>364.047674</td>
+      <td>368.117249</td>
+      <td>25258600</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>2024-01-03 00:00:00-05:00</th>
+      <td>366.271049</td>
+      <td>370.489503</td>
+      <td>365.774760</td>
+      <td>367.849243</td>
+      <td>23083500</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>2024-01-04 00:00:00-05:00</th>
+      <td>367.918763</td>
+      <td>370.330719</td>
+      <td>364.444741</td>
+      <td>365.209015</td>
+      <td>20901500</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>2024-01-05 00:00:00-05:00</th>
+      <td>366.231332</td>
+      <td>369.298392</td>
+      <td>363.779664</td>
+      <td>365.020386</td>
+      <td>20987000</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>2024-01-08 00:00:00-05:00</th>
+      <td>366.558897</td>
+      <td>372.415129</td>
+      <td>366.271072</td>
+      <td>371.908905</td>
+      <td>23134000</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>2024-01-09 00:00:00-05:00</th>
+      <td>369.248790</td>
+      <td>373.199230</td>
+      <td>368.434870</td>
+      <td>373.000732</td>
+      <td>20830000</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>2024-01-10 00:00:00-05:00</th>
+      <td>373.576434</td>
+      <td>381.318557</td>
+      <td>373.526817</td>
+      <td>379.928925</td>
+      <td>25514200</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>2024-01-11 00:00:00-05:00</th>
+      <td>383.134973</td>
+      <td>387.780229</td>
+      <td>377.556691</td>
+      <td>381.775146</td>
+      <td>27850800</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>2024-01-12 00:00:00-05:00</th>
+      <td>382.628747</td>
+      <td>385.795072</td>
+      <td>381.794986</td>
+      <td>385.586639</td>
+      <td>21645700</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>2024-01-16 00:00:00-05:00</th>
+      <td>390.738082</td>
+      <td>391.105331</td>
+      <td>384.742906</td>
+      <td>387.373230</td>
+      <td>27202300</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>2024-01-17 00:00:00-05:00</th>
+      <td>385.100262</td>
+      <td>387.214427</td>
+      <td>381.953778</td>
+      <td>386.579193</td>
+      <td>22234100</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>2024-01-18 00:00:00-05:00</th>
+      <td>388.812528</td>
+      <td>391.065668</td>
+      <td>387.224397</td>
+      <td>390.946564</td>
+      <td>23392100</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>2024-01-19 00:00:00-05:00</th>
+      <td>392.822533</td>
+      <td>395.710938</td>
+      <td>390.579298</td>
+      <td>395.710938</td>
+      <td>29272000</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>2024-01-22 00:00:00-05:00</th>
+      <td>397.050882</td>
+      <td>397.646435</td>
+      <td>390.668616</td>
+      <td>393.566956</td>
+      <td>27016900</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>2024-01-23 00:00:00-05:00</th>
+      <td>392.812565</td>
+      <td>396.415627</td>
+      <td>391.006067</td>
+      <td>395.939178</td>
+      <td>20525900</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>2024-01-24 00:00:00-05:00</th>
+      <td>398.559634</td>
+      <td>402.619273</td>
+      <td>397.477728</td>
+      <td>399.572052</td>
+      <td>24867000</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>2024-01-25 00:00:00-05:00</th>
+      <td>401.318993</td>
+      <td>403.989029</td>
+      <td>399.542271</td>
+      <td>401.864899</td>
+      <td>21021200</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>2024-01-26 00:00:00-05:00</th>
+      <td>401.368560</td>
+      <td>403.155218</td>
+      <td>399.442957</td>
+      <td>400.931824</td>
+      <td>17803300</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>2024-01-29 00:00:00-05:00</th>
+      <td>403.046056</td>
+      <td>406.936974</td>
+      <td>401.328886</td>
+      <td>406.678894</td>
+      <td>24510200</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">msft_history</span><span class="p">[</span><span class="s1">&#39;Close&#39;</span><span class="p">],</span> <span class="s1">&#39;-o&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Microsoft Closing Prices&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="n">rotation</span> <span class="o">=</span> <span class="mi">90</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/644b332e6fd75eb39e41e4b15caf38b5b1bed671a4ce0da93398e7beb2dfd331.png" src="_images/644b332e6fd75eb39e41e4b15caf38b5b1bed671a4ce0da93398e7beb2dfd331.png" />
+</div>
+</div>
+<p><strong>Problem</strong>: Determine a linear function to model the data.</p>
+<p>One approach would be to use our observations about linear functions:</p>
+<div class="math notranslate nohighlight">
+\[f(n) = \text{starting value} + \text{change} \times n\]</div>
+<p>The closing price on the first day of the data is 370.869995, and on the twentieth day is 408.589996.</p>
+<ul class="simple">
+<li><p>This represents a change of (408.589996 - 370.869995)/19 = 2.0447371633429277</p></li>
+</ul>
+<p>thus;</p>
+<div class="math notranslate nohighlight">
+\[f(n) = 370.869995 + 2.0447371633429277n\]</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#difference from last day to first day divided by number of days</span>
+<span class="p">(</span><span class="n">msft_history</span><span class="p">[</span><span class="s1">&#39;Close&#39;</span><span class="p">][</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="n">msft_history</span><span class="p">[</span><span class="s1">&#39;Close&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">])</span><span class="o">/</span><span class="mi">19</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/var/folders/8v/7bhy8yqn04b7rzqglb2s38200000gn/T/ipykernel_2721/3312656144.py:2: FutureWarning: Series.__getitem__ treating keys as positions is deprecated. In a future version, integer keys will always be treated as labels (consistent with DataFrame behavior). To access a value by position, use `ser.iloc[pos]`
+  (msft_history[&#39;Close&#39;][-1] - msft_history[&#39;Close&#39;][0])/19
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2.0295602898848686
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="k">return</span> <span class="mf">370.869995</span><span class="o">+</span><span class="mf">2.0447371633429277</span><span class="o">*</span><span class="n">n</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">19</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([ 0,  1,  2,  3,  4,  5,  6,  7,  8,  9, 10, 11, 12, 13, 14, 15, 16,
+       17, 18])
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">n</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">19</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">f</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([370.869995  , 372.91473216, 374.95946933, 377.00420649,
+       379.04894365, 381.09368082, 383.13841798, 385.18315514,
+       387.22789231, 389.27262947, 391.31736663, 393.3621038 ,
+       395.40684096, 397.45157812, 399.49631529, 401.54105245,
+       403.58578961, 405.63052678, 407.67526394])
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">msft_history</span><span class="p">[</span><span class="s1">&#39;Close&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="s1">&#39;-o&#39;</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s1">&#39;data&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Microsoft Closing Prices&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="n">rotation</span> <span class="o">=</span> <span class="mi">90</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">f</span><span class="p">(</span><span class="n">n</span><span class="p">),</span> <span class="n">label</span> <span class="o">=</span> <span class="s1">&#39;model&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="n">n</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/d23e86e6c410289c5182acddeb2f261ab1d5bdb0cfb318c86fea121d7d3a246b.png" src="_images/d23e86e6c410289c5182acddeb2f261ab1d5bdb0cfb318c86fea121d7d3a246b.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#approximate value from model for day index 10</span>
+<span class="n">f</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>391.3173666334293
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#true value on 10th index</span>
+<span class="n">msft_history</span><span class="p">[</span><span class="s1">&#39;Close&#39;</span><span class="p">][</span><span class="mi">10</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/var/folders/8v/7bhy8yqn04b7rzqglb2s38200000gn/T/ipykernel_2721/4187910198.py:2: FutureWarning: Series.__getitem__ treating keys as positions is deprecated. In a future version, integer keys will always be treated as labels (consistent with DataFrame behavior). To access a value by position, use `ser.iloc[pos]`
+  msft_history[&#39;Close&#39;][10]
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>386.5791931152344
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">predicted</span> <span class="o">=</span> <span class="n">f</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">actual</span> <span class="o">=</span> <span class="n">msft_history</span><span class="p">[</span><span class="s1">&#39;Close&#39;</span><span class="p">][</span><span class="mi">10</span><span class="p">]</span>
+<span class="c1">#error</span>
+<span class="n">predicted</span> <span class="o">-</span> <span class="n">actual</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/var/folders/8v/7bhy8yqn04b7rzqglb2s38200000gn/T/ipykernel_2721/3176480792.py:2: FutureWarning: Series.__getitem__ treating keys as positions is deprecated. In a future version, integer keys will always be treated as labels (consistent with DataFrame behavior). To access a value by position, use `ser.iloc[pos]`
+  actual = msft_history[&#39;Close&#39;][10]
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4.7381735181949125
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Tesla Example</strong></p>
+<p>Below, we load in the Tesla stock data for January 2024.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">tsla</span> <span class="o">=</span> <span class="n">yf</span><span class="o">.</span><span class="n">Ticker</span><span class="p">(</span><span class="s2">&quot;TSLA&quot;</span><span class="p">)</span>
+<span class="n">history</span> <span class="o">=</span> <span class="n">tsla</span><span class="o">.</span><span class="n">history</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">history</span><span class="p">[</span><span class="s1">&#39;Close&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="s1">&#39;-o&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Tesla Closing Prices&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">history</span><span class="p">))));</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/09300e69cfb1bdd4db56f05c5f6d1aeb634fa8592703ce2dff3b799ed80bee24.png" src="_images/09300e69cfb1bdd4db56f05c5f6d1aeb634fa8592703ce2dff3b799ed80bee24.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">y</span> <span class="o">=</span> <span class="n">history</span><span class="p">[</span><span class="s1">&#39;Close&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span>
+<span class="n">x</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">history</span><span class="p">)))</span>
+<span class="n">tsla_data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">&#39;day&#39;</span><span class="p">:</span> <span class="n">x</span><span class="p">,</span> <span class="s1">&#39;closing_price&#39;</span><span class="p">:</span> <span class="n">y</span><span class="p">})</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s1">&#39;day&#39;</span><span class="p">)</span>
+<span class="n">tsla_data</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>closing_price</th>
+    </tr>
+    <tr>
+      <th>day</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>417.410004</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>403.839996</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>379.279999</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>410.440002</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>411.049988</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>394.359985</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>394.940002</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>394.739990</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>403.309998</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>396.359985</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>428.220001</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>413.820007</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>426.500000</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>424.070007</td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td>415.109985</td>
+    </tr>
+    <tr>
+      <th>15</th>
+      <td>412.380005</td>
+    </tr>
+    <tr>
+      <th>16</th>
+      <td>406.579987</td>
+    </tr>
+    <tr>
+      <th>17</th>
+      <td>397.149994</td>
+    </tr>
+    <tr>
+      <th>18</th>
+      <td>398.089996</td>
+    </tr>
+    <tr>
+      <th>19</th>
+      <td>393.904999</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<ul class="simple">
+<li><p>Determine a linear function to model the data</p></li>
+</ul>
+<ul class="simple">
+<li><p>Use your model to predict the price on day 2.</p></li>
+</ul>
+<ul class="simple">
+<li><p>What is the error in your prediction?</p></li>
+</ul>
+<ul class="simple">
+<li><p>What does your model predict on day 8, and what is the error in this prediction?</p></li>
+</ul>
+</section>
+<section id="slope-and-intercept">
+<h1>Slope and Intercept<a class="headerlink" href="#slope-and-intercept" title="Link to this heading">#</a></h1>
+<p>The change of a linear function is often talked about as the <em>slope</em> of the line.  In general, given any two points on a line – <span class="math notranslate nohighlight">\((x_1, y_1)\)</span> and <span class="math notranslate nohighlight">\((x_2, y_2)\)</span> – , the slope is the average difference between those points:</p>
+<div class="math notranslate nohighlight">
+\[\text{slope} = \frac{y_2 - y_1}{x_2 - x_1}\]</div>
+<p>and by rearranging this equation you can write an equation for the line as:</p>
+<div class="math notranslate nohighlight">
+\[y = \text{slope} \times (x - x_1) + y_1\]</div>
+<p>For example, suppose you want an equation between the points <span class="math notranslate nohighlight">\((3, 5)\)</span> and <span class="math notranslate nohighlight">\((8, 12)\)</span>.</p>
+<p>First we determine the slope <span class="math notranslate nohighlight">\(\frac{12 - 5}{8 - 3} = \frac{7}{5}\)</span>, then plug into our equation $<span class="math notranslate nohighlight">\(y = \frac{7}{5}(x - 3) + 5\)</span>$</p>
+</section>
+<section id="plotting-functions-with-matplotlib-and-numpy">
+<h1>Plotting Functions with <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> and <code class="docutils literal notranslate"><span class="pre">numpy</span></code><a class="headerlink" href="#plotting-functions-with-matplotlib-and-numpy" title="Link to this heading">#</a></h1>
+<p>Important ingredients: inputs (<span class="math notranslate nohighlight">\(x\)</span>) and outputs (<span class="math notranslate nohighlight">\(f(x)\)</span>).  Practically, this means we need to define a function and array of inputs to plug into the function and plot.  Two helper functions for this are <code class="docutils literal notranslate"><span class="pre">np.arange</span></code> and <code class="docutils literal notranslate"><span class="pre">np.linspace</span></code>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">start</span> <span class="n">x</span><span class="p">,</span> <span class="n">stop</span> <span class="n">x</span><span class="p">,</span> <span class="n">step</span> <span class="n">size</span><span class="p">)</span>
+<span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="n">start</span> <span class="n">x</span><span class="p">,</span> <span class="n">stop</span> <span class="n">x</span><span class="p">,</span> <span class="n">number</span> <span class="n">of</span> <span class="n">intervals</span> <span class="n">between</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([0, 1, 2, 3, 4, 5, 6, 7, 8, 9])
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">9</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([ 0.  ,  1.25,  2.5 ,  3.75,  5.  ,  6.25,  7.5 ,  8.75, 10.  ])
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mf">.5</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([3. , 3.5, 4. , 4.5, 5. , 5.5, 6. , 6.5, 7. , 7.5])
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([0.        , 0.01010101, 0.02020202, 0.03030303, 0.04040404,
+       0.05050505, 0.06060606, 0.07070707, 0.08080808, 0.09090909,
+       0.1010101 , 0.11111111, 0.12121212, 0.13131313, 0.14141414,
+       0.15151515, 0.16161616, 0.17171717, 0.18181818, 0.19191919,
+       0.2020202 , 0.21212121, 0.22222222, 0.23232323, 0.24242424,
+       0.25252525, 0.26262626, 0.27272727, 0.28282828, 0.29292929,
+       0.3030303 , 0.31313131, 0.32323232, 0.33333333, 0.34343434,
+       0.35353535, 0.36363636, 0.37373737, 0.38383838, 0.39393939,
+       0.4040404 , 0.41414141, 0.42424242, 0.43434343, 0.44444444,
+       0.45454545, 0.46464646, 0.47474747, 0.48484848, 0.49494949,
+       0.50505051, 0.51515152, 0.52525253, 0.53535354, 0.54545455,
+       0.55555556, 0.56565657, 0.57575758, 0.58585859, 0.5959596 ,
+       0.60606061, 0.61616162, 0.62626263, 0.63636364, 0.64646465,
+       0.65656566, 0.66666667, 0.67676768, 0.68686869, 0.6969697 ,
+       0.70707071, 0.71717172, 0.72727273, 0.73737374, 0.74747475,
+       0.75757576, 0.76767677, 0.77777778, 0.78787879, 0.7979798 ,
+       0.80808081, 0.81818182, 0.82828283, 0.83838384, 0.84848485,
+       0.85858586, 0.86868687, 0.87878788, 0.88888889, 0.8989899 ,
+       0.90909091, 0.91919192, 0.92929293, 0.93939394, 0.94949495,
+       0.95959596, 0.96969697, 0.97979798, 0.98989899, 1.        ])
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>EXAMPLES</strong></p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(f(x) = x^2\)</span></p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#define function</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#determine domain (x)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#plot (x, f(x))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Problem</strong></p>
+<p>Define and plot the following functions on <span class="math notranslate nohighlight">\(x \in [-3, 3]\)</span></p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(f(x) = x^2 - 1\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(g(x) = -x^2 + 1\)</span></p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#define f and g</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#determine domain</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#plot</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="geometric-sequences-and-exponential-functions">
+<h1>Geometric Sequences and Exponential Functions<a class="headerlink" href="#geometric-sequences-and-exponential-functions" title="Link to this heading">#</a></h1>
+<p>Consider the sequence formed by <span class="math notranslate nohighlight">\(a_0 = 10\)</span> and <span class="math notranslate nohighlight">\(a_{n + 1} = a_n \times 1.1\)</span></p>
+<div class="math notranslate nohighlight">
+\[10.0, 11.0, 12.1, 13.31, 14.641, 16.105, 17.716, 19.487, 21.436, 23.579, ...\]</div>
+<p>What would <span class="math notranslate nohighlight">\(a_{20}\)</span> be equal to?  <span class="math notranslate nohighlight">\(a_{100}\)</span>?  If you recognize the repeated multiplication happening you can rewrite the terms of the sequence as</p>
+<div class="math notranslate nohighlight">
+\[f(n) = 10(1.1^n)\]</div>
+<p>Define and plot the function for <span class="math notranslate nohighlight">\(n \in [0, 20]\)</span>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#define the function</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#domain </span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#plot</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Problem</strong></p>
+<p>Suppose you invest 1000 dollars in TSLA stock at an annual rate of return of .03.  How much money would you have after 10 years?  Determine a function to represent the situation and plot the function below.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#define the function</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#domain</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#plot</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="trigonometric-sequences-and-functions">
+<h1>Trigonometric Sequences and Functions<a class="headerlink" href="#trigonometric-sequences-and-functions" title="Link to this heading">#</a></h1>
+<p>A different kind of behavior to that of continued growth or decline as exhibited by our linear and exponential functions is oscilating behavior.  Consider the problem of determining the position of your shadow on a ferris wheel ride.  Diameter is 20 feet and makes one rotation every 2 minutes.  After 10 seconds your shadow will be five feet from the base.  Complete the table below:</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Time</p></th>
+<th class="head"><p>0</p></th>
+<th class="head"><p>10</p></th>
+<th class="head"><p>20</p></th>
+<th class="head"><p>30</p></th>
+<th class="head"><p>40</p></th>
+<th class="head"><p>50</p></th>
+<th class="head"><p>60</p></th>
+<th class="head"><p>70</p></th>
+<th class="head"><p>80</p></th>
+<th class="head"><p>90</p></th>
+<th class="head"><p>100</p></th>
+<th class="head"><p>110</p></th>
+<th class="head"><p>120</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Position</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong>Plotting Trig Functions</strong></p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(f(x) = \sin(x)\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(g(x) = 2\sin(x)\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(h(x) = \sin(2x)\)</span></p></li>
+</ul>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Plotting Functions</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#plotting-a-sequence">Plotting a Sequence</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#linear-functions-and-arithmetic-sequences">Linear Functions and Arithmetic Sequences</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#application-modeling-stock-data">Application: Modeling Stock Data</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#slope-and-intercept">Slope and Intercept</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#plotting-functions-with-matplotlib-and-numpy">Plotting Functions with <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> and <code class="docutils literal notranslate"><span class="pre">numpy</span></code></a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#geometric-sequences-and-exponential-functions">Geometric Sequences and Exponential Functions</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#trigonometric-sequences-and-functions">Trigonometric Sequences and Functions</a></li>
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By The Jupyter Book community
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

@@ -5,3 +5,5 @@ parts:
   - caption: Functions and Models
     chapters:
     - file: intro/functions
+    - file: intro/functions_representation_models
+    - file: intro/probability
