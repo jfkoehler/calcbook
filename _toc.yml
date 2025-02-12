@@ -9,3 +9,7 @@ parts:
     - file: intro/probability
     - file: intro/intro_probability
     - file: intro/stats
+
+  - caption: The Definite Integral
+    chapters:
+    - file: integration/area
