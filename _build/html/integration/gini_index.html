@@ -34,7 +34,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -65,6 +65,8 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'integration/gini_index';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Area Between Curves and Application to Equality" href="gini_extra.html" />
+    <link rel="prev" title="Riemann Sums and Definite Integrals" href="area.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="" />
@@ -116,8 +118,6 @@
       
       
       
-        
-      
       <dialog id="pst-primary-sidebar-modal"></dialog>
       <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
         
@@ -166,12 +166,26 @@
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
                 <a class="reference internal" href="../syllabus.html">
-                    Course Description
+                    Calculus I: Spring 2025
                 </a>
             </li>
         </ul>
-        <ul class="nav bd-sidenav">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Functions and Models</span></p>
+<ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../intro/functions.html">Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../intro/functions_representation_models.html">Modeling with Sequences and Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../intro/probability.html">Introduction to Probability</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../intro/intro_probability.html">Probability Distributions: Discrete and Continuous</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../intro/stats.html">Probability and Statistics</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">The Definite Integral</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="area.html">Riemann Sums and Definite Integrals</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Area Between Curves and Wealth Distribution</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="gini_extra.html">Area Between Curves and Application to Equality</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="calc_consumer_surplus.html">Supply and Demand: Consumer Surplus</a></li>
 </ul>
 
     </div>
@@ -348,7 +362,10 @@
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Area Between Curves and Wealth Distribution</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Area Between Curves and Wealth Distribution</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#warm-up-problem-1991-ap-calculus-bc3">Warm Up Problem: 1991 AP Calculus BC3</a></li>
+</ul>
+</li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#wealth-distribution">Wealth Distribution</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#quadratic-fit">Quadratic Fit</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#getting-the-fit">Getting the Fit</a></li>
@@ -390,72 +407,20 @@
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-<span class="kn">from</span> <span class="nn">scipy.integrate</span> <span class="kn">import</span> <span class="n">quad</span>
+<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
 </pre></div>
 </div>
 </div>
 </div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#define y = x</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#define y = sqrt(x)</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#plot on 0, 1</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#area between?</span>
-</pre></div>
-</div>
-</div>
-</div>
-<p><strong>EX:</strong> Consider <span class="math notranslate nohighlight">\(y = \sqrt{x}\)</span> and <span class="math notranslate nohighlight">\(y = x^2\)</span></p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#define functions</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#plot</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#domain?</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#solution</span>
-</pre></div>
-</div>
-</div>
-</div>
+<section id="warm-up-problem-1991-ap-calculus-bc3">
+<h2>Warm Up Problem: 1991 AP Calculus BC3<a class="headerlink" href="#warm-up-problem-1991-ap-calculus-bc3" title="Link to this heading">#</a></h2>
+<p>Let <span class="math notranslate nohighlight">\(R\)</span> be the shaded region in the first quadrant enclosed by the <span class="math notranslate nohighlight">\(y\)</span>-axis and the graphs of <span class="math notranslate nohighlight">\(y = \sin(x)\)</span> and <span class="math notranslate nohighlight">\(y = \cos(x)\)</span>.</p>
 <ol class="arabic simple">
-<li><p><span class="math notranslate nohighlight">\(f(x) = \sin{x}\)</span> and <span class="math notranslate nohighlight">\(g(x) = \cos{x}\)</span> on <span class="math notranslate nohighlight">\([0, \pi]\)</span></p></li>
-<li><p>Between <span class="math notranslate nohighlight">\(f(x) = 3x + 4\)</span> and <span class="math notranslate nohighlight">\(g(x) = x^2\)</span></p></li>
+<li><p>Find the area of <span class="math notranslate nohighlight">\(R\)</span>.</p></li>
+<li><p>Find the volume of the solid generated when <span class="math notranslate nohighlight">\(R\)</span> is revolved about the <span class="math notranslate nohighlight">\(x\)</span>-axis.</p></li>
+<li><p>Find the volume of the solid whose base is <span class="math notranslate nohighlight">\(R\)</span> and whose cross sections cut by planes perpendicular to the <span class="math notranslate nohighlight">\(x\)</span>-axis are squares.</p></li>
 </ol>
+</section>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="wealth-distribution">
 <h1>Wealth Distribution<a class="headerlink" href="#wealth-distribution" title="Link to this heading">#</a></h1>
@@ -552,7 +517,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x12258ce30&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x13508cb30&gt;
 </pre></div>
 </div>
 <img alt="../_images/576344b712e3f78b5225d5c1d5b8f018166acb6fd80c7d91cc3b1cd0797515cd.png" src="../_images/576344b712e3f78b5225d5c1d5b8f018166acb6fd80c7d91cc3b1cd0797515cd.png" />
@@ -597,7 +562,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x122681970&gt;]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x135172ea0&gt;]
 </pre></div>
 </div>
 <img alt="../_images/d85fbc793ae11af0e0ac4cef601be5db9ef3d04d246c2ed2d2466222f8c820db.png" src="../_images/d85fbc793ae11af0e0ac4cef601be5db9ef3d04d246c2ed2d2466222f8c820db.png" />
@@ -645,7 +610,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x12258c5c0&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x120e66ed0&gt;
 </pre></div>
 </div>
 <img alt="../_images/daa16ea96ce282316323ea7cf397c18f4d38247a6d08e2a18f8c4eeddad7d0c2.png" src="../_images/daa16ea96ce282316323ea7cf397c18f4d38247a6d08e2a18f8c4eeddad7d0c2.png" />
@@ -666,7 +631,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x11b61e540&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x1350e1a00&gt;
 </pre></div>
 </div>
 <img alt="../_images/19a575e58e9e3b849cadb2a66c55265713ea1acf489c036fb9ec7175b472dffa.png" src="../_images/19a575e58e9e3b849cadb2a66c55265713ea1acf489c036fb9ec7175b472dffa.png" />
@@ -738,7 +703,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x122a1be30&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x1366fdca0&gt;
 </pre></div>
 </div>
 <img alt="../_images/6c34251ea73e054f8f96d1fbda0f0afb2a0c55d7ad0b54d349ee37a7766b9882.png" src="../_images/6c34251ea73e054f8f96d1fbda0f0afb2a0c55d7ad0b54d349ee37a7766b9882.png" />
@@ -894,8 +859,7 @@
 </section>
 <section id="problems">
 <h3>Problems<a class="headerlink" href="#problems" title="Link to this heading">#</a></h3>
-<p><strong>Problem 1</strong>: Visit the WikiPedia page on <a class="reference external" href="https://en.wikipedia.org/wiki/Gini_coefficient"><strong>Gini Coefficients</strong></a>.  See if you can replicate the results in the table comparing the U.S. Gini Index in the 1970’s to that of the 2000’s.</p>
-<p><strong>Problem 2</strong>: Use the table below to find the Lorenz curve for the data.</p>
+<p><strong>Problem 1</strong>: Use the table below to find the Lorenz curve for the data.</p>
 <div class="pst-scrollable-table-container"><table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p>Fraction of People</p></th>
@@ -924,8 +888,7 @@
 </tbody>
 </table>
 </div>
-<p><strong>Problem 3</strong>: Let the fraction of population be the variable <span class="math notranslate nohighlight">\(p\)</span> and the fraction of the resource to be <span class="math notranslate nohighlight">\(r\)</span>.  Use the symbols to write the equation for perfect equality.</p>
-<p><strong>Problem 4</strong>: The table below shows how arable land is distributed among farmers in Blivia, Denmark, and the United States.  In which country is the land most equally distributed?  The least?</p>
+<p><strong>Problem 2</strong>: The table below shows how arable land is distributed among farmers in Bolivia, Denmark, and the United States.  In which country is the land most equally distributed?  The least?</p>
 <div class="pst-scrollable-table-container"><table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p>Fraction of Farmers</p></th>
@@ -993,7 +956,7 @@
 </tbody>
 </table>
 </div>
-<p><strong>Problem 5</strong>: The table below shows how population was divided among the 25 largest countries in 1963 and 1968.  Was there change in the population distribution between 1963 and 1968? How would the Lorenz curves for 1963 and 1968 compare?</p>
+<p><strong>Problem 3</strong>: The table below shows how population was divided among the 25 largest countries in 1963 and 1968.  Was there change in the population distribution between 1963 and 1968? How would the Lorenz curves for 1963 and 1968 compare?</p>
 <div class="pst-scrollable-table-container"><table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p>Fraction of Countries</p></th>
@@ -1029,51 +992,7 @@
 </tbody>
 </table>
 </div>
-<p><strong>Problem 6</strong>: The table below shows how total energy produced and total energy consumed was divided among the 25 largest producers and users of energy in 1963.  Draw the corresponding Lornez curves on the same set of coordinates.  Was production of energy more or less equally divided than was use of energy?</p>
-<div class="pst-scrollable-table-container"><table class="table">
-<thead>
-<tr class="row-odd"><th class="head"><p>Fraction of Countries</p></th>
-<th class="head"><p>Energy Used</p></th>
-<th class="head"><p>Energy Produced</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>0.0</p></td>
-<td><p>0.00</p></td>
-<td><p>0.00</p></td>
-</tr>
-<tr class="row-odd"><td><p>0.2</p></td>
-<td><p>0.027</p></td>
-<td><p>0.032</p></td>
-</tr>
-<tr class="row-even"><td><p>0.4</p></td>
-<td><p>0.065</p></td>
-<td><p>0.084</p></td>
-</tr>
-<tr class="row-odd"><td><p>0.6</p></td>
-<td><p>0.135</p></td>
-<td><p>170</p></td>
-</tr>
-<tr class="row-even"><td><p>0.8</p></td>
-<td><p>0.266</p></td>
-<td><p>0.3031</p></td>
-</tr>
-<tr class="row-odd"><td><p>1.0</p></td>
-<td><p>1.000</p></td>
-<td><p>1.0000</p></td>
-</tr>
-</tbody>
-</table>
-</div>
-<p><strong>Problem 7</strong>: Letting <span class="math notranslate nohighlight">\(p\)</span> stand for the fraction of the population and <span class="math notranslate nohighlight">\(r\)</span> for the fraction of the resource, consider the family of Lorenz curve given by the equation</p>
-<div class="math notranslate nohighlight">
-\[r = p^n; \quad n = 1,2,3,4,...\]</div>
-<ul class="simple">
-<li><p>To what situation does <span class="math notranslate nohighlight">\(n = 1\)</span> correspond?</p></li>
-<li><p>In what way is the number <span class="math notranslate nohighlight">\(n\)</span> a measure of the equlaity of distribution?</p></li>
-<li><p>To what situation does the Lorenz curve <span class="math notranslate nohighlight">\(r = p^n\)</span> correspond in the case as <span class="math notranslate nohighlight">\(n \to \infty\)</span></p></li>
-</ul>
-<p><strong>Problem 8</strong>: The table below shows how gross national product (GNP) is distributed among the countries of the world:</p>
+<p><strong>Problem 4</strong>: The table below shows how gross national product (GNP) is distributed among the countries of the world:</p>
 <div class="pst-scrollable-table-container"><table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p>Fraction of Countries</p></th>
@@ -1120,8 +1039,6 @@
 <p>a. Determine the Lorenz Curve for this data using the model you deem most appropriate.</p>
 <p>b. Draw the Lorenz Curve and the curve for completely unequal distribution on the same axes.</p>
 <p>c. Is the GNP divided equally or unequally among the countries of the world?</p>
-<p><strong>Problem 9</strong>: Use the library to find a research article that investigates the Gini Coefficient.  Describe the research, what were they investigating, what was the data, and what did they find.</p>
-<p><strong>Problem 10</strong>: The US Census provides data that could be used in an analysis of distribution of resources.  One such dataset is the <a class="reference external" href="https://www.census.gov/data/tables/2017/demo/wealth/wealth-asset-ownership.html">Wealth, Asset Ownership, &amp; Debt of Households</a>. Use this data to analyze the equality of the distribution of debt – or find another data table that is of interest and makes sense to use in an analysis of distribution of resources.</p>
 </section>
 </section>
 </section>
@@ -1156,6 +1073,24 @@
                 <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
+    <a class="left-prev"
+       href="area.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Riemann Sums and Definite Integrals</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="gini_extra.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Area Between Curves and Application to Equality</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
 </div>
                 </footer>
               
@@ -1173,7 +1108,10 @@
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Area Between Curves and Wealth Distribution</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Area Between Curves and Wealth Distribution</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#warm-up-problem-1991-ap-calculus-bc3">Warm Up Problem: 1991 AP Calculus BC3</a></li>
+</ul>
+</li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#wealth-distribution">Wealth Distribution</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#quadratic-fit">Quadratic Fit</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#getting-the-fit">Getting the Fit</a></li>
