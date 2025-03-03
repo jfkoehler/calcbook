@@ -16,3 +16,7 @@ parts:
     - file: integration/gini_index
     - file: integration/gini_extra
     - file: integration/calc_consumer_surplus
+
+  - caption: The Derivative
+    chapters:
+    - file: differentiation/intro_to_derivatives
